@@ -1,0 +1,148 @@
+2025-08-13 04:55:28,060 - __main__ - INFO - ============================================================
+2025-08-13 04:55:28,060 - __main__ - INFO - STARTING FILE UPLOAD DEBUG TESTS
+2025-08-13 04:55:28,060 - __main__ - INFO - ============================================================
+2025-08-13 04:55:28,060 - __main__ - INFO - 
+========================================
+2025-08-13 04:55:28,060 - __main__ - INFO - TEST 1: Direct FileService Processing
+2025-08-13 04:55:28,060 - __main__ - INFO - ========================================
+2025-08-13 04:55:28,060 - __main__ - INFO - Testing file processing for: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+2025-08-13 04:55:28,060 - __main__ - INFO - Created FileService instance
+2025-08-13 04:55:28,061 - __main__ - ERROR - ❌ Exception during file processing: FileService.process_file() missing 1 required positional argument: 'file_type'
+2025-08-13 04:55:28,061 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/azeem/Documents/upwork-projects/chat_project/test_file_upload.py", line 48, in test_file_processing
+    result = file_service.process_file(file_path)
+TypeError: FileService.process_file() missing 1 required positional argument: 'file_type'
+
+2025-08-13 04:55:28,061 - __main__ - INFO - 
+========================================
+2025-08-13 04:55:28,061 - __main__ - INFO - TEST 2: View Serialization Helper
+2025-08-13 04:55:28,061 - __main__ - INFO - ========================================
+2025-08-13 04:55:28,062 - __main__ - INFO - Testing view's JSON serialization helper...
+2025-08-13 04:55:28,062 - __main__ - INFO - ✅ View serialization helper works with test data
+2025-08-13 04:55:28,063 - __main__ - INFO - 
+========================================
+2025-08-13 04:55:28,063 - __main__ - INFO - TEST 3: ChatProcessor Integration
+2025-08-13 04:55:28,063 - __main__ - INFO - ========================================
+2025-08-13 04:55:28,063 - __main__ - INFO - Testing ChatProcessor file upload...
+2025-08-13 04:55:53,458 - __main__ - INFO - ============================================================
+2025-08-13 04:55:53,458 - __main__ - INFO - STARTING FILE UPLOAD DEBUG TESTS
+2025-08-13 04:55:53,458 - __main__ - INFO - ============================================================
+2025-08-13 04:55:53,458 - __main__ - INFO - 
+========================================
+2025-08-13 04:55:53,459 - __main__ - INFO - TEST 1: Direct FileService Processing
+2025-08-13 04:55:53,459 - __main__ - INFO - ========================================
+2025-08-13 04:55:53,459 - __main__ - INFO - Testing file processing for: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+2025-08-13 04:55:53,459 - __main__ - INFO - Created FileService instance
+2025-08-13 04:55:53,459 - ai_services - INFO - Processing CSV file: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+2025-08-13 04:55:53,473 - ai_services - INFO - CSV loaded: 77 rows, 3 columns
+2025-08-13 04:55:53,473 - ai_services - INFO - Creating basic analysis...
+2025-08-13 04:55:53,480 - ai_services - INFO - Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+2025-08-13 04:55:53,489 - ai_services - INFO - CSV processing completed successfully
+2025-08-13 04:55:53,489 - ai_services - INFO - Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+2025-08-13 04:55:53,489 - ai_services - INFO - Sample data type: <class 'list'>
+2025-08-13 04:55:53,489 - ai_services - INFO - Analysis type: <class 'dict'>
+2025-08-13 04:55:53,489 - __main__ - INFO - File processing result type: <class 'dict'>
+2025-08-13 04:55:53,489 - __main__ - INFO - File processing success: True
+2025-08-13 04:55:53,490 - __main__ - INFO - File processed successfully, testing JSON serialization...
+2025-08-13 04:55:53,491 - __main__ - INFO - ✅ JSON serialization successful
+2025-08-13 04:55:53,491 - __main__ - INFO - JSON length: 22211 characters
+2025-08-13 04:55:53,491 - __main__ - INFO - ✅ Result saved to test_result.json
+2025-08-13 04:55:53,491 - __main__ - INFO - 
+========================================
+2025-08-13 04:55:53,491 - __main__ - INFO - TEST 2: View Serialization Helper
+2025-08-13 04:55:53,491 - __main__ - INFO - ========================================
+2025-08-13 04:55:53,492 - __main__ - INFO - Testing view's JSON serialization helper...
+2025-08-13 04:55:53,492 - __main__ - INFO - ✅ View serialization helper works with test data
+2025-08-13 04:55:53,492 - __main__ - INFO - 
+========================================
+2025-08-13 04:55:53,492 - __main__ - INFO - TEST 3: ChatProcessor Integration
+2025-08-13 04:55:53,492 - __main__ - INFO - ========================================
+2025-08-13 04:55:53,493 - __main__ - INFO - Testing ChatProcessor file upload...
+2025-08-13 04:55:53,513 - __main__ - INFO - Created test session: test-session-123
+2025-08-13 04:55:53,513 - __main__ - INFO - Created mock uploaded file: Skincare_DB_Schema_Guide.csv
+2025-08-13 04:55:53,514 - __main__ - INFO - Created ChatProcessor instance
+2025-08-13 04:55:53,514 - __main__ - INFO - ChatProcessor result type: <class 'coroutine'>
+2025-08-13 04:55:53,514 - __main__ - ERROR - ❌ Exception during ChatProcessor processing: 'coroutine' object has no attribute 'get'
+2025-08-13 04:55:53,514 - __main__ - ERROR - Traceback (most recent call last):
+  File "/home/azeem/Documents/upwork-projects/chat_project/test_file_upload.py", line 136, in test_chat_processor
+    logger.info(f"ChatProcessor success: {result.get('success', False)}")
+AttributeError: 'coroutine' object has no attribute 'get'
+
+2025-08-13 04:55:53,516 - __main__ - INFO - 
+============================================================
+2025-08-13 04:55:53,517 - __main__ - INFO - DEBUG TESTS COMPLETED
+2025-08-13 04:55:53,517 - __main__ - INFO - Check test_upload.log for detailed results
+2025-08-13 04:55:53,517 - __main__ - INFO - ============================================================
+2025-08-13 04:57:34,665 - __main__ - INFO - ============================================================
+2025-08-13 04:57:34,665 - __main__ - INFO - STARTING FILE UPLOAD DEBUG TESTS
+2025-08-13 04:57:34,666 - __main__ - INFO - ============================================================
+2025-08-13 04:57:34,666 - __main__ - INFO - 
+========================================
+2025-08-13 04:57:34,666 - __main__ - INFO - TEST 1: Direct FileService Processing
+2025-08-13 04:57:34,666 - __main__ - INFO - ========================================
+2025-08-13 04:57:34,666 - __main__ - INFO - Testing file processing for: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+2025-08-13 04:57:34,666 - __main__ - INFO - Created FileService instance
+2025-08-13 04:57:34,666 - ai_services - INFO - Processing CSV file: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+2025-08-13 04:57:34,669 - ai_services - INFO - CSV loaded: 77 rows, 3 columns
+2025-08-13 04:57:34,670 - ai_services - INFO - Creating basic analysis...
+2025-08-13 04:57:34,673 - ai_services - INFO - Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+2025-08-13 04:57:34,680 - ai_services - INFO - CSV processing completed successfully
+2025-08-13 04:57:34,681 - ai_services - INFO - Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+2025-08-13 04:57:34,681 - ai_services - INFO - Sample data type: <class 'list'>
+2025-08-13 04:57:34,681 - ai_services - INFO - Analysis type: <class 'dict'>
+2025-08-13 04:57:34,681 - __main__ - INFO - File processing result type: <class 'dict'>
+2025-08-13 04:57:34,681 - __main__ - INFO - File processing success: True
+2025-08-13 04:57:34,681 - __main__ - INFO - File processed successfully, testing JSON serialization...
+2025-08-13 04:57:34,682 - __main__ - INFO - ✅ JSON serialization successful
+2025-08-13 04:57:34,682 - __main__ - INFO - JSON length: 22211 characters
+2025-08-13 04:57:34,682 - __main__ - INFO - ✅ Result saved to test_result.json
+2025-08-13 04:57:34,682 - __main__ - INFO - 
+========================================
+2025-08-13 04:57:34,682 - __main__ - INFO - TEST 2: View Serialization Helper
+2025-08-13 04:57:34,682 - __main__ - INFO - ========================================
+2025-08-13 04:57:34,683 - __main__ - INFO - Testing view's JSON serialization helper...
+2025-08-13 04:57:34,684 - __main__ - INFO - ✅ View serialization helper works with test data
+2025-08-13 04:57:34,684 - __main__ - INFO - 
+========================================
+2025-08-13 04:57:34,684 - __main__ - INFO - TEST 3: ChatProcessor Integration
+2025-08-13 04:57:34,684 - __main__ - INFO - ========================================
+2025-08-13 04:57:34,684 - __main__ - INFO - Testing ChatProcessor file upload...
+2025-08-13 04:57:34,688 - __main__ - INFO - Created test session: test-session-123
+2025-08-13 04:57:34,689 - __main__ - INFO - Created mock uploaded file: Skincare_DB_Schema_Guide.csv
+2025-08-13 04:57:34,689 - __main__ - INFO - Created ChatProcessor instance
+2025-08-13 04:57:34,689 - asyncio - DEBUG - Using selector: EpollSelector
+2025-08-13 04:57:34,724 - ai_services - INFO - Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/test-session-123_20250813_045734_Skincare_DB_Schema_Guide.csv
+2025-08-13 04:57:34,727 - ai_services - INFO - CSV loaded: 77 rows, 3 columns
+2025-08-13 04:57:34,728 - ai_services - INFO - Creating basic analysis...
+2025-08-13 04:57:34,730 - ai_services - INFO - Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+2025-08-13 04:57:34,734 - ai_services - INFO - CSV processing completed successfully
+2025-08-13 04:57:34,734 - ai_services - INFO - Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+2025-08-13 04:57:34,734 - ai_services - INFO - Sample data type: <class 'list'>
+2025-08-13 04:57:34,734 - ai_services - INFO - Analysis type: <class 'dict'>
+2025-08-13 04:57:34,736 - ai_services - INFO - Sending streaming request to AI service with model: gemini-1.5-flash
+2025-08-13 04:57:34,921 - httpcore.connection - DEBUG - connect_tcp.started host='generativelanguage.googleapis.com' port=443 local_address=None timeout=30.0 socket_options=None
+2025-08-13 04:57:34,969 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x774c428a6860>
+2025-08-13 04:57:34,970 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x774c434146c0> server_hostname='generativelanguage.googleapis.com' timeout=30.0
+2025-08-13 04:57:35,160 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x774c433f03d0>
+2025-08-13 04:57:35,161 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-08-13 04:57:35,162 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-08-13 04:57:35,162 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-08-13 04:57:35,162 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-08-13 04:57:35,163 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-08-13 04:57:39,276 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Content-Type', b'application/json; charset=UTF-8'), (b'Vary', b'Origin'), (b'Vary', b'X-Origin'), (b'Vary', b'Referer'), (b'Content-Encoding', b'gzip'), (b'Date', b'Wed, 13 Aug 2025 09:57:39 GMT'), (b'Server', b'scaffolding on HTTPServer2'), (b'X-XSS-Protection', b'0'), (b'X-Frame-Options', b'SAMEORIGIN'), (b'X-Content-Type-Options', b'nosniff'), (b'Server-Timing', b'gfet4t7; dur=4075'), (b'Alt-Svc', b'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000'), (b'Transfer-Encoding', b'chunked')])
+2025-08-13 04:57:39,277 - httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyA7vBmqL-zZpJrvNoijDzHTvYaEeNctEig "HTTP/1.1 200 OK"
+2025-08-13 04:57:39,277 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-08-13 04:57:39,279 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-08-13 04:57:39,279 - httpcore.http11 - DEBUG - response_closed.started
+2025-08-13 04:57:39,279 - httpcore.http11 - DEBUG - response_closed.complete
+2025-08-13 04:57:39,711 - httpcore.connection - DEBUG - close.started
+2025-08-13 04:57:39,711 - httpcore.connection - DEBUG - close.complete
+2025-08-13 04:57:39,749 - __main__ - INFO - ChatProcessor result type: <class 'dict'>
+2025-08-13 04:57:39,749 - __main__ - INFO - ChatProcessor success: True
+2025-08-13 04:57:39,749 - __main__ - INFO - ✅ ChatProcessor processing successful
+2025-08-13 04:57:39,750 - __main__ - INFO - ✅ ChatProcessor result is JSON serializable
+2025-08-13 04:57:39,750 - __main__ - INFO - 
+============================================================
+2025-08-13 04:57:39,750 - __main__ - INFO - DEBUG TESTS COMPLETED
+2025-08-13 04:57:39,750 - __main__ - INFO - Check test_upload.log for detailed results
+2025-08-13 04:57:39,750 - __main__ - INFO - ============================================================

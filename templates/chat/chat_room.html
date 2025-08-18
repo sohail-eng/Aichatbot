@@ -1,0 +1,698 @@
+<!-- templates/chat/chat_room.html -->
+{% extends 'chat/base.html' %}
+
+{% block title %}AI Chat Room{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-4">
+    <!-- Header -->
+    <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+        <div class="flex justify-between items-start">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">AI Data Assistant</h1>
+                <p class="text-gray-600">Upload files, connect to databases, and ask data-driven questions</p>
+                <div class="mt-2 flex space-x-4">
+                    <span class="text-sm text-gray-500">Session: {{ session_id }}</span>
+                    <span id="connectionStatus" class="text-sm text-gray-500">Status: Connecting...</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fas fa-user mr-1"></i>
+                        {% if user.is_authenticated %}
+                            {{ user.get_full_name|default:user.username }}
+                        {% else %}
+                            Guest User
+                        {% endif %}
+                    </div>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'logout' %}" class="text-red-600 hover:text-red-800 text-sm">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    {% else %}
+                        <a href="{% url 'login' %}" class="text-blue-600 hover:text-blue-800 text-sm">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    {% endif %}
+                </div>
+                {% if user.is_authenticated %}
+                    <div class="text-xs text-gray-500 mt-1">
+                        Logged in as: {{ user.username }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <!-- Uploaded Files Section -->
+    <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+        <h3 class="font-semibold text-gray-700 mb-3">📁 Uploaded Files</h3>
+        <div id="uploadedFiles" class="space-y-2">
+            <p class="text-gray-500 text-sm">No files uploaded yet</p>
+        </div>
+    </div>
+    
+    <!-- Controls Panel -->
+    <div class="bg-white rounded-lg shadow-md p-4 mb-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- File Upload -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-gray-700">Upload File</h3>
+                <div id="fileDropZone" class="file-drop-zone p-4 text-center rounded-lg cursor-pointer border-2 border-dashed border-gray-300 hover:border-blue-400 transition-colors">
+                    <input type="file" id="fileInput" class="hidden" accept=".csv,.xlsx,.xls,.txt,.json,.pdf">
+                    <p class="text-gray-600">Click or drag files here</p>
+                    <p class="text-xs text-gray-500">CSV, Excel, Text, JSON, PDF</p>
+                </div>
+            </div>
+            
+            <!-- Folder Path -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-gray-700">Folder Path</h3>
+                <input type="text" id="folderPath" placeholder="Enter folder path" 
+                       class="w-full p-2 border rounded-lg">
+                <button id="processFolderBtn" class="w-full bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">
+                    Process Folder
+                </button>
+            </div>
+            
+            <!-- Database Connection -->
+            <div class="space-y-2">
+                <h3 class="font-semibold text-gray-700">Database</h3>
+                <button id="dbConnectBtn" class="w-full bg-green-500 text-white p-2 rounded-lg hover:bg-green-600">
+                    Connect to Database
+                </button>
+                <div id="dbStatus" class="text-xs text-gray-500">Not connected</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chat Messages -->
+    <div class="bg-white rounded-lg shadow-md">
+        <div id="chatMessages" class="chat-container overflow-y-auto p-4 space-y-4">
+            <!-- Messages will be inserted here -->
+        </div>
+        
+        <!-- Message Input -->
+        <div class="border-t p-4">
+            <div class="flex space-x-2">
+                <input type="text" id="messageInput" placeholder="Type your message or ask about your data..." 
+                       class="flex-1 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button id="sendBtn" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Database Connection Modal -->
+<div id="dbModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-lg w-96 max-w-full">
+        <h3 class="text-lg font-semibold mb-4">Connect to Database</h3>
+        <div class="space-y-3">
+            <select id="dbType" class="w-full p-2 border rounded-lg">
+                <option value="mssql">Microsoft SQL Server</option>
+                <option value="postgresql">PostgreSQL</option>
+                <option value="mysql">MySQL</option>
+            </select>
+            <input type="text" id="dbServer" placeholder="Server address" class="w-full p-2 border rounded-lg">
+            <input type="text" id="dbDatabase" placeholder="Database name" class="w-full p-2 border rounded-lg">
+            <input type="text" id="dbUsername" placeholder="Username" class="w-full p-2 border rounded-lg">
+            <input type="password" id="dbPassword" placeholder="Password" class="w-full p-2 border rounded-lg">
+            <input type="number" id="dbPort" placeholder="Port (optional)" class="w-full p-2 border rounded-lg">
+        </div>
+        <div class="flex space-x-2 mt-4">
+            <button id="dbConnectConfirm" class="flex-1 bg-green-500 text-white p-2 rounded-lg hover:bg-green-600">
+                Connect
+            </button>
+            <button id="dbConnectCancel" class="flex-1 bg-gray-500 text-white p-2 rounded-lg hover:bg-gray-600">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // WebSocket connection
+    const sessionId = '{{ session_id }}';
+    const websocketUrl = `ws://${window.location.host}/ws/chat/${sessionId}/`;
+    let chatSocket = null;
+    let isConnected = false;
+    
+    // Initialize WebSocket
+    function initWebSocket() {
+        chatSocket = new WebSocket(websocketUrl);
+        
+        chatSocket.onopen = function(e) {
+            isConnected = true;
+            document.getElementById('connectionStatus').textContent = 'Status: Connected';
+            document.getElementById('connectionStatus').className = 'text-sm text-green-600';
+        };
+        
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            handleIncomingMessage(data);
+        };
+        
+        chatSocket.onclose = function(e) {
+            isConnected = false;
+            document.getElementById('connectionStatus').textContent = 'Status: Disconnected';
+            document.getElementById('connectionStatus').className = 'text-sm text-red-600';
+            
+            // Attempt to reconnect after 3 seconds
+            setTimeout(initWebSocket, 3000);
+        };
+        
+        chatSocket.onerror = function(e) {
+            console.error('WebSocket error:', e);
+            showToast('Connection error. Retrying...', 'error');
+        };
+    }
+    
+    // Track processed message IDs to prevent duplicates
+    const processedMessageIds = new Set();
+    
+    // Handle incoming messages
+    function handleIncomingMessage(data) {
+        const messagesContainer = document.getElementById('chatMessages');
+        
+        if (data.type === 'error') {
+            showToast(data.message, 'error');
+            const typingIndicator = document.querySelector('.typing-indicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+            return;
+        }
+        
+        // Handle pong messages (keep-alive responses) - don't display them
+        if (data.type === 'pong') {
+            console.log('Received pong at:', data.timestamp);
+            return;
+        }
+        
+        // Check for duplicate messages
+        if (data.id && processedMessageIds.has(data.id)) {
+            console.log('Duplicate message detected, skipping:', data.id);
+            return;
+        }
+        
+        // Add message ID to processed set
+        if (data.id) {
+            processedMessageIds.add(data.id);
+        }
+
+        const messageDiv = createMessageElement(data);
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        
+        // Remove typing indicator if present
+        const typingIndicator = document.querySelector('.typing-indicator');
+        if (typingIndicator && data.type !== 'typing') {
+            typingIndicator.remove();
+        }
+    }
+    
+    // Create message element
+    function createMessageElement(data) {
+        const messageDiv = document.createElement('div');
+        const isUser = data.type === 'user';
+        const isSystem = data.type === 'system';
+        const isTyping = data.type === 'typing';
+        
+        if (isTyping) {
+            messageDiv.className = 'typing-indicator text-gray-500 italic text-sm';
+            messageDiv.textContent = data.message;
+            return messageDiv;
+        }
+        
+        messageDiv.className = `flex ${isUser ? 'justify-end' : 'justify-start'}`;
+        
+        const bubbleDiv = document.createElement('div');
+        bubbleDiv.className = `message-bubble p-3 rounded-lg shadow-md ${
+            isUser ? 'bg-blue-500 text-white' : 
+            isSystem ? 'bg-gray-200 text-gray-700 text-sm' : 
+            'bg-white text-gray-800'
+        }`;
+        
+        // Format message content
+        const content = formatMessageContent(data.message, data.type);
+        bubbleDiv.innerHTML = content;
+        
+        // Add timestamp
+        if (data.timestamp) {
+            const timeDiv = document.createElement('div');
+            timeDiv.className = `text-xs mt-1 ${isUser ? 'text-blue-200' : 'text-gray-500'}`;
+            timeDiv.textContent = formatTimestamp(data.timestamp);
+            bubbleDiv.appendChild(timeDiv);
+        }
+        
+        messageDiv.appendChild(bubbleDiv);
+        return messageDiv;
+    }
+    
+    // Format message content
+    function formatMessageContent(message, type) {
+        // Basic markdown-like formatting
+        if (typeof message !== 'string') {
+            message = String(message); // Ensure message is a string
+        }
+        message = message.replace(/```sql\n([\s\S]*?)\n```/g, '<pre class="bg-gray-800 text-green-400 p-2 rounded mt-2 text-sm overflow-x-auto"><code>$1</code></pre>');
+        message = message.replace(/```([\s\S]*?)```/g, '<pre class="bg-gray-100 p-2 rounded mt-2 text-sm overflow-x-auto"><code>$1</code></pre>');
+        message = message.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        message = message.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        message = message.replace(/\n/g, '<br>');
+        
+        return message;
+    }
+    
+    // Send message
+    function sendMessage() {
+        const messageInput = document.getElementById('messageInput');
+        const message = messageInput.value.trim();
+        
+        if (!message || !isConnected) return;
+        
+        chatSocket.send(JSON.stringify({
+            type: 'message',
+            message: message
+        }));
+        
+        messageInput.value = '';
+    }
+    
+    // File upload handling
+    function setupFileUpload() {
+        const fileInput = document.getElementById('fileInput');
+        const dropZone = document.getElementById('fileDropZone');
+        
+        if (!dropZone || !fileInput) {
+            console.error('File upload elements not found');
+            return;
+        }
+        
+        dropZone.addEventListener('click', () => fileInput.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            console.log('Files dropped:', files);
+            if (files.length > 0) {
+                uploadFile(files[0]);
+            }
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            console.log('File input changed:', e.target.files);
+            if (e.target.files.length > 0) {
+                uploadFile(e.target.files[0]);
+            }
+        });
+    }
+    
+    // Upload file
+    async function uploadFile(file) {
+        const formData = new FormData();
+        formData.append('file', file);
+        
+        // No question field anymore, so just upload the file
+        formData.append('question', '');
+        
+        try {
+            showToast('Uploading file...', 'info');
+            console.log('Uploading file:', file.name, 'Size:', file.size);
+            
+            const response = await fetch('/upload/', {
+                method: 'POST',
+                body: formData
+            });
+            
+            console.log('Upload response status:', response.status);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
+            const result = await response.json();
+            console.log('Upload result:', result);
+            
+            if (result.success) {
+                showToast(`File "${result.file_info.filename}" uploaded successfully!`, 'success');
+                
+                // Add file upload message to chat
+                const messagesContainer = document.getElementById('chatMessages');
+                const fileMessage = createMessageElement({
+                    type: 'system',
+                    message: `📁 File uploaded: ${result.file_info.filename} (${formatFileSize(result.file_info.file_size)})`,
+                    timestamp: new Date().toISOString()
+                });
+                messagesContainer.appendChild(fileMessage);
+                
+                // Add AI analysis to chat
+                const aiMessage = createMessageElement({
+                    type: 'ai',
+                    message: result.analysis,
+                    timestamp: new Date().toISOString()
+                });
+                messagesContainer.appendChild(aiMessage);
+                
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                // Refresh uploaded files list
+                loadUploadedFiles();
+            } else {
+                showToast(`Upload failed: ${result.error}`, 'error');
+            }
+        } catch (error) {
+            console.error('Upload error:', error);
+            showToast(`Upload failed: ${error.message}`, 'error');
+        }
+    }
+    
+    // Folder processing
+    async function processFolder() {
+        const folderPath = document.getElementById('folderPath').value.trim();
+        if (!folderPath) {
+            showToast('Please enter a folder path', 'error');
+            return;
+        }
+        
+        try {
+            showToast('Processing folder...', 'info');
+            
+            const response = await fetch('/folder/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({folder_path: folderPath})
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                showToast('Folder processed successfully!', 'success');
+                
+                // Add messages to chat
+                const messagesContainer = document.getElementById('chatMessages');
+                
+                const folderMessage = createMessageElement({
+                    type: 'system',
+                    message: `Analyzed folder: ${folderPath} (${result.folder_info.total_files} files)`,
+                    timestamp: new Date().toISOString()
+                });
+                messagesContainer.appendChild(folderMessage);
+                
+                const aiMessage = createMessageElement({
+                    type: 'ai',
+                    message: result.ai_response,
+                    timestamp: new Date().toISOString()
+                });
+                messagesContainer.appendChild(aiMessage);
+                
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                // Clear input
+                document.getElementById('folderPath').value = '';
+            } else {
+                showToast(`Folder processing failed: ${result.error}`, 'error');
+            }
+        } catch (error) {
+            showToast('Folder processing error occurred', 'error');
+            console.error('Folder processing error:', error);
+        }
+    }
+    
+    // Database connection
+    function showDatabaseModal() {
+        document.getElementById('dbModal').classList.remove('hidden');
+    }
+    
+    function hideDatabaseModal() {
+        document.getElementById('dbModal').classList.add('hidden');
+    }
+    
+    async function connectToDatabase() {
+        const connectionData = {
+            type: document.getElementById('dbType').value,
+            server: document.getElementById('dbServer').value,
+            database: document.getElementById('dbDatabase').value,
+            username: document.getElementById('dbUsername').value,
+            password: document.getElementById('dbPassword').value,
+            port: parseInt(document.getElementById('dbPort').value) || 1433
+        };
+        
+        if (!connectionData.server || !connectionData.database || !connectionData.username || !connectionData.password) {
+            showToast('Please fill in all required fields', 'error');
+            return;
+        }
+        
+        try {
+            showToast('Connecting to database...', 'info');
+            
+            const response = await fetch('/database/connect/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(connectionData)
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                showToast('Database connected successfully!', 'success');
+                document.getElementById('dbStatus').textContent = `Connected to ${connectionData.server}/${connectionData.database}`;
+                document.getElementById('dbStatus').className = 'text-xs text-green-600';
+                
+                // Add messages to chat
+                const messagesContainer = document.getElementById('chatMessages');
+                
+                const dbMessage = createMessageElement({
+                    type: 'system',
+                    message: `Connected to database: ${connectionData.server}/${connectionData.database}`,
+                    timestamp: new Date().toISOString()
+                });
+                messagesContainer.appendChild(dbMessage);
+                
+                const aiMessage = createMessageElement({
+                    type: 'ai',
+                    message: result.ai_response,
+                    timestamp: new Date().toISOString()
+                });
+                messagesContainer.appendChild(aiMessage);
+                
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                hideDatabaseModal();
+                
+                // Clear form
+                document.getElementById('dbServer').value = '';
+                document.getElementById('dbDatabase').value = '';
+                document.getElementById('dbUsername').value = '';
+                document.getElementById('dbPassword').value = '';
+                document.getElementById('dbPort').value = '';
+            } else {
+                showToast(`Database connection failed: ${result.error}`, 'error');
+            }
+        } catch (error) {
+            showToast('Database connection error occurred', 'error');
+            console.error('Database connection error:', error);
+        }
+    }
+    
+    // Load uploaded files
+    async function loadUploadedFiles() {
+        try {
+            const response = await fetch('/files/');
+            const result = await response.json();
+            
+            if (result.success) {
+                displayUploadedFiles(result.files);
+            }
+        } catch (error) {
+            console.error('Error loading uploaded files:', error);
+        }
+    }
+    
+    // Display uploaded files
+    function displayUploadedFiles(files) {
+        const container = document.getElementById('uploadedFiles');
+        
+        if (files.length === 0) {
+            container.innerHTML = '<p class="text-gray-500 text-sm">No files uploaded yet</p>';
+            return;
+        }
+        
+        container.innerHTML = '';
+        files.forEach(file => {
+            const fileDiv = document.createElement('div');
+            fileDiv.className = 'flex items-center justify-between p-3 bg-gray-50 rounded-lg';
+            fileDiv.innerHTML = `
+                <div class="flex items-center space-x-3">
+                    <div class="text-blue-500">
+                        <i class="fas fa-file-${getFileIcon(file.type)}"></i>
+                    </div>
+                    <div>
+                        <p class="font-medium text-gray-800">${file.name}</p>
+                        <p class="text-xs text-gray-500">${file.type.toUpperCase()} • ${formatFileSize(file.size)} • ${formatDate(file.uploaded_at)}</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="px-2 py-1 text-xs rounded-full ${file.processed ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">
+                        ${file.processed ? 'Processed' : 'Processing...'}
+                    </span>
+                    <button onclick="askAboutFile(${file.id}, '${file.name}')" class="text-blue-600 hover:text-blue-800 text-sm px-2 py-1 rounded hover:bg-blue-50">
+                        <i class="fas fa-question-circle"></i> Ask
+                    </button>
+                    <button onclick="deleteFile(${file.id}, '${file.name}')" class="text-red-600 hover:text-red-800 text-sm px-2 py-1 rounded hover:bg-red-50">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </div>
+            `;
+            container.appendChild(fileDiv);
+        });
+    }
+    
+    // Get file icon based on type
+    function getFileIcon(type) {
+        const icons = {
+            'csv': 'csv',
+            'xlsx': 'excel',
+            'xls': 'excel',
+            'txt': 'alt',
+            'json': 'code',
+            'pdf': 'pdf'
+        };
+        return icons[type] || 'alt';
+    }
+    
+    // Format file size
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+    
+    // Format date
+    function formatDate(dateString) {
+        return new Date(dateString).toLocaleDateString();
+    }
+    
+    // Ask about a specific file
+    function askAboutFile(fileId, fileName) {
+        const question = prompt(`What would you like to know about "${fileName}"?`);
+        if (question) {
+            const messageInput = document.getElementById('messageInput');
+            messageInput.value = `Question about ${fileName}: ${question}`;
+            messageInput.focus();
+        }
+    }
+    
+    // Delete a file
+    async function deleteFile(fileId, fileName) {
+        if (!confirm(`Are you sure you want to delete "${fileName}"? This action cannot be undone.`)) {
+            return;
+        }
+        
+        try {
+            const response = await fetch(`/files/${fileId}/`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken')
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                showToast(`File "${fileName}" deleted successfully`, 'success');
+                // Refresh the file list
+                loadUploadedFiles();
+            } else {
+                showToast(`Failed to delete file: ${result.error}`, 'error');
+            }
+        } catch (error) {
+            console.error('Error deleting file:', error);
+            showToast('Error deleting file. Please try again.', 'error');
+        }
+    }
+    
+    // Get CSRF token from cookies
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    
+    // Event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize WebSocket
+        initWebSocket();
+        
+        // Setup file upload
+        setupFileUpload();
+        
+        // Load uploaded files
+        loadUploadedFiles();
+        
+        // Message input handling
+        const messageInput = document.getElementById('messageInput');
+        const sendBtn = document.getElementById('sendBtn');
+        
+        messageInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+        
+        sendBtn.addEventListener('click', sendMessage);
+        
+        // Folder processing
+        document.getElementById('processFolderBtn').addEventListener('click', processFolder);
+        
+        // Database connection
+        document.getElementById('dbConnectBtn').addEventListener('click', showDatabaseModal);
+        document.getElementById('dbConnectConfirm').addEventListener('click', connectToDatabase);
+        document.getElementById('dbConnectCancel').addEventListener('click', hideDatabaseModal);
+        
+        // Close modal on outside click
+        document.getElementById('dbModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideDatabaseModal();
+            }
+        });
+    });
+    
+    // Keep connection alive
+    setInterval(() => {
+        if (isConnected && chatSocket.readyState === WebSocket.OPEN) {
+            chatSocket.send(JSON.stringify({type: 'ping'}));
+        }
+    }, 30000); // Ping every 30 seconds
+</script>
+{% endblock %}

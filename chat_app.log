@@ -1,0 +1,654 @@
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Request error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Error processing message: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Request error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+Request error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+Request error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)
+Error processing message: You cannot call this from an async context - use a thread or sync_to_async.
+Request error: 
+Request error: 
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Received response from Llama API. Status: 200
+Sending request to Llama API with model: llama3:latest
+Received response from Llama API. Status: 200
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Received response from Llama API. Status: 200
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Received response from Llama API. Status: 200
+Sending request to Llama API with model: llama3:latest
+Sending request to Llama API with model: llama3:latest
+Received response from Llama API. Status: 200
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Received response from Llama API. Status: 200
+Raw Llama API response: {"model":"llama3:latest","created_at":"2025-08-11T07:44:18.431914021Z","response":"Hello! It's great to meet you! I'm here to help with any data-related tasks or questions you may have. What brings you to my digital doorstep today? Do you have a file you'd like me to analyze or a specific problem you're trying to solve? Let's get started!","done":true,"done_reason":"stop","context":[128006,882,128007,271,2374,25,1472,527,264,11190,15592,18328,28175,304,828,6492,323,1052,8863,13,720,286,1472,649,...
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest
+Request error: 
+Sending request to Llama API with model: llama3:latest (attempt 1)
+Received response from Llama API. Status: 200
+Raw Llama API response: {"model":"llama3:latest","created_at":"2025-08-11T07:53:51.419791883Z","response":"It seems like there's been a connection issue, and I'm not receiving your messages correctly! Don't worry, let's start fresh.\n\nHello! I'm doing well, thanks for asking!\n\nAs for your question, it seems like you're trying to ask about something related to Pakistan. If that's the case, I'd be happy to help you with any questions or provide information on a specific topic. What would you like to know about Pakista...
+Sending request to Llama API with model: llama3:latest (attempt 1)
+Received response from Llama API. Status: 200
+Raw Llama API response: {"model":"llama3:latest","created_at":"2025-08-11T07:55:28.726648495Z","response":"Easy peasy!\n\nThe answer to 2+2 is... (drumroll please)... 4!\n\nI'll repeat it for good measure: the correct answer is indeed 4.\n\nNow, if you have any more math questions or need help with something else entirely, feel free to ask!","done":true,"done_reason":"stop","context":[128006,882,128007,271,2374,25,1472,527,264,11190,15592,18328,28175,304,828,6492,323,1052,8863,13,720,286,1472,649,1520,3932,449,512,286,...
+Sending request to Llama API with model: llama3:latest (attempt 1)
+Timeout error on attempt 1: 
+Sending request to Llama API with model: llama3:latest (attempt 2)
+Received response from Llama API. Status: 200
+Raw Llama API response: {"model":"llama3:latest","created_at":"2025-08-11T08:08:06.988569412Z","response":"Hello there!\n\nIt seems like you're saying \"hi\" a couple of times. Don't worry; I'm happy to chat with you! However, if you have a specific question or topic in mind, please feel free to share it, and I'll do my best to assist you.\n\nIf not, we can always engage in some friendly conversation. What's been on your mind lately?\n\nRemember, as a helpful AI assistant, I'm here to provide information, answer questi...
+Sending request to Llama API with model: llama3:latest (attempt 1)
+Received response from Llama API. Status: 200
+Raw Llama API response: {"model":"llama3:latest","created_at":"2025-08-13T08:48:32.795881506Z","response":"Hello! I'm here to help you with your data-related needs. What can I assist you with today? Would you like to upload a file for analysis, write a SQL query, or discuss some general questions about data? Let me know how I can be of service!","done":true,"done_reason":"stop","context":[128006,882,128007,271,2374,25,1472,527,264,11190,15592,18328,28175,304,828,6492,323,1052,8863,13,720,286,1472,649,1520,3932,449,512,...
+Error checking Olloma availability: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x74812a44b040>: Failed to establish a new connection: [Errno 111] Connection refused'))
+Sending request to Llama API with model: llama2:latest (attempt 1)
+Request error on attempt 1: All connection attempts failed
+Sending request to Llama API with model: llama2:latest (attempt 2)
+Request error on attempt 2: All connection attempts failed
+Sending request to Llama API with model: llama2:latest (attempt 3)
+Request error on attempt 3: All connection attempts failed
+Sending streaming request to Foundry Local with model: llama2:latest
+Error processing message: All connection attempts failed
+Sending streaming request to Foundry Local with model: llama2:latest
+Error processing message: All connection attempts failed
+Sending streaming request to Foundry Local with model: llama2:latest
+Error processing message: All connection attempts failed
+Sending streaming request to Foundry Local with model: llama2:latest
+Error processing message: All connection attempts failed
+Sending streaming request to Foundry Local with model: llama2:latest
+Error processing message: All connection attempts failed
+Sending streaming request to Foundry Local with model: llama2:latest
+Connection error: Unable to connect to AI service at http://localhost:8080/v1/chat/completions
+Sending streaming request to Foundry Local with model: llama2
+Foundry API error: 404 - b'{"error":{"message":"model \\"llama2\\" not found, try pulling it first","type":"api_error","param":null,"code":null}}\n'
+Sending streaming request to Foundry Local with model: llama2
+Foundry API error: 404 - b'{"error":{"message":"model \\"llama2\\" not found, try pulling it first","type":"api_error","param":null,"code":null}}\n'
+Sending streaming request to Foundry Local with model: llama2:7b
+Foundry API error: 500 - b'{"error":{"message":"model requires more system memory (8.4 GiB) than is available (8.4 GiB)","type":"api_error","param":null,"code":null}}\n'
+Sending streaming request to Foundry Local with model: llama3:latest
+Sending streaming request to Foundry Local with model: llama3:latest
+Sending streaming request to Foundry Local with model: llama3:latest
+Sending streaming request to Foundry Local with model: llama3:latest
+Timeout error: AI service request timed out
+Sending streaming request to Foundry Local with model: llama3:latest
+Timeout error: AI service request timed out
+Sending streaming request to Foundry Local with model: llama3:latest
+Timeout error: AI service request timed out
+Sending streaming request to AI service with model: gemini-pro
+AI service error: 401 - b'[{\n  "error": {\n    "code": 401,\n    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",\n    "status": "UNAUTHENTICATED"\n  }\n}\n]'
+Sending streaming request to AI service with model: gemini-pro
+AI service error: 401 - b'[{\n  "error": {\n    "code": 401,\n    "message": "Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",\n    "status": "UNAUTHENTICATED"\n  }\n}\n]'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 3 (char 2) | line: [{
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": "\""
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 105
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "flqcaI7WKvKThMIP4cPH0Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ,
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1) | line: {
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": "Noor\" is a popular song by Indian singer Hardy Sandhu.  It"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 105
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "flqcaI7WKvKThMIP4cPH0Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ,
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1) | line: {
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": "'s known for its catchy melody and romantic lyrics.  Do you have any"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 105
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "flqcaI7WKvKThMIP4cPH0Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ,
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1) | line: {
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": " specific questions about the song?  For example, are you interested in:\n\n* **The meaning of the lyrics?**\n* **The music video?"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 105
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "flqcaI7WKvKThMIP4cPH0Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ,
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1) | line: {
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": "**\n* **Its chart performance?**\n* **Its reception by critics or fans?**\n* **Comparisons to other songs by Hardy Sandhu?"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 105,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 105
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "flqcaI7WKvKThMIP4cPH0Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ,
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1) | line: {
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": "**\n\nLet me know what you'd like to know!\n"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       },
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:       "finishReason": "STOP"
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 94,
+Google AI streaming parse error: Extra data: line 1 column 27 (char 26) | line:     "candidatesTokenCount": 111,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 205,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 94
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ],
+Google AI streaming parse error: Extra data: line 1 column 30 (char 29) | line:     "candidatesTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 111
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "flqcaI7WKvKThMIP4cPH0Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ]
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 3 (char 2) | line: [{
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": "I"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 89,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 89,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 89
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "jFqcaN23IY7ahMIP5aTb8Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ,
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 2 (char 1) | line: {
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "candidates": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 6 (char 5) | line:     {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:       "content": {
+Google AI streaming parse error: Extra data: line 1 column 16 (char 15) | line:         "parts": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 12 (char 11) | line:           {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:             "text": " am a large language model, trained by Google.\n"
+Google AI streaming parse error: Expecting value: line 1 column 11 (char 10) | line:           }
+Google AI streaming parse error: Expecting value: line 1 column 9 (char 8) | line:         ],
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:         "role": "model"
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       },
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:       "finishReason": "STOP"
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     }
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   ],
+Google AI streaming parse error: Extra data: line 1 column 18 (char 17) | line:   "usageMetadata": {
+Google AI streaming parse error: Extra data: line 1 column 23 (char 22) | line:     "promptTokenCount": 78,
+Google AI streaming parse error: Extra data: line 1 column 27 (char 26) | line:     "candidatesTokenCount": 12,
+Google AI streaming parse error: Extra data: line 1 column 22 (char 21) | line:     "totalTokenCount": 90,
+Google AI streaming parse error: Extra data: line 1 column 26 (char 25) | line:     "promptTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 78
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ],
+Google AI streaming parse error: Extra data: line 1 column 30 (char 29) | line:     "candidatesTokensDetails": [
+Google AI streaming parse error: Expecting property name enclosed in double quotes: line 1 column 8 (char 7) | line:       {
+Google AI streaming parse error: Extra data: line 1 column 19 (char 18) | line:         "modality": "TEXT",
+Google AI streaming parse error: Extra data: line 1 column 21 (char 20) | line:         "tokenCount": 12
+Google AI streaming parse error: Expecting value: line 1 column 7 (char 6) | line:       }
+Google AI streaming parse error: Expecting value: line 1 column 5 (char 4) | line:     ]
+Google AI streaming parse error: Expecting value: line 1 column 3 (char 2) | line:   },
+Google AI streaming parse error: Extra data: line 1 column 17 (char 16) | line:   "modelVersion": "gemini-1.5-flash",
+Google AI streaming parse error: Extra data: line 1 column 15 (char 14) | line:   "responseId": "jFqcaN23IY7ahMIP5aTb8Ak"
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: }
+Google AI streaming parse error: Expecting value: line 1 column 1 (char 0) | line: ]
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Downloads/Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/test-session-123_20250813_045734_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/caa74be1-da2e-4e35-b6e6-831cc32a237b_20250813_050618_test.csv
+CSV loaded: 2 rows, 2 columns
+Creating basic analysis...
+Analysis created: {'rows': 2, 'columns': 2, 'column_names': ['test', 'data'], 'dtypes': {'test': 'int64', 'data': 'int64'}, 'missing_values': {'test': 0, 'data': 0}, 'memory_usage': 160}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/caa74be1-da2e-4e35-b6e6-831cc32a237b_20250813_050618_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_050639_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_050835_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/3fa57ae2-a3a2-4c88-872b-e36628888bc5_20250813_051453_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/c7de38c5-75aa-4ed5-8a27-bf8907544999_20250813_052048_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/2a0a6375-ac61-4bc6-b982-766b9d7aa8ee_20250813_052656_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053249_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/24eb940a-42f3-466f-93aa-78cb5f0c5ce2_20250813_053450_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053816_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 2 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053816_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 2 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053816_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 2 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053816_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 2 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053816_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 2 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053816_Skincare_DB_Schema_Guide (1).csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053249_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053249_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053249_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/bb0d88fc-8e09-4a8a-9d19-f46bca6b2408_20250813_053249_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Sending streaming request to AI service with model: gemini-1.5-flash
+Google AI service error: 503 - {
+  "error": {
+    "code": 503,
+    "message": "The model is overloaded. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
+Sending streaming request to AI service with model: gemini-1.5-flash

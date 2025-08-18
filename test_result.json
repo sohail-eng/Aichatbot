@@ -1,0 +1,465 @@
+{
+  "success": true,
+  "file_type": "csv",
+  "content": "                           Field                                Description                                   How_to_get\n0                     product_id                          Unique identifier               Generate UUID during ingestion\n1                     brand_name                                 Brand name              Scrape INCIDecoder/retailer PDP\n2                   product_name                          Full product name              Scrape INCIDecoder/retailer PDP\n3                    description                  Short product description                   Scrape PDP; clean with LLM\n4                  category_step         Routine step (cleanser/serum/etc.)      Keyword map or LLM on title/description\n5                   is_face_only                    Face-only vs multi-area                     PDP description keywords\n6              primary_image_url                      Primary product image                         Scrape PDP image/CDN\n7                product_pdp_url                    Product detail page URL                                 Scrape/crawl\n8                         status           Active/discontinued/reformulated            INCIDecoder status; brand updates\n9                      inci_full                            Raw INCI string                                  INCIDecoder\n10                   inci_parsed              Array of ingredients in order                         Parse INCI; tokenise\n11                  lead_actives                                Key actives               LLM/regex on INCI + PDP claims\n12         active_strength_known                     Actives % if published            Brand/PDP; leave blank if unknown\n13             is_fragrance_free                        Fragrance-free flag                 Detect parfum/EU26 allergens\n14       contains_essential_oils                     Essential oils present                      Detect EO names in INCI\n15        contains_alcohol_denat                      Alcohol denat present                           Search INCI tokens\n16         fungal_acne_safe_flag                  Malassezia-safe heuristic             Deny-list of esters/polysorbates\n17        comedogenic_risk_score                    0\u20133 comedogenicity risk  Heuristic rules by top-10 INCI oils/butters\n18         irritation_risk_score                        0\u20133 irritation risk          Fragrance/EO/alcohol/strong actives\n19           pregnancy_safe_flag                          Safe in pregnancy        Deny-list: retinoids, HQ, SA>2%, etc.\n20               skin_type_flags       Oily/dry/combo/sensitive suitability                Rule-based from actives + PDP\n21             concern_fit_flags  Acne/PIH/redness/barrier/texture/anti-age                   Actives-to-concern mapping\n22               vehicle_texture             Gel/cream/lotion/oil/balm/etc.                         PDP + INCI heuristic\n23                        finish               Matte/dewy/natural/occlusive                        LLM/reviews/PDP hints\n24                         color                 Tint or colour if relevant                               PDP or reviews\n25                     spf_value                                 SPF number                                PDP/packaging\n26                      spf_type                    Mineral/chemical/hybrid                      From UV filters in INCI\n27                 uva_ppd_or_pa                                  PA or PPD                   PDP/packaging if available\n28                     pa_rating                          PA+/PA+++/unknown                                PDP/packaging\n29           broad_spectrum_flag                       Broad spectrum claim                                PDP/packaging\n30        is_water_resistant_spf                     Water resistance claim                                PDP/packaging\n31       uvisafe_claims_verified                 Verification for UV claims                 Manual/reliable sources only\n32            instructions_basic                      Basic usage direction                               PDP; summarise\n33                  routine_time                                 AM/PM/both              Infer from actives (retinol=PM)\n34              step_order_index                           Index in routine                              Map by category\n35                  country_code              Retailer country for this row                        From retailer context\n36                 retailer_name                             Retailer label                                  Scrape site\n37                  retailer_url                               Where to buy                              Scrape PDP link\n38                      currency                              Currency code                                 Retailer/PDP\n39                  price_retail                               Retail price                                   Scrape PDP\n40                       size_ml                               Size in ml/g                PDP; parse variants if needed\n41                price_per_10ml                    Computed price per 10ml                      Compute (price/size*10)\n42           availability_status                             In stock / OOS                       PDP scrape if feasible\n43              last_checked_utc                     Timestamp last checked                            Populate on crawl\n44             affiliate_program                   amazon/skimlinks/rs/none                       Your affiliate mapping\n45             affiliate_link_id                    Affiliate link token/id                         Your network mapping\n46                   rating_mean                             Avg rating 0\u20135                  Retailer reviews API/scrape\n47                      rating_n                               Review count                  Retailer reviews API/scrape\n48      review_sentiment_overall                           \u22121..+1 sentiment                         LLM/NLP over reviews\n49   review_sentiment_by_persona             JSON by skin type/tone/concern               NLP grouping if tags available\n50      irritation_mentions_rate              % reviews flagging irritation                               NLP on reviews\n51         texture_mentions_json                 JSON freq of texture terms                               NLP on reviews\n52                   topics_json            Key topics/complaints/positives                               NLP on reviews\n53                packaging_type                Tube/jar/pump/dropper/stick                        PDP image/description\n54                    pao_months                       Period After Opening                                PDP/packaging\n55                   launch_date                            Original launch                               Brand comms/PR\n56            reformulation_date                          Reformulated date                            Brand/INCIDecoder\n57                  cruelty_free                          Cruelty-free flag                    Brand policy / aggregator\n58                         vegan                                 Vegan flag                     Brand or retailer filter\n59              regulatory_notes                          EU allergens etc.                          PDP/regulatory docs\n60                      ph_range                           Product pH range                     Brand claims / lab tests\n61             occlusivity_index                   0\u20133 occlusive heuristics       Heuristic from INCI (waxes/petrolatum)\n62               viscosity_class                     Low/med/high viscosity                  Heuristic from vehicle/INCI\n63             colorants_present                         Colorants included                           CI numbers in INCI\n64           preservatives_class      Parabens/phenoxyethanol/organic acids                                   INCI parse\n65     photo_sensitizers_present                Citrus oils/AHA combos etc.                                 INCI + rules\n66  ingredient_percent_estimates           Model-estimated % of key actives                   LLM/model if not disclosed\n67       malassezia_trigger_list          List of risky esters/polysorbates                            Derived from INCI\n68                 peptide_types                Signal/carrier/neuro/copper                             INCI parse + LLM\n69             antioxidant_stack      VitC type, ferulic, EGCG, resveratrol                                   INCI parse\n70           retinoid_generation              Retinol/retinal/granactive/Rx                             INCI parse + PDP\n71                   AHA_profile      Glycolic/lactic/mandelic, free acid %                         PDP/INCI + estimates\n72    compatibility_ruleset_hash                    Hash of product\u2019s rules                    Compute from INCI/vehicle\n73       clinical_evidence_score                      0\u20131 evidence strength             Map from internal evidence table\n74          country_availability                List of ISO codes available                 Aggregate retailer countries\n75              effect_embedding                 Vector for effect matching                 Compute with embedding model\n76                inci_embedding                      Vector of INCI tokens                 Compute with embedding model",
+  "data": [
+    {
+      "Field": "product_id",
+      "Description": "Unique identifier",
+      "How_to_get": "Generate UUID during ingestion"
+    },
+    {
+      "Field": "brand_name",
+      "Description": "Brand name",
+      "How_to_get": "Scrape INCIDecoder/retailer PDP"
+    },
+    {
+      "Field": "product_name",
+      "Description": "Full product name",
+      "How_to_get": "Scrape INCIDecoder/retailer PDP"
+    },
+    {
+      "Field": "description",
+      "Description": "Short product description",
+      "How_to_get": "Scrape PDP; clean with LLM"
+    },
+    {
+      "Field": "category_step",
+      "Description": "Routine step (cleanser/serum/etc.)",
+      "How_to_get": "Keyword map or LLM on title/description"
+    },
+    {
+      "Field": "is_face_only",
+      "Description": "Face-only vs multi-area",
+      "How_to_get": "PDP description keywords"
+    },
+    {
+      "Field": "primary_image_url",
+      "Description": "Primary product image",
+      "How_to_get": "Scrape PDP image/CDN"
+    },
+    {
+      "Field": "product_pdp_url",
+      "Description": "Product detail page URL",
+      "How_to_get": "Scrape/crawl"
+    },
+    {
+      "Field": "status",
+      "Description": "Active/discontinued/reformulated",
+      "How_to_get": "INCIDecoder status; brand updates"
+    },
+    {
+      "Field": "inci_full",
+      "Description": "Raw INCI string",
+      "How_to_get": "INCIDecoder"
+    }
+  ],
+  "analysis": {
+    "rows": 77,
+    "columns": 3,
+    "column_names": [
+      "Field",
+      "Description",
+      "How_to_get"
+    ],
+    "dtypes": {
+      "Field": "object",
+      "Description": "object",
+      "How_to_get": "object"
+    },
+    "missing_values": {
+      "Field": 0,
+      "Description": 0,
+      "How_to_get": 0
+    },
+    "memory_usage": 18198
+  },
+  "numeric_summary": {},
+  "full_data": [
+    {
+      "Field": "product_id",
+      "Description": "Unique identifier",
+      "How_to_get": "Generate UUID during ingestion"
+    },
+    {
+      "Field": "brand_name",
+      "Description": "Brand name",
+      "How_to_get": "Scrape INCIDecoder/retailer PDP"
+    },
+    {
+      "Field": "product_name",
+      "Description": "Full product name",
+      "How_to_get": "Scrape INCIDecoder/retailer PDP"
+    },
+    {
+      "Field": "description",
+      "Description": "Short product description",
+      "How_to_get": "Scrape PDP; clean with LLM"
+    },
+    {
+      "Field": "category_step",
+      "Description": "Routine step (cleanser/serum/etc.)",
+      "How_to_get": "Keyword map or LLM on title/description"
+    },
+    {
+      "Field": "is_face_only",
+      "Description": "Face-only vs multi-area",
+      "How_to_get": "PDP description keywords"
+    },
+    {
+      "Field": "primary_image_url",
+      "Description": "Primary product image",
+      "How_to_get": "Scrape PDP image/CDN"
+    },
+    {
+      "Field": "product_pdp_url",
+      "Description": "Product detail page URL",
+      "How_to_get": "Scrape/crawl"
+    },
+    {
+      "Field": "status",
+      "Description": "Active/discontinued/reformulated",
+      "How_to_get": "INCIDecoder status; brand updates"
+    },
+    {
+      "Field": "inci_full",
+      "Description": "Raw INCI string",
+      "How_to_get": "INCIDecoder"
+    },
+    {
+      "Field": "inci_parsed",
+      "Description": "Array of ingredients in order",
+      "How_to_get": "Parse INCI; tokenise"
+    },
+    {
+      "Field": "lead_actives",
+      "Description": "Key actives",
+      "How_to_get": "LLM/regex on INCI + PDP claims"
+    },
+    {
+      "Field": "active_strength_known",
+      "Description": "Actives % if published",
+      "How_to_get": "Brand/PDP; leave blank if unknown"
+    },
+    {
+      "Field": "is_fragrance_free",
+      "Description": "Fragrance-free flag",
+      "How_to_get": "Detect parfum/EU26 allergens"
+    },
+    {
+      "Field": "contains_essential_oils",
+      "Description": "Essential oils present",
+      "How_to_get": "Detect EO names in INCI"
+    },
+    {
+      "Field": "contains_alcohol_denat",
+      "Description": "Alcohol denat present",
+      "How_to_get": "Search INCI tokens"
+    },
+    {
+      "Field": "fungal_acne_safe_flag",
+      "Description": "Malassezia-safe heuristic",
+      "How_to_get": "Deny-list of esters/polysorbates"
+    },
+    {
+      "Field": "comedogenic_risk_score",
+      "Description": "0\u20133 comedogenicity risk",
+      "How_to_get": "Heuristic rules by top-10 INCI oils/butters"
+    },
+    {
+      "Field": "irritation_risk_score",
+      "Description": "0\u20133 irritation risk",
+      "How_to_get": "Fragrance/EO/alcohol/strong actives"
+    },
+    {
+      "Field": "pregnancy_safe_flag",
+      "Description": "Safe in pregnancy",
+      "How_to_get": "Deny-list: retinoids, HQ, SA>2%, etc."
+    },
+    {
+      "Field": "skin_type_flags",
+      "Description": "Oily/dry/combo/sensitive suitability",
+      "How_to_get": "Rule-based from actives + PDP"
+    },
+    {
+      "Field": "concern_fit_flags",
+      "Description": "Acne/PIH/redness/barrier/texture/anti-age",
+      "How_to_get": "Actives-to-concern mapping"
+    },
+    {
+      "Field": "vehicle_texture",
+      "Description": "Gel/cream/lotion/oil/balm/etc.",
+      "How_to_get": "PDP + INCI heuristic"
+    },
+    {
+      "Field": "finish",
+      "Description": "Matte/dewy/natural/occlusive",
+      "How_to_get": "LLM/reviews/PDP hints"
+    },
+    {
+      "Field": "color",
+      "Description": "Tint or colour if relevant",
+      "How_to_get": "PDP or reviews"
+    },
+    {
+      "Field": "spf_value",
+      "Description": "SPF number",
+      "How_to_get": "PDP/packaging"
+    },
+    {
+      "Field": "spf_type",
+      "Description": "Mineral/chemical/hybrid",
+      "How_to_get": "From UV filters in INCI"
+    },
+    {
+      "Field": "uva_ppd_or_pa",
+      "Description": "PA or PPD",
+      "How_to_get": "PDP/packaging if available"
+    },
+    {
+      "Field": "pa_rating",
+      "Description": "PA+/PA+++/unknown",
+      "How_to_get": "PDP/packaging"
+    },
+    {
+      "Field": "broad_spectrum_flag",
+      "Description": "Broad spectrum claim",
+      "How_to_get": "PDP/packaging"
+    },
+    {
+      "Field": "is_water_resistant_spf",
+      "Description": "Water resistance claim",
+      "How_to_get": "PDP/packaging"
+    },
+    {
+      "Field": "uvisafe_claims_verified",
+      "Description": "Verification for UV claims",
+      "How_to_get": "Manual/reliable sources only"
+    },
+    {
+      "Field": "instructions_basic",
+      "Description": "Basic usage direction",
+      "How_to_get": "PDP; summarise"
+    },
+    {
+      "Field": "routine_time",
+      "Description": "AM/PM/both",
+      "How_to_get": "Infer from actives (retinol=PM)"
+    },
+    {
+      "Field": "step_order_index",
+      "Description": "Index in routine",
+      "How_to_get": "Map by category"
+    },
+    {
+      "Field": "country_code",
+      "Description": "Retailer country for this row",
+      "How_to_get": "From retailer context"
+    },
+    {
+      "Field": "retailer_name",
+      "Description": "Retailer label",
+      "How_to_get": "Scrape site"
+    },
+    {
+      "Field": "retailer_url",
+      "Description": "Where to buy",
+      "How_to_get": "Scrape PDP link"
+    },
+    {
+      "Field": "currency",
+      "Description": "Currency code",
+      "How_to_get": "Retailer/PDP"
+    },
+    {
+      "Field": "price_retail",
+      "Description": "Retail price",
+      "How_to_get": "Scrape PDP"
+    },
+    {
+      "Field": "size_ml",
+      "Description": "Size in ml/g",
+      "How_to_get": "PDP; parse variants if needed"
+    },
+    {
+      "Field": "price_per_10ml",
+      "Description": "Computed price per 10ml",
+      "How_to_get": "Compute (price/size*10)"
+    },
+    {
+      "Field": "availability_status",
+      "Description": "In stock / OOS",
+      "How_to_get": "PDP scrape if feasible"
+    },
+    {
+      "Field": "last_checked_utc",
+      "Description": "Timestamp last checked",
+      "How_to_get": "Populate on crawl"
+    },
+    {
+      "Field": "affiliate_program",
+      "Description": "amazon/skimlinks/rs/none",
+      "How_to_get": "Your affiliate mapping"
+    },
+    {
+      "Field": "affiliate_link_id",
+      "Description": "Affiliate link token/id",
+      "How_to_get": "Your network mapping"
+    },
+    {
+      "Field": "rating_mean",
+      "Description": "Avg rating 0\u20135",
+      "How_to_get": "Retailer reviews API/scrape"
+    },
+    {
+      "Field": "rating_n",
+      "Description": "Review count",
+      "How_to_get": "Retailer reviews API/scrape"
+    },
+    {
+      "Field": "review_sentiment_overall",
+      "Description": "\u22121..+1 sentiment",
+      "How_to_get": "LLM/NLP over reviews"
+    },
+    {
+      "Field": "review_sentiment_by_persona",
+      "Description": "JSON by skin type/tone/concern",
+      "How_to_get": "NLP grouping if tags available"
+    },
+    {
+      "Field": "irritation_mentions_rate",
+      "Description": "% reviews flagging irritation",
+      "How_to_get": "NLP on reviews"
+    },
+    {
+      "Field": "texture_mentions_json",
+      "Description": "JSON freq of texture terms",
+      "How_to_get": "NLP on reviews"
+    },
+    {
+      "Field": "topics_json",
+      "Description": "Key topics/complaints/positives",
+      "How_to_get": "NLP on reviews"
+    },
+    {
+      "Field": "packaging_type",
+      "Description": "Tube/jar/pump/dropper/stick",
+      "How_to_get": "PDP image/description"
+    },
+    {
+      "Field": "pao_months",
+      "Description": "Period After Opening",
+      "How_to_get": "PDP/packaging"
+    },
+    {
+      "Field": "launch_date",
+      "Description": "Original launch",
+      "How_to_get": "Brand comms/PR"
+    },
+    {
+      "Field": "reformulation_date",
+      "Description": "Reformulated date",
+      "How_to_get": "Brand/INCIDecoder"
+    },
+    {
+      "Field": "cruelty_free",
+      "Description": "Cruelty-free flag",
+      "How_to_get": "Brand policy / aggregator"
+    },
+    {
+      "Field": "vegan",
+      "Description": "Vegan flag",
+      "How_to_get": "Brand or retailer filter"
+    },
+    {
+      "Field": "regulatory_notes",
+      "Description": "EU allergens etc.",
+      "How_to_get": "PDP/regulatory docs"
+    },
+    {
+      "Field": "ph_range",
+      "Description": "Product pH range",
+      "How_to_get": "Brand claims / lab tests"
+    },
+    {
+      "Field": "occlusivity_index",
+      "Description": "0\u20133 occlusive heuristics",
+      "How_to_get": "Heuristic from INCI (waxes/petrolatum)"
+    },
+    {
+      "Field": "viscosity_class",
+      "Description": "Low/med/high viscosity",
+      "How_to_get": "Heuristic from vehicle/INCI"
+    },
+    {
+      "Field": "colorants_present",
+      "Description": "Colorants included",
+      "How_to_get": "CI numbers in INCI"
+    },
+    {
+      "Field": "preservatives_class",
+      "Description": "Parabens/phenoxyethanol/organic acids",
+      "How_to_get": "INCI parse"
+    },
+    {
+      "Field": "photo_sensitizers_present",
+      "Description": "Citrus oils/AHA combos etc.",
+      "How_to_get": "INCI + rules"
+    },
+    {
+      "Field": "ingredient_percent_estimates",
+      "Description": "Model-estimated % of key actives",
+      "How_to_get": "LLM/model if not disclosed"
+    },
+    {
+      "Field": "malassezia_trigger_list",
+      "Description": "List of risky esters/polysorbates",
+      "How_to_get": "Derived from INCI"
+    },
+    {
+      "Field": "peptide_types",
+      "Description": "Signal/carrier/neuro/copper",
+      "How_to_get": "INCI parse + LLM"
+    },
+    {
+      "Field": "antioxidant_stack",
+      "Description": "VitC type, ferulic, EGCG, resveratrol",
+      "How_to_get": "INCI parse"
+    },
+    {
+      "Field": "retinoid_generation",
+      "Description": "Retinol/retinal/granactive/Rx",
+      "How_to_get": "INCI parse + PDP"
+    },
+    {
+      "Field": "AHA_profile",
+      "Description": "Glycolic/lactic/mandelic, free acid %",
+      "How_to_get": "PDP/INCI + estimates"
+    },
+    {
+      "Field": "compatibility_ruleset_hash",
+      "Description": "Hash of product\u2019s rules",
+      "How_to_get": "Compute from INCI/vehicle"
+    },
+    {
+      "Field": "clinical_evidence_score",
+      "Description": "0\u20131 evidence strength",
+      "How_to_get": "Map from internal evidence table"
+    },
+    {
+      "Field": "country_availability",
+      "Description": "List of ISO codes available",
+      "How_to_get": "Aggregate retailer countries"
+    },
+    {
+      "Field": "effect_embedding",
+      "Description": "Vector for effect matching",
+      "How_to_get": "Compute with embedding model"
+    },
+    {
+      "Field": "inci_embedding",
+      "Description": "Vector of INCI tokens",
+      "How_to_get": "Compute with embedding model"
+    }
+  ]
+}
