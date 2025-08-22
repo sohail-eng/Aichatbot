@@ -398,3 +398,92 @@ class ExecuteQueryView(View):
             
         except Exception as e:
             return JsonResponse({'success': False, 'error': str(e)})
+
+@method_decorator(csrf_exempt, name='dispatch')
+class ProcessAttachmentsView(View):
+    def post(self, request):
+        """Process attached files for chat context"""
+        try:
+            session_id = request.session.get('chat_session_id')
+            if not session_id:
+                return JsonResponse({'success': False, 'error': 'No session found'})
+            
+            if 'files' not in request.FILES:
+                return JsonResponse({'success': False, 'error': 'No files provided'})
+            
+            uploaded_files = request.FILES.getlist('files')
+            results = []
+            
+            for uploaded_file in uploaded_files:
+                # Validate file
+                if uploaded_file.size == 0:
+                    results.append({'success': False, 'filename': uploaded_file.name, 'error': 'File is empty'})
+                    continue
+                
+                if uploaded_file.size > 50 * 1024 * 1024:  # 50MB limit
+                    results.append({'success': False, 'filename': uploaded_file.name, 'error': 'File too large (max 50MB)'})
+                    continue
+                
+                # Check file extension
+                import os
+                allowed_extensions = ['.csv', '.xlsx', '.xls', '.txt', '.json', '.pdf']
+                file_extension = os.path.splitext(uploaded_file.name)[1].lower()
+                if file_extension not in allowed_extensions:
+                    results.append({'success': False, 'filename': uploaded_file.name, 'error': f'File type not supported. Allowed: {", ".join(allowed_extensions)}'})
+                    continue
+                
+                # Process file
+                result = self._process_attachment_sync(session_id, uploaded_file)
+                results.append(result)
+            
+            return JsonResponse({
+                'success': True,
+                'results': results
+            })
+            
+        except Exception as e:
+            logger.error(f"Error processing attachments: {e}")
+            return JsonResponse({'success': False, 'error': str(e)})
+    
+    def _process_attachment_sync(self, session_id: str, uploaded_file):
+        """Synchronous attachment processing"""
+        try:
+            # Save file
+            from ai_services.file_service import FileService
+            file_service = FileService()
+            file_info = file_service.save_uploaded_file(uploaded_file, session_id)
+            
+            if not file_info['success']:
+                return {'success': False, 'filename': uploaded_file.name, 'error': file_info['error']}
+            
+            # Process file
+            processed_file = file_service.process_file(file_info['full_path'], file_info['file_type'])
+            
+            if not processed_file['success']:
+                return {'success': False, 'filename': uploaded_file.name, 'error': processed_file['error']}
+            
+            # Save to database
+            from chat.models import ChatSession, UploadedFile
+            session, created = ChatSession.objects.get_or_create(session_id=session_id)
+            
+            uploaded_file_record = UploadedFile.objects.create(
+                session=session,
+                file_name=file_info['filename'],
+                file_type=file_info['file_type'],
+                file_path=file_info['file_path'],
+                file_size=file_info['file_size'],
+                processed=True
+            )
+            
+            return {
+                'success': True,
+                'filename': uploaded_file.name,
+                'file_id': uploaded_file_record.id,
+                'file_type': file_info['file_type'],
+                'file_size': file_info['file_size'],
+                'processed_data': processed_file.get('data', [])
+            }
+            
+        except Exception as e:
+            logger.error(f"Error in attachment processing: {e}")
+            return {'success': False, 'filename': uploaded_file.name, 'error': str(e)}
