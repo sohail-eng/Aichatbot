@@ -652,3 +652,551 @@ Found existing session: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
 Session found: bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
 Found 1 files for session bb0d88fc-8e09-4a8a-9d19-f46bca6b2408
 Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015628_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Creating basic analysis...
+Analysis created: {'rows': 3817, 'columns': 13, 'column_names': ['host', 'neighboraddress', 'timestamp', 'vrf', 'lastchange', 'peer_as', 'sessionstate', 'prefixesreceived', 'prefixaccepted', 'prefixsent', 'peergroups', 'neighborinfo', 'DeviceType'], 'dtypes': {'host': 'object', 'neighboraddress': 'object', 'timestamp': 'object', 'vrf': 'object', 'lastchange': 'object', 'peer_as': 'float64', 'sessionstate': 'object', 'prefixesreceived': 'float64', 'prefixaccepted': 'float64', 'prefixsent': 'float64', 'peergroups': 'object', 'neighborinfo': 'object', 'DeviceType': 'object'}, 'missing_values': {'host': 0, 'neighboraddress': 0, 'timestamp': 0, 'vrf': 0, 'lastchange': 0, 'peer_as': 3817, 'sessionstate': 6, 'prefixesreceived': 358, 'prefixaccepted': 358, 'prefixsent': 560, 'peergroups': 329, 'neighborinfo': 405, 'DeviceType': 0}, 'memory_usage': 2452574}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 2 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 2 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_020441_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_020527_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_020527_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/89fb852a-586a-4382-ada7-81425cc03008_20250821_034824_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/3a8d4b0b-cb7d-4eda-92d2-2c36c26109e4_20250821_034840_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/3a8d4b0b-cb7d-4eda-92d2-2c36c26109e4_20250821_034840_Skincare_DB_Schema_Guide_oIJHmfS.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/3a8d4b0b-cb7d-4eda-92d2-2c36c26109e4_20250821_034841_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 4 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/34add346-04fa-4e99-906b-a07d0a1a83c7_20250821_041748_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/7bdf0e55-0fd1-497e-ab3e-d8f9c13d4cba_20250821_041808_Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Creating basic analysis...
+Analysis created: {'rows': 77, 'columns': 3, 'column_names': ['Field', 'Description', 'How_to_get'], 'dtypes': {'Field': 'object', 'Description': 'object', 'How_to_get': 'object'}, 'missing_values': {'Field': 0, 'Description': 0, 'How_to_get': 0}, 'memory_usage': 18198}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+CSV loaded: 77 rows, 3 columns
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'which devices has bgp state down and what’s their neighbor ip' with 1 attached files
+Extracted keywords: ['neighbor', 'state', 'devices', 'down', 'which', 'bgp']
+Analyzing file: BGPData.csv (ID: 17)
+Error getting file path for ID 17: You cannot call this from an async context - use a thread or sync_to_async.
+Could not find file path for ID: 17
+Analysis completed. Found data in 0 instances
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+CSV loaded: 77 rows, 3 columns
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'which devices has bgp state down and what’s their neighbor ip' with 1 attached files
+Extracted keywords: ['down', 'devices', 'neighbor', 'bgp', 'which', 'state']
+Analyzing file: BGPData.csv (ID: 17)
+Error getting file path for {'id': 17, 'name': 'BGPData.csv', 'type': 'csv'}: You cannot call this from an async context - use a thread or sync_to_async.
+Could not find file path for file: {'id': 17, 'name': 'BGPData.csv', 'type': 'csv'}
+Analysis completed. Found data in 0 instances
+Sending streaming request to AI service with model: gemini-1.5-flash
+CSV loaded: 3817 rows, 13 columns
+Detected BGP data, performing specialized analysis
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 attached files
+Extracted keywords: ['state', 'bgp', 'neighbor', 'devices', 'which', 'down']
+Analyzing file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (ID: test_id)
+No file found with name 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv' in database
+Found file by name search: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Analyzing file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (Type: csv)
+CSV loaded: 3817 rows, 13 columns
+Detected BGP data, performing specialized analysis
+Analysis completed. Found data in 6 instances
+CSV loaded: 3817 rows, 13 columns
+Detected BGP data, performing specialized analysis
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 attached files
+Extracted keywords: ['devices', 'neighbor', 'down', 'which', 'bgp', 'state']
+Analyzing file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (ID: test_id)
+No file found with name 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv' in database
+Found file by name search: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Analyzing file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (Type: csv)
+CSV loaded: 3817 rows, 13 columns
+Detected BGP data, performing specialized analysis
+Analysis completed. Found data in 6 instances
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'which devices has bgp state down and what’s their neighbor ip' with 1 attached files
+Extracted keywords: ['down', 'devices', 'neighbor', 'bgp', 'which', 'state']
+Analyzing file: BGPData.csv (ID: 17)
+Error getting file path for {'id': 17, 'name': 'BGPData.csv', 'type': 'csv'}: You cannot call this from an async context - use a thread or sync_to_async.
+Could not find file path for file: {'id': 17, 'name': 'BGPData.csv', 'type': 'csv'}
+Analysis completed. Found data in 0 instances
+Sending streaming request to AI service with model: gemini-1.5-flash
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 attached files
+Extracted keywords: ['down', 'neighbor', 'state', 'which', 'devices', 'bgp']
+Analyzing file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (ID: test_id)
+Error searching for file by name 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv': You cannot call this from an async context - use a thread or sync_to_async.
+Found file by name search: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Analyzing file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (Type: csv)
+CSV loaded: 3817 rows, 13 columns
+Detected BGP data, performing specialized analysis
+Analysis completed. Found data in 6 instances
+Processing question with 1 attached files
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 attached files
+Extracted keywords: ['down', 'neighbor', 'state', 'which', 'devices', 'bgp']
+Analyzing file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (ID: test_id)
+Error searching for file by name 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv': You cannot call this from an async context - use a thread or sync_to_async.
+Found file by name search: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Analyzing file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (Type: csv)
+CSV loaded: 3817 rows, 13 columns
+Detected BGP data, performing specialized analysis
+Analysis completed. Found data in 6 instances
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'which devices has bgp state down and what’s their neighbor ip' with 1 files
+Search terms: ['devices', 'show', 'failed', 'down', 'inactive', 'offline', 'list', 'their', 'state', 'neighbor', 'which', 'bgp', 'identify']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 17, 'name': 'BGPData.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'Which devices has vrf support on them ?' with 1 files
+Search terms: ['devices', 'show', 'list', 'them', 'which', 'vrf', 'support', 'identify']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 17, 'name': 'BGPData.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250821_051108_linkedin_posts_output.csv
+CSV loaded: 17 rows, 15 columns
+Creating basic analysis...
+Analysis created: {'rows': 17, 'columns': 15, 'column_names': ['scraped_at', 'is_repost', 'original_author', 'author', 'author_title', 'post_time', 'content', 'post_id', 'reactions_count', 'comments_count', 'reposts_count', 'has_image', 'has_video', 'hashtags', 'reposter'], 'dtypes': {'scraped_at': 'object', 'is_repost': 'bool', 'original_author': 'float64', 'author': 'object', 'author_title': 'object', 'post_time': 'object', 'content': 'object', 'post_id': 'object', 'reactions_count': 'int64', 'comments_count': 'int64', 'reposts_count': 'int64', 'has_image': 'bool', 'has_video': 'bool', 'hashtags': 'object', 'reposter': 'object'}, 'missing_values': {'scraped_at': 0, 'is_repost': 0, 'original_author': 17, 'author': 0, 'author_title': 0, 'post_time': 0, 'content': 0, 'post_id': 0, 'reactions_count': 0, 'comments_count': 0, 'reposts_count': 0, 'has_image': 0, 'has_video': 0, 'hashtags': 0, 'reposter': 15}, 'memory_usage': 36567}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'provide all the persons names present in the file' with 1 files
+Search terms: ['present', 'provide', 'names', 'file', 'persons', 'all']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 26, 'name': 'linkedin_posts_output.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question: 'provide the person names?' with 1 files
+Search terms: ['names', 'person', 'provide']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 26, 'name': 'linkedin_posts_output.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['down', 'bgp', 'devices', 'show', 'identify', 'offline', 'which', 'state', 'their', 'list', 'failed', 'inactive', 'neighbor']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 'test_id', 'name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'type': 'csv'}
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['down', 'bgp', 'devices', 'show', 'identify', 'offline', 'which', 'state', 'their', 'list', 'failed', 'inactive', 'neighbor']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 'test_id', 'name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Searching for query: 'provide author name'
+Analyzing question: 'provide author name' with 1 files
+Search terms: ['author', 'name', 'provide']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 26, 'name': 'linkedin_posts_output.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['offline', 'their', 'down', 'state', 'bgp', 'inactive', 'devices', 'show', 'identify', 'list', 'failed', 'neighbor', 'which']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 'test_id', 'name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'type': 'csv', 'path': '/home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv'}
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['offline', 'their', 'down', 'state', 'bgp', 'inactive', 'devices', 'show', 'identify', 'list', 'failed', 'neighbor', 'which']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 'test_id', 'name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'type': 'csv', 'path': '/home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['failed', 'inactive', 'offline', 'show', 'which', 'neighbor', 'state', 'their', 'down', 'bgp', 'devices', 'list', 'identify']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['failed', 'inactive', 'offline', 'show', 'which', 'neighbor', 'state', 'their', 'down', 'bgp', 'devices', 'list', 'identify']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['identify', 'devices', 'list', 'offline', 'inactive', 'down', 'state', 'neighbor', 'show', 'bgp', 'which', 'their', 'failed']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['identify', 'devices', 'list', 'offline', 'inactive', 'down', 'state', 'neighbor', 'show', 'bgp', 'which', 'their', 'failed']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Searching for query: 'do you know that whats data inside?'
+Analyzing question: 'do you know that whats data inside?' with 1 files
+Search terms: ['whats', 'data', 'show', 'list', 'inside', 'know', 'identify']
+Error resolving file path: You cannot call this from an async context - use a thread or sync_to_async.
+Could not resolve path for: {'id': 16, 'name': 'InterfaceData.csv', 'type': 'csv'}
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['down', 'show', 'list', 'identify', 'bgp', 'state', 'which', 'offline', 'devices', 'failed', 'neighbor', 'inactive', 'their']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['down', 'show', 'list', 'identify', 'bgp', 'state', 'which', 'offline', 'devices', 'failed', 'neighbor', 'inactive', 'their']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['list', 'state', 'down', 'inactive', 'failed', 'offline', 'neighbor', 'devices', 'their', 'identify', 'which', 'show', 'bgp']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question (async): 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['list', 'state', 'down', 'inactive', 'failed', 'offline', 'neighbor', 'devices', 'their', 'identify', 'which', 'show', 'bgp']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['failed', 'their', 'state', 'bgp', 'show', 'inactive', 'offline', 'identify', 'list', 'neighbor', 'which', 'down', 'devices']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['failed', 'their', 'state', 'bgp', 'show', 'inactive', 'offline', 'identify', 'list', 'neighbor', 'which', 'down', 'devices']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['state', 'their', 'down', 'inactive', 'devices', 'neighbor', 'failed', 'bgp', 'show', 'offline', 'which', 'identify', 'list']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['state', 'their', 'down', 'inactive', 'devices', 'neighbor', 'failed', 'bgp', 'show', 'offline', 'which', 'identify', 'list']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+RAG context result: {'success': False, 'context': '', 'sources': [], 'message': 'No relevant context found in the specified files.'}
+RAG success: False
+RAG sources: 0
+RAG context length: 0
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['identify', 'down', 'neighbor', 'their', 'failed', 'which', 'inactive', 'list', 'show', 'state', 'devices', 'offline', 'bgp']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['identify', 'down', 'neighbor', 'their', 'failed', 'which', 'inactive', 'list', 'show', 'state', 'devices', 'offline', 'bgp']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: []
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+File de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv not found in embeddings
+Found 0 search results
+RAG context result: {'success': False, 'context': '', 'sources': [], 'message': 'No relevant context found in the specified files.'}
+RAG success: False
+RAG sources: 0
+RAG context length: 0
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['state', 'which', 'show', 'identify', 'neighbor', 'list', 'offline', 'inactive', 'bgp', 'their', 'failed', 'devices', 'down']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['state', 'which', 'show', 'identify', 'neighbor', 'list', 'offline', 'inactive', 'bgp', 'their', 'failed', 'devices', 'down']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Files to search: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Available files in embeddings: ['de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv']
+Checking file: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Found file de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv in embeddings, processing 3 chunks
+Found 3 search results
+RAG context result: {'success': True, 'context': 'Source: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv\nData summary for de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv: 3817 rows, 13 columns\n\n---\n\nSource: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv\nColumns in de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv: host, neighboraddress, timestamp, vrf, lastchange, peer_as, sessionstate, prefixesreceived, prefixaccepted, prefixsent, peergroups, neighborinfo, DeviceType\n\n---\n\nSource: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv\nSample data from de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv:\n[\n  {\n    "host": "c11x98an2m1.network.microsoft.com",\n    "neighboraddress": "172.199.36.9",\n    "timestamp": "57:24.5",\n    "vrf": "admin",\n    "lastchange": "51:16.2",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m1.network.microsoft.com",\n    "neighboraddress": "172.199.36.13",\n    "timestamp": "57:29.6",\n    "vrf": "admin",\n    "lastchange": "51:16.3",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m1.network.microsoft.com",\n    "neighboraddress": "172.199.36.15",\n    "timestamp": "57:31.6",\n    "vrf": "admin",\n    "lastchange": "51:16.2",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m1.network.microsoft.com",\n    "neighboraddress": "172.199.36.11",\n    "timestamp": "57:33.7",\n    "vrf": "admin",\n    "lastchange": "51:16.3",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m2.network.microsoft.com",\n    "neighboraddress": "172.199.36.25",\n    "timestamp": "58:27.5",\n    "vrf": "admin",\n    "lastchange": "51:16.2",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m2.network.microsoft.com",\n    "neighboraddress": "172.199.36.29",\n    "timestamp": "58:30.9",\n    "vrf": "admin",\n    "lastchange": "51:16.2",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m2.network.microsoft.com",\n    "neighboraddress": "172.199.36.31",\n    "timestamp": "58:33.8",\n    "vrf": "admin",\n    "lastchange": "51:16.3",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m2.network.microsoft.com",\n    "neighboraddress": "172.199.36.27",\n    "timestamp": "58:36.5",\n    "vrf": "admin",\n    "lastchange": "51:16.3",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m2.network.microsoft.com",\n    "neighboraddress": "2ff1:4898:3040:5::3a",\n    "timestamp": "58:39.9",\n    "vrf": "admin",\n    "lastchange": "51:17.7",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": NaN,\n    "prefixaccepted": NaN,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m2.network.microsoft.com",\n    "neighboraddress": "2ff1:4898:3040:5::3e",\n    "timestamp": "58:41.8",\n    "vrf": "admin",\n    "lastchange": "51:17.7",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": NaN,\n    "prefixaccepted": NaN,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  }\n]', 'sources': [{'file_name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'chunk_type': 'summary', 'relevance_score': 0.9953594982595245, 'content_preview': 'Data summary for de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv: 3817 rows, 13 columns'}, {'file_name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'chunk_type': 'columns', 'relevance_score': 0.9895684350334225, 'content_preview': 'Columns in de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv: host, neighboraddress, timestamp, vrf, lastchange, peer_as, sessionstate, prefixesreceived, prefixaccepted, prefixsent, peergroups, neighborinfo, DeviceType'}, {'file_name': 'de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv', 'chunk_type': 'sample_data', 'relevance_score': 0.9808384631965954, 'content_preview': 'Sample data from de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv:\n[\n  {\n    "host": "c11x98an2m1.network.microsoft.com",\n    "neighboraddress": "172.199.36.9",\n    "timestamp": "57:24.5",\n    "vrf": "admin",\n    "lastchange": "51:16.2",\n    "peer_as": NaN,\n    "sessionstate": "IDLE",\n    "prefixesreceived": 0.0,\n    "prefixaccepted": 0.0,\n    "prefixsent": 0.0,\n    "peergroups": NaN,\n    "neighborinfo": NaN,\n    "DeviceType": "MS"\n  },\n  {\n    "host": "c11x98an2m1.network.micros...'}], 'total_sources': 3, 'average_relevance': 0.9885887988298475}
+RAG success: True
+RAG sources: 3
+RAG context length: 4398
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Analyzing question: 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['which', 'down', 'inactive', 'state', 'bgp', 'show', 'list', 'offline', 'devices', 'neighbor', 'their', 'identify', 'failed']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what's their neighbor ip' with 1 files
+Search terms: ['which', 'down', 'inactive', 'state', 'bgp', 'show', 'list', 'offline', 'devices', 'neighbor', 'their', 'identify', 'failed']
+Using direct path: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv
+Processing file for RAG: de83e3ba-31e9-42b7-8104-a74b05bdfc63_20250819_015640_BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what's their neighbor ip'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'what is the attached context about?' with 1 files
+Search terms: ['identify', 'show', 'attached', 'context', 'list']
+Processing file for RAG: BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'what is the attached context about?'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'can you find the author name?' with 1 files
+Search terms: ['name', 'author']
+Processing file for RAG: linkedin_posts_output.csv (csv)
+CSV loaded: 17 rows, 15 columns
+Searching for query: 'can you find the author name?'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what’s their neighbor ip' with 1 files
+Search terms: ['identify', 'show', 'state', 'devices', 'inactive', 'neighbor', 'which', 'down', 'bgp', 'their', 'list', 'failed', 'offline']
+Processing file for RAG: BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'which devices has bgp state down and what’s their neighbor ip'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'Which devices has vrf support on them ?' with 1 files
+Search terms: ['identify', 'show', 'vrf', 'devices', 'list', 'which', 'support', 'them']
+Processing file for RAG: BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Searching for query: 'Which devices has vrf support on them ?'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'List devices with interfacestatus not_present' with 1 files
+Search terms: ['list', 'interfacestatus', 'devices', 'not_present']
+Processing file for RAG: InterfaceData.csv (csv)
+CSV loaded: 100 rows, 11 columns
+Searching for query: 'List devices with interfacestatus not_present'
+Sending streaming request to AI service with model: gemini-1.5-flash

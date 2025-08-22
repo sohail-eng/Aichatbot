@@ -1,0 +1,78 @@
+Field,Description,How_to_get
+product_id,Unique identifier,Generate UUID during ingestion
+brand_name,Brand name,Scrape INCIDecoder/retailer PDP
+product_name,Full product name,Scrape INCIDecoder/retailer PDP
+description,Short product description,Scrape PDP; clean with LLM
+category_step,Routine step (cleanser/serum/etc.),Keyword map or LLM on title/description
+is_face_only,Face-only vs multi-area,PDP description keywords
+primary_image_url,Primary product image,Scrape PDP image/CDN
+product_pdp_url,Product detail page URL,Scrape/crawl
+status,Active/discontinued/reformulated,INCIDecoder status; brand updates
+inci_full,Raw INCI string,INCIDecoder
+inci_parsed,Array of ingredients in order,Parse INCI; tokenise
+lead_actives,Key actives,LLM/regex on INCI + PDP claims
+active_strength_known,Actives % if published,Brand/PDP; leave blank if unknown
+is_fragrance_free,Fragrance-free flag,Detect parfum/EU26 allergens
+contains_essential_oils,Essential oils present,Detect EO names in INCI
+contains_alcohol_denat,Alcohol denat present,Search INCI tokens
+fungal_acne_safe_flag,Malassezia-safe heuristic,Deny-list of esters/polysorbates
+comedogenic_risk_score,0–3 comedogenicity risk,Heuristic rules by top-10 INCI oils/butters
+irritation_risk_score,0–3 irritation risk,Fragrance/EO/alcohol/strong actives
+pregnancy_safe_flag,Safe in pregnancy,"Deny-list: retinoids, HQ, SA>2%, etc."
+skin_type_flags,Oily/dry/combo/sensitive suitability,Rule-based from actives + PDP
+concern_fit_flags,Acne/PIH/redness/barrier/texture/anti-age,Actives-to-concern mapping
+vehicle_texture,Gel/cream/lotion/oil/balm/etc.,PDP + INCI heuristic
+finish,Matte/dewy/natural/occlusive,LLM/reviews/PDP hints
+color,Tint or colour if relevant,PDP or reviews
+spf_value,SPF number,PDP/packaging
+spf_type,Mineral/chemical/hybrid,From UV filters in INCI
+uva_ppd_or_pa,PA or PPD,PDP/packaging if available
+pa_rating,PA+/PA+++/unknown,PDP/packaging
+broad_spectrum_flag,Broad spectrum claim,PDP/packaging
+is_water_resistant_spf,Water resistance claim,PDP/packaging
+uvisafe_claims_verified,Verification for UV claims,Manual/reliable sources only
+instructions_basic,Basic usage direction,PDP; summarise
+routine_time,AM/PM/both,Infer from actives (retinol=PM)
+step_order_index,Index in routine,Map by category
+country_code,Retailer country for this row,From retailer context
+retailer_name,Retailer label,Scrape site
+retailer_url,Where to buy,Scrape PDP link
+currency,Currency code,Retailer/PDP
+price_retail,Retail price,Scrape PDP
+size_ml,Size in ml/g,PDP; parse variants if needed
+price_per_10ml,Computed price per 10ml,Compute (price/size*10)
+availability_status,In stock / OOS,PDP scrape if feasible
+last_checked_utc,Timestamp last checked,Populate on crawl
+affiliate_program,amazon/skimlinks/rs/none,Your affiliate mapping
+affiliate_link_id,Affiliate link token/id,Your network mapping
+rating_mean,Avg rating 0–5,Retailer reviews API/scrape
+rating_n,Review count,Retailer reviews API/scrape
+review_sentiment_overall,−1..+1 sentiment,LLM/NLP over reviews
+review_sentiment_by_persona,JSON by skin type/tone/concern,NLP grouping if tags available
+irritation_mentions_rate,% reviews flagging irritation,NLP on reviews
+texture_mentions_json,JSON freq of texture terms,NLP on reviews
+topics_json,Key topics/complaints/positives,NLP on reviews
+packaging_type,Tube/jar/pump/dropper/stick,PDP image/description
+pao_months,Period After Opening,PDP/packaging
+launch_date,Original launch,Brand comms/PR
+reformulation_date,Reformulated date,Brand/INCIDecoder
+cruelty_free,Cruelty-free flag,Brand policy / aggregator
+vegan,Vegan flag,Brand or retailer filter
+regulatory_notes,EU allergens etc.,PDP/regulatory docs
+ph_range,Product pH range,Brand claims / lab tests
+occlusivity_index,0–3 occlusive heuristics,Heuristic from INCI (waxes/petrolatum)
+viscosity_class,Low/med/high viscosity,Heuristic from vehicle/INCI
+colorants_present,Colorants included,CI numbers in INCI
+preservatives_class,Parabens/phenoxyethanol/organic acids,INCI parse
+photo_sensitizers_present,Citrus oils/AHA combos etc.,INCI + rules
+ingredient_percent_estimates,Model-estimated % of key actives,LLM/model if not disclosed
+malassezia_trigger_list,List of risky esters/polysorbates,Derived from INCI
+peptide_types,Signal/carrier/neuro/copper,INCI parse + LLM
+antioxidant_stack,"VitC type, ferulic, EGCG, resveratrol",INCI parse
+retinoid_generation,Retinol/retinal/granactive/Rx,INCI parse + PDP
+AHA_profile,"Glycolic/lactic/mandelic, free acid %",PDP/INCI + estimates
+compatibility_ruleset_hash,Hash of product’s rules,Compute from INCI/vehicle
+clinical_evidence_score,0–1 evidence strength,Map from internal evidence table
+country_availability,List of ISO codes available,Aggregate retailer countries
+effect_embedding,Vector for effect matching,Compute with embedding model
+inci_embedding,Vector of INCI tokens,Compute with embedding model

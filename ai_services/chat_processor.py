@@ -7,6 +7,8 @@ from chat.models import ChatSession, Message, UploadedFile
 from .foundry_service import FoundryService
 from .database_service import DatabaseService
 from .file_service import FileService
+from .enhanced_llm_service import EnhancedLLMService
+from .rag_service import RAGService
 
 logger = logging.getLogger('ai_services')
 
@@ -15,6 +17,8 @@ class ChatProcessor:
         self.llama_service = FoundryService()
         self.database_service = DatabaseService()
         self.file_service = FileService()
+        self.enhanced_llm_service = EnhancedLLMService()
+        self.rag_service = RAGService()
     
     async def process_message(self, session_id: str, message_content: str, 
                        message_type: str = 'user', metadata: Optional[Dict] = None) -> Dict:
@@ -29,17 +33,27 @@ class ChatProcessor:
             # Get conversation context
             context = await self._get_conversation_context(session)
             
-            # Determine message intent and process accordingly
-            intent = self._analyze_intent(message_content, metadata)
+            # Handle attached files if any
+            attached_files = metadata.get('attached_files', []) if metadata else []
             
-            if intent['type'] == 'database_query':
-                response = await self._process_database_query(session, message_content, context, intent)
-            elif intent['type'] == 'file_analysis':
-                response = await self._process_file_analysis(session, message_content, context, intent)
-            elif intent['type'] == 'general_chat':
-                response = await self._process_general_chat(session, message_content, context)
+            # If message has attached files, process with enhanced LLM service
+            if attached_files:
+                logger.info(f"Processing message with {len(attached_files)} attached files")
+                response = await self._process_message_with_attachments(
+                    session, message_content, attached_files, context
+                )
             else:
-                response = await self._process_general_chat(session, message_content, context)
+                # Determine message intent and process accordingly
+                intent = self._analyze_intent(message_content, metadata)
+                
+                if intent['type'] == 'database_query':
+                    response = await self._process_database_query(session, message_content, context, intent)
+                elif intent['type'] == 'file_analysis':
+                    response = await self._process_file_analysis(session, message_content, context, intent)
+                elif intent['type'] == 'general_chat':
+                    response = await self._process_general_chat(session, message_content, context)
+                else:
+                    response = await self._process_general_chat(session, message_content, context)
             
             # Save AI response
             ai_message = await self._create_message(
@@ -358,6 +372,61 @@ Files found:"""
             'content': file_result['response'],
             'metadata': {'file_analysis': True, **file_result.get('metadata', {})}
         }
+    
+    async def _process_message_with_attachments(self, session: ChatSession, message: str, 
+                                              attached_files: List[Dict], context: List[Dict]) -> Dict:
+        """
+        Process message with attached files using enhanced LLM service
+        
+        Args:
+            session: Chat session
+            message: User message
+            attached_files: List of attached file information
+            context: Conversation context
+            
+        Returns:
+            Response with file analysis and LLM answer
+        """
+        try:
+            logger.info(f"Processing message with {len(attached_files)} attached files")
+            
+            # Use enhanced LLM service to process question with files
+            result = await self.enhanced_llm_service.process_question_with_files(
+                message, attached_files
+            )
+            
+            if not result['success']:
+                return {
+                    'content': result['response'],
+                    'metadata': {
+                        'chat_type': 'file_analysis',
+                        'error': True,
+                        'attached_files': len(attached_files)
+                    }
+                }
+            
+            # Return successful response
+            return {
+                'content': result['response'],
+                'metadata': {
+                    'chat_type': 'file_analysis',
+                    'attached_files': len(attached_files),
+                    'data_found': result['metadata']['data_found'],
+                    'files_analyzed': result['metadata']['files_analyzed'],
+                    'search_keywords': result['metadata']['search_keywords']
+                }
+            }
+            
+        except Exception as e:
+            logger.error(f"Error processing message with attachments: {e}")
+            return {
+                'content': f"Sorry, I encountered an error processing your question with the attached files: {str(e)}",
+                'metadata': {
+                    'chat_type': 'file_analysis',
+                    'error': True,
+                    'attached_files': len(attached_files)
+                }
+            }
     
     async def _process_general_chat(self, session: ChatSession, message: str, 
                             context: List[Dict]) -> Dict:

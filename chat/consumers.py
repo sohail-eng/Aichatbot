@@ -80,24 +80,69 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def _handle_chat_message(self, data):
         """Handle regular chat message"""
         message = data.get('message', '')
+        attached_files = data.get('attached_files', [])
+        
         if not message.strip():
             return
         
-        # Echo user message
+        # Echo user message with file info
+        user_message = message
+        if attached_files:
+            file_names = [f['name'] for f in attached_files]
+            user_message += f"\n\n📎 Attached files: {', '.join(file_names)}"
+        
         await self.send(text_data=json.dumps({
             'type': 'user',
-            'message': message,
+            'message': user_message,
             'timestamp': self._get_timestamp()
         }))
         
-        # Send typing indicator
+        # Send initial thinking status
         await self.send(text_data=json.dumps({
             'type': 'typing',
-            'message': 'AI is thinking...'
+            'message': '💭 Thinking...'
         }))
         
-        # Process message
-        result = await self._process_message_async(message, None)
+        # If there are attached files, send processing status updates
+        if attached_files:
+            # Send analyzing status
+            await self.send(text_data=json.dumps({
+                'type': 'typing',
+                'message': '🔍 Analyzing attached files...'
+            }))
+            
+            # Small delay to show the status
+            await asyncio.sleep(1)
+            
+            # Send RAG processing status
+            await self.send(text_data=json.dumps({
+                'type': 'typing',
+                'message': '🧠 Processing with RAG system...'
+            }))
+            
+            # Small delay to show the status
+            await asyncio.sleep(1)
+            
+            # Send searching status
+            await self.send(text_data=json.dumps({
+                'type': 'typing',
+                'message': '🔎 Searching for relevant data...'
+            }))
+            
+            # Small delay to show the status
+            await asyncio.sleep(1)
+        
+        # Send generating status
+        await self.send(text_data=json.dumps({
+            'type': 'typing',
+            'message': '🤖 Generating AI response...'
+        }))
+        
+        # Process message with attachments
+        metadata = {
+            'attached_files': attached_files
+        }
+        result = await self._process_message_async(message, metadata)
         
         # Send AI response (only once)
         import uuid
