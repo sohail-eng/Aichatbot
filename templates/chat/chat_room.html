@@ -73,8 +73,11 @@
         </div>
     </div>
     
+    <!-- Sidebar Backdrop -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop hidden"></div>
+    
     <!-- Right Sidebar Panel -->
-    <div id="sidebar" class="w-80 bg-white shadow-lg border-l transform transition-transform duration-300 ease-in-out">
+    <div id="sidebar" class="w-80 bg-white shadow-lg border-l hidden">
         <div class="p-4">
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-lg font-semibold text-gray-800">Tools & Files</h2>
@@ -413,25 +416,104 @@
         const toggleSidebarBtn = document.getElementById('toggleSidebar');
         const closeSidebarBtn = document.getElementById('closeSidebar');
         const sidebar = document.getElementById('sidebar');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
         
         // Toggle sidebar
         toggleSidebarBtn.addEventListener('click', () => {
             sidebarVisible = !sidebarVisible;
             if (sidebarVisible) {
-                sidebar.classList.remove('-translate-x-full');
+                sidebar.classList.add('show');
+                sidebar.classList.remove('hidden');
+                // Only show backdrop on mobile
+                if (window.innerWidth <= 768) {
+                    sidebarBackdrop.classList.add('show');
+                    sidebarBackdrop.classList.remove('hidden');
+                }
+                toggleSidebarBtn.classList.add('bg-blue-500', 'text-white');
+                toggleSidebarBtn.classList.remove('bg-gray-100', 'text-gray-600');
             } else {
-                sidebar.classList.add('-translate-x-full');
+                sidebar.classList.remove('show');
+                sidebar.classList.add('hidden');
+                sidebarBackdrop.classList.remove('show');
+                sidebarBackdrop.classList.add('hidden');
+                toggleSidebarBtn.classList.remove('bg-blue-500', 'text-white');
+                toggleSidebarBtn.classList.add('bg-gray-100', 'text-gray-600');
             }
         });
         
         // Close sidebar
         closeSidebarBtn.addEventListener('click', () => {
             sidebarVisible = false;
-            sidebar.classList.add('-translate-x-full');
+            sidebar.classList.remove('show');
+            sidebar.classList.add('hidden');
+            sidebarBackdrop.classList.remove('show');
+            sidebarBackdrop.classList.add('hidden');
+            toggleSidebarBtn.classList.remove('bg-blue-500', 'text-white');
+            toggleSidebarBtn.classList.add('bg-gray-100', 'text-gray-600');
         });
         
         // Setup accordion functionality
         setupAccordion();
+        
+        // Ensure backdrop is hidden on desktop by default
+        if (window.innerWidth > 768) {
+            sidebarBackdrop.classList.add('hidden');
+        }
+        
+        // Close sidebar when clicking outside (only on mobile)
+        document.addEventListener('click', (e) => {
+            if (sidebarVisible && 
+                !sidebar.contains(e.target) && 
+                !toggleSidebarBtn.contains(e.target) &&
+                window.innerWidth <= 768) { // Only on mobile
+                sidebarVisible = false;
+                sidebar.classList.remove('show');
+                sidebar.classList.add('hidden');
+                sidebarBackdrop.classList.remove('show');
+                sidebarBackdrop.classList.add('hidden');
+                toggleSidebarBtn.classList.remove('bg-blue-500', 'text-white');
+                toggleSidebarBtn.classList.add('bg-gray-100', 'text-gray-600');
+            }
+        });
+        
+        // Close sidebar with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sidebarVisible) {
+                sidebarVisible = false;
+                sidebar.classList.remove('show');
+                sidebar.classList.add('hidden');
+                sidebarBackdrop.classList.remove('show');
+                sidebarBackdrop.classList.add('hidden');
+                toggleSidebarBtn.classList.remove('bg-blue-500', 'text-white');
+                toggleSidebarBtn.classList.add('bg-gray-100', 'text-gray-600');
+            }
+        });
+        
+        // Close sidebar when clicking on backdrop (mobile only)
+        sidebarBackdrop.addEventListener('click', () => {
+            if (window.innerWidth <= 768) { // Only on mobile
+                sidebarVisible = false;
+                sidebar.classList.remove('show');
+                sidebar.classList.add('hidden');
+                sidebarBackdrop.classList.remove('show');
+                sidebarBackdrop.classList.add('hidden');
+                toggleSidebarBtn.classList.remove('bg-blue-500', 'text-white');
+                toggleSidebarBtn.classList.add('bg-gray-100', 'text-gray-600');
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && sidebarVisible) {
+                // On desktop, hide backdrop but keep sidebar open
+                sidebarBackdrop.classList.remove('show');
+                sidebarBackdrop.classList.add('hidden');
+            } else if (window.innerWidth <= 768 && sidebarVisible) {
+                // On mobile, show backdrop
+                sidebarBackdrop.classList.add('show');
+                sidebarBackdrop.classList.remove('hidden');
+            }
+        });
     }
     
     // Accordion functionality

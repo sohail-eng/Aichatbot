@@ -56,10 +56,16 @@ class FileAnalyzer:
                     continue
                 
                 # Process file for RAG system
+                # We need session_id and file_id for RAG processing
+                session_id = file_info.get('session_id', 'default_session')
+                file_id = file_info.get('id', f"temp_{file_info.get('name')}")
+                
                 rag_result = self.rag_service.process_file_for_rag(
+                    session_id,
                     file_path, 
                     file_info.get('type'), 
-                    file_info.get('name')
+                    file_info.get('name'),
+                    file_id
                 )
                 
                 # Analyze file content (legacy + RAG enhanced)
@@ -145,10 +151,16 @@ class FileAnalyzer:
                     continue
                 
                 # Process file for RAG system
+                # We need session_id and file_id for RAG processing
+                session_id = file_info.get('session_id', 'default_session')
+                file_id = file_info.get('id', f"temp_{file_info.get('name')}")
+                
                 rag_result = self.rag_service.process_file_for_rag(
+                    session_id,
                     file_path, 
                     file_info.get('type'), 
-                    file_info.get('name')
+                    file_info.get('name'),
+                    file_id
                 )
                 
                 # Analyze file content (legacy + RAG enhanced)

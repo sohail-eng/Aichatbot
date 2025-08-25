@@ -1200,3 +1200,523 @@ Processing file for RAG: InterfaceData.csv (csv)
 CSV loaded: 100 rows, 11 columns
 Searching for query: 'List devices with interfacestatus not_present'
 Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/51d13a58-a164-4f37-94f0-9eaaedfb5346_20250824_052019_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which device status is down?' with 1 files
+Search terms: ['show', 'list', 'status', 'down', 'offline', 'inactive', 'device', 'identify', 'which', 'failed']
+Processing file for RAG: InterfaceData.csv (csv)
+CSV loaded: 100 rows, 11 columns
+Searching for query: 'which device status is down?'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which ip is down?' with 2 files
+Search terms: ['offline', 'which', 'show', 'down', 'failed', 'list', 'identify', 'inactive']
+Processing file for RAG: BGPData.csv (csv)
+CSV loaded: 3817 rows, 13 columns
+Processing file for RAG: InterfaceData.csv (csv)
+CSV loaded: 100 rows, 11 columns
+Searching for query: 'which ip is down?'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'I need posts Author's names' with 1 files
+Search terms: ['names', 'posts', 'need', 'author']
+Processing file for RAG: linkedin_posts_output.csv (csv)
+CSV loaded: 17 rows, 15 columns
+Searching for query: 'I need posts Author's names'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/a6e4e4c0-71a8-4e65-9867-a9aad00acd40_20250824_111530_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'what is the data about?' with 1 files
+Search terms: ['list', 'identify', 'data', 'show']
+Processing file for RAG: InterfaceData.csv (csv)
+CSV loaded: 100 rows, 11 columns
+Searching for query: 'what is the data about?'
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/a6e4e4c0-71a8-4e65-9867-a9aad00acd40_20250824_111639_BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Creating basic analysis...
+Analysis created: {'rows': 3817, 'columns': 13, 'column_names': ['host', 'neighboraddress', 'timestamp', 'vrf', 'lastchange', 'peer_as', 'sessionstate', 'prefixesreceived', 'prefixaccepted', 'prefixsent', 'peergroups', 'neighborinfo', 'DeviceType'], 'dtypes': {'host': 'object', 'neighboraddress': 'object', 'timestamp': 'object', 'vrf': 'object', 'lastchange': 'object', 'peer_as': 'float64', 'sessionstate': 'object', 'prefixesreceived': 'float64', 'prefixaccepted': 'float64', 'prefixsent': 'float64', 'peergroups': 'object', 'neighborinfo': 'object', 'DeviceType': 'object'}, 'missing_values': {'host': 0, 'neighboraddress': 0, 'timestamp': 0, 'vrf': 0, 'lastchange': 0, 'peer_as': 3817, 'sessionstate': 6, 'prefixesreceived': 358, 'prefixaccepted': 358, 'prefixsent': 560, 'peergroups': 329, 'neighborinfo': 405, 'DeviceType': 0}, 'memory_usage': 2452574}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/a6e4e4c0-71a8-4e65-9867-a9aad00acd40_20250824_113228_BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Creating basic analysis...
+Analysis created: {'rows': 3817, 'columns': 13, 'column_names': ['host', 'neighboraddress', 'timestamp', 'vrf', 'lastchange', 'peer_as', 'sessionstate', 'prefixesreceived', 'prefixaccepted', 'prefixsent', 'peergroups', 'neighborinfo', 'DeviceType'], 'dtypes': {'host': 'object', 'neighboraddress': 'object', 'timestamp': 'object', 'vrf': 'object', 'lastchange': 'object', 'peer_as': 'float64', 'sessionstate': 'object', 'prefixesreceived': 'float64', 'prefixaccepted': 'float64', 'prefixsent': 'float64', 'peergroups': 'object', 'neighborinfo': 'object', 'DeviceType': 'object'}, 'missing_values': {'host': 0, 'neighboraddress': 0, 'timestamp': 0, 'vrf': 0, 'lastchange': 0, 'peer_as': 3817, 'sessionstate': 6, 'prefixesreceived': 358, 'prefixaccepted': 358, 'prefixsent': 560, 'peergroups': 329, 'neighborinfo': 405, 'DeviceType': 0}, 'memory_usage': 2452574}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/a6e4e4c0-71a8-4e65-9867-a9aad00acd40_20250824_113259_BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Creating basic analysis...
+Analysis created: {'rows': 3817, 'columns': 13, 'column_names': ['host', 'neighboraddress', 'timestamp', 'vrf', 'lastchange', 'peer_as', 'sessionstate', 'prefixesreceived', 'prefixaccepted', 'prefixsent', 'peergroups', 'neighborinfo', 'DeviceType'], 'dtypes': {'host': 'object', 'neighboraddress': 'object', 'timestamp': 'object', 'vrf': 'object', 'lastchange': 'object', 'peer_as': 'float64', 'sessionstate': 'object', 'prefixesreceived': 'float64', 'prefixaccepted': 'float64', 'prefixsent': 'float64', 'peergroups': 'object', 'neighborinfo': 'object', 'DeviceType': 'object'}, 'missing_values': {'host': 0, 'neighboraddress': 0, 'timestamp': 0, 'vrf': 0, 'lastchange': 0, 'peer_as': 3817, 'sessionstate': 6, 'prefixesreceived': 358, 'prefixaccepted': 358, 'prefixsent': 560, 'peergroups': 329, 'neighborinfo': 405, 'DeviceType': 0}, 'memory_usage': 2452574}
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/a6e4e4c0-71a8-4e65-9867-a9aad00acd40_20250824_113543_BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Creating basic analysis...
+Analysis created: {'rows': 3817, 'columns': 13, 'column_names': ['host', 'neighboraddress', 'timestamp', 'vrf', 'lastchange', 'peer_as', 'sessionstate', 'prefixesreceived', 'prefixaccepted', 'prefixsent', 'peergroups', 'neighborinfo', 'DeviceType'], 'dtypes': {'host': 'object', 'neighboraddress': 'object', 'timestamp': 'object', 'vrf': 'object', 'lastchange': 'object', 'peer_as': 'float64', 'sessionstate': 'object', 'prefixesreceived': 'float64', 'prefixaccepted': 'float64', 'prefixsent': 'float64', 'peergroups': 'object', 'neighborinfo': 'object', 'DeviceType': 'object'}, 'missing_values': {'host': 0, 'neighboraddress': 0, 'timestamp': 0, 'vrf': 0, 'lastchange': 0, 'peer_as': 3817, 'sessionstate': 6, 'prefixesreceived': 358, 'prefixaccepted': 358, 'prefixsent': 560, 'peergroups': 329, 'neighborinfo': 405, 'DeviceType': 0}, 'memory_usage': 2452574}
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+JSON validation passed
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Failed to load embedding model: (MaxRetryError("HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Max retries exceeded with url: /xet-bridge-us/621ffdc136468d709f180294/35b363afb9df4b2003fa3154c65b08833ba4632fc938a11d5f0dcadd966dfe4a?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20250824%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250824T200613Z&X-Amz-Expires=3600&X-Amz-Signature=4282d87331bd841fd2eba9ce87cd8c39e0545835219eeedc33b5cbdc9a6747a2&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model_qint8_avx512.onnx%3B+filename%3D%22model_qint8_avx512.onnx%22%3B&x-id=GetObject&Expires=1756069573&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc1NjA2OTU3M319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82MjFmZmRjMTM2NDY4ZDcwOWYxODAyOTQvMzViMzYzYWZiOWRmNGIyMDAzZmEzMTU0YzY1YjA4ODMzYmE0NjMyZmM5MzhhMTFkNWYwZGNhZGQ5NjZkZmU0YSoifV19&Signature=r83uc-3xAgFHU~PcuMCsVJlrIX19y4D0g66fjZYnlXVnapyNgtz1AUGmVqfRwJRw69BPHyfZUa2Gexulij7~Aq6EESFuNtrZUPr1R2nj0rJ1h7PzjhaETtvYOVSBuNC2mZgdcP0IgxqTN-XD9naTVL9u9nv~dnHX~q8fgjN4VqyaAdB4lxfM2JPDcVH~OXMHZB4~hYF7GDAM5-l033Dcgd7~nGpWt4QH5k4AD1nqfjonWukZ86XBFdhEqhl~pqlz6kYX-17cAbdAUL~c4xCqsvERrPfKQO3Gk7TUczyGVG1zPbLK7uujJormzKNSSm9RdWGQfFpv6G~VqzAUY~04Xw__&Key-Pair-Id=K2L8F4GPSG1IFC (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x780e8f8adf60>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))"), '(Request ID: 062e99f1-3819-4355-9fd6-54d815b5817f)')
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which device status is down?' with 1 files
+Search terms: ['offline', 'status', 'list', 'show', 'identify', 'inactive', 'device', 'down', 'which', 'failed']
+Error in async file analysis: RAGService.process_file_for_rag() missing 2 required positional arguments: 'file_name' and 'file_id'
+Traceback (most recent call last):
+  File "/home/azeem/Documents/upwork-projects/chat_project/ai_services/file_analyzer.py", line 148, in analyze_question_with_files_async
+    rag_result = self.rag_service.process_file_for_rag(
+TypeError: RAGService.process_file_for_rag() missing 2 required positional arguments: 'file_name' and 'file_id'
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down?' with 2 files
+Search terms: ['which', 'offline', 'list', 'status', 'down', 'show', 'identify', 'failed', 'inactive', 'device']
+Error in async file analysis: RAGService.process_file_for_rag() missing 2 required positional arguments: 'file_name' and 'file_id'
+Traceback (most recent call last):
+  File "/home/azeem/Documents/upwork-projects/chat_project/ai_services/file_analyzer.py", line 148, in analyze_question_with_files_async
+    rag_result = self.rag_service.process_file_for_rag(
+TypeError: RAGService.process_file_for_rag() missing 2 required positional arguments: 'file_name' and 'file_id'
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down?' with 2 files
+Search terms: ['which', 'offline', 'list', 'status', 'down', 'show', 'identify', 'failed', 'inactive', 'device']
+Error in async file analysis: RAGService.process_file_for_rag() missing 2 required positional arguments: 'file_name' and 'file_id'
+Traceback (most recent call last):
+  File "/home/azeem/Documents/upwork-projects/chat_project/ai_services/file_analyzer.py", line 148, in analyze_question_with_files_async
+    rag_result = self.rag_service.process_file_for_rag(
+TypeError: RAGService.process_file_for_rag() missing 2 required positional arguments: 'file_name' and 'file_id'
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: test_devices.csv (csv)
+Processing file for RAG: test_devices.csv (csv)
+Created new collection: session_test_session_123
+Added 3 chunks to ChromaDB for file: test_devices.csv
+Searching for query: 'which device status is down?' in session test_session_123
+Found 3 similar chunks for query: which device status is down?
+Searching for query: 'which device status is down?' in session test_session_123
+Found 3 similar chunks for query: which device status is down?
+Deleted 3 chunks for file: test_devices.csv
+Cleared chunks for file: test_devices.csv in session test_session_123
+Analyzing question: 'which device status is down?' with 1 files
+Search terms: ['status', 'inactive', 'device', 'which', 'list', 'offline', 'identify', 'down', 'show', 'failed']
+Could not resolve path for: {'id': 'test_1', 'name': 'test_devices.csv', 'type': 'csv', 'session_id': 'test_session_456'}
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down?' with 2 files
+Search terms: ['which', 'inactive', 'show', 'identify', 'list', 'device', 'failed', 'offline', 'status', 'down']
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Created new collection: session_default_session
+Added 7 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Searching for query: 'which device status is down?' in session default_session
+Found 5 similar chunks for query: which device status is down?
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which device status is down?' with 1 files
+Search terms: ['which', 'inactive', 'show', 'identify', 'list', 'device', 'failed', 'offline', 'status', 'down']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Searching for query: 'which device status is down?' in session default_session
+Found 5 similar chunks for query: which device status is down?
+Sending streaming request to AI service with model: gemini-1.5-flash
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: devices.csv (csv)
+Processing file for RAG: devices.csv (csv)
+Created new collection: session_test_filtering_session
+Added 3 chunks to ChromaDB for file: devices.csv
+Processing file for RAG: interfaces.csv (csv)
+Processing file for RAG: interfaces.csv (csv)
+Added 3 chunks to ChromaDB for file: interfaces.csv
+Getting context for question in files: ['devices.csv']
+Searching for query: 'which device status is down?' in session test_filtering_session
+Filtering search to files: ['devices.csv']
+Found 3 similar chunks for query: which device status is down? in files: ['devices.csv']
+Context assembled from 3 sources in files: ['devices.csv']
+Getting context for question in files: ['interfaces.csv']
+Searching for query: 'which interface status is inactive?' in session test_filtering_session
+Filtering search to files: ['interfaces.csv']
+Found 3 similar chunks for query: which interface status is inactive? in files: ['interfaces.csv']
+Context assembled from 3 sources in files: ['interfaces.csv']
+Getting context for question in files: ['devices.csv', 'interfaces.csv']
+Searching for query: 'what is the status?' in session test_filtering_session
+Filtering search to files: ['devices.csv', 'interfaces.csv']
+Found 5 similar chunks for query: what is the status? in files: ['devices.csv', 'interfaces.csv']
+Context assembled from 5 sources in files: ['devices.csv', 'interfaces.csv']
+Getting context for question in files: ['nonexistent.csv']
+Searching for query: 'test query' in session test_filtering_session
+Filtering search to files: ['nonexistent.csv']
+Found 0 similar chunks for query: test query in files: ['nonexistent.csv']
+Deleted 3 chunks for file: devices.csv
+Cleared chunks for file: devices.csv in session test_filtering_session
+Deleted 3 chunks for file: interfaces.csv
+Cleared chunks for file: interfaces.csv in session test_filtering_session
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which ip is down?' with 1 files
+Search terms: ['down', 'show', 'failed', 'inactive', 'offline', 'list', 'identify', 'which']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Retrieved existing collection: session_default_session
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Getting context for question in files: ['InterfaceData.csv']
+Searching for query: 'which ip is down?' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: which ip is down? in files: ['InterfaceData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash

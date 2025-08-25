@@ -61,7 +61,13 @@ class EnhancedLLMService:
                 }
             
             # Step 3: Get RAG context (after files are processed for RAG)
-            rag_context = self.rag_service.get_context_for_question(question, file_names)
+            # We need session_id for RAG context - get it from the first file if available
+            session_id = None
+            if attached_files and len(attached_files) > 0:
+                # Try to get session_id from file metadata or use a default
+                session_id = attached_files[0].get('session_id', 'default_session')
+            
+            rag_context = self.rag_service.get_context_for_question(session_id, question, file_names)
             
             # Step 2: Generate LLM response based on analysis and RAG context
             llm_response = await self._generate_llm_response(question, file_analysis, rag_context)

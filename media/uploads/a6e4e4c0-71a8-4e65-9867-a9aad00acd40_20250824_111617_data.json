@@ -1,0 +1,489 @@
+{
+    "pla.carousel": [],
+    "banner.leaderboard": [],
+    "pla.in_grid": [],
+    "banner.siderail": [],
+    "banner.any": [],
+    "pla.any": [
+        {
+            "placement_type": "pla.any",
+            "onload_payload": ",//b.us5.us.criteo.com/rm?rm_e=0m8_sTZvR059t4X5TUl6i_6ZwdiFLiUHAyWmiStc-y6asQQU1i4vU3MvR2izPSZhNCNc5TIb9S5tiHgc3BzFd06khNCqWFmyaXkdeRrzdeu1jCQ3freQgZchCxXjOD6htXtT0iCVD4QJpxRL6rFrn7P-0_R6-sxtsJKlZq2m6OiGnTdfKluYCG52OoB5-66RfcxdDYIbNGL2yiGWvpvSyoCjEDmRDdZ4Kzs2_-34ZMsRAQ7Mw2THrc8oXBD6qT3QB9PhCYf9-TobhcX3h8OBzJfMqCRQDDl-lomdUh6q097Wa8ge8QjbFODJQvdGbGby9-aROfk6pE-vjaO_VLHDSA&ev=4,//b.us5.us.criteo.com/rm?rm_e=mTdRv7Zg77xXdCXc3jrXR0MEDImHx610P3IlGhsewtGN-b3laiQKYA6wFwB0S0K5NZ-4ALfCQELG6kyJ0u8NlQ-B3LpXH5fwUisjZiRCAHcHJ1W2ySyXhaRmz4LLmfMMsIYAouNVF3ayJ6W7WqWgIM8OKIQVlQhNqoeFLMlCJRkinWA1pwWQOu4j8DUMeO89GP4ZazxlXwufAo7m1FxdLPlrtajUimGTP482dxWflSj4Dm3rLmVmK_-Nusdrpkan19ro7_VHG0anLxpDoT7Q7aFMne0uSHoqbohPxLVWrcWsFfeR8iL0w80t9NC-qC57NXiyuBz3R8geGmp51W3HdN1zDoPwbC7Zgucdx8pRfw4&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=ku4CwGh0iFXdr9ELAp8H7vjK6nriY0inGgG3eNfGNg3d99C72nr25-uIXcCcH-ub1dhJ18GJGAGWKW8eqjIkXXfdnCT1a2Szpql_XYsT30uy8jdP64f9XhEczilMqCpcQXbzoUILJ_L7NofSWW0sosgIvmAQzi54agcR1YfWDfOWMuHGl-Tpszzq3e8nFBlA-pXTstXb8K6A8djji6EZuvh0Vd-hldPKuhuRfmhfo2Ok1FeWujgp2Id_duVq7OPlUx3KNeSMeP78_c8XP6jg3af6GzKZ6P1NBt3fh9DlX9kJrB89cEVut9AuEKi4Lvh5w02Q7QQXHu2RM6CYV7i4RA&ev=4,//b.us5.us.criteo.com/rm?rm_e=B2SfqXtiGgZF9Oti2OyCovhgJPAhwsOZXHQwAkY-PC52FcydCohaZNzeR6mfbhMrkYKnoPRihY7wQ5Mp8q5LVDAX0fYARgD7drBD7HMnZ8UfMD09t6SoOaweHgAAsulivfegTbXppvrVjIbRWpXOFXzwqjnoeASs_BTDE2WZnV0xHOOQVdyN_usHhl69ayoDhCXD7k96pM63-4nLG2sV7Htw1Tqx2S_hRmCKUPgIGB3NENnbwsXzxV78WCm2-ik7oM7DAMLeoLC1mnzm6yzAyiF6u3QLifVQS3882l-PpWhYWEEYk5lnuuIBQ8f_4MBcPdr9a4ELoDA5ttUlpMEOku106gu-xhdOcNCnq8K3PzpvyPoawaro9J-keNjoczsq&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=MTtTitsjUGh5NkKVi9l7kaUaRHhSvlz0v-o7BNEyemEhihdhEq6MFS1JsCy58Kn4ASMhDtWjeYeE1J0RPvWA6Unzgo06Oy_fVsA1gzzivSwaJHsZoWgJppRZKyX-uUBDGhdmaG0wapSpDQc0JNPksS5Atjubeex2mSF4bkEe0Ff1V0WfL4YQnd_XaAwC3pZP6WTVEVVj5yeUSMRdIMl3VE0maI4r16GLN4o-1iiGnyk-hp_BNtddRZHv3KvLpPVE2Ijv2jJX6RTQMvKBjMi9ruvVG9cmPeg4OnqZx2q52qZXH5r121m-pj8wapnWED12EWPMEBR3jsXDXOEFWi_H44tE09U-JqowpZh0lSZvkAzqqa-xd5HcMh06fN5fZ0MX1Rc7pFXPiFDDeZq-53hcBQ&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=cl-yeZZzU8lZ6Oa1mesvKhYC7fwtAayckDep6QOeOXEebG4TNRJpGPYnNFLs2HExn5H8_Q2AShjn5D8H2DQ8qeWq9Blm9l51XhU1aBqhyekbaP4mQ3oO2z8xFpyRLzbfV9FNX--IpR1yYSWuDbqhI045jQu_D9f4kfk3ZAvuLhBR0H-bT9wuwDpej_VNTk7g9a1IWaVuK44NsjsGXjx96tB6y1YVXwP8OdJu6ONZCgA-M3L0k7EBABaJmDkUckL25LHHYdIsJjhrMzzPgcWOSQrgF9GlGmdLZ1pna07V2InQoNDIFg81T8ZycoB8j-YCdTVoGeH0KxKxUJM0tnqQsHb0QG0yxJJdESMRifI3zeSZ_h4nF07elG0ZSJKjKhx10VYAlvzVfZTmdLXRC8BqkQ&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=PGTHo7t2AfTspb2-iNd9mc3oUv08aGJ8Vi5O5ucToafhgiOlPHUsMTLbYfvJPpqkytCwJ4uZpwJUmsyXRp2EnKHSptlDUC9lih3QBgOWInSGU49BayxotnOGH6Fnn5XpKeaMK5rRPtfIF1QEbeVlOv7wdh6wP9G2xnrejC3cvezKr6FxpOk1reM_xIMxzqlgrFOoFwCUHPS72kbewVla0wudDmOEg6H3bIYZufBZg9hb3M5AbiKuWXosri_OLiLKl6G18xA_w2HOQYNNMtU1TLNvHDuyF-HTrxNAyOe7OS54jtDiPEu_bjdaKHY043MguymzyURTBi-pkje-l5CfqvGTLdexbYf_Odb174MXHi_hS6J-7WvHe17z_6YbqPIXEiBlXXyrft-gk9qnJx4T6w&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P455936",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": true,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2862480-main-zoom.jpg?imwidth=135&pb=allure-2024-bestofbeauty",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$24.00",
+                        "skuId": "2862480",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P455936",
+                    "reviews": "15979",
+                    "moreColors": 10,
+                    "displayName": "Lip Butter Balm Treatment for Hydration + Nourishing Shine",
+                    "rating": "4.3107",
+                    "targetUrl": "https://www.sephora.com/product/summer-fridays-lip-butter-balm-P455936"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=_GYp5jAg_cKITE1gGlCd8r0-B1CCxjUseiUnlxJ8ciEIGUuQP4u9ycAUFLFCR_2RwLIaj-XjotgnnjEnvjh3SpOP1ScZnfgu6UCUmdJ1BUv6kNaxoI9xg4yCc_on4DkXy0b-wYxwohjTJGjzk2uC3SkSsYdzqmiTmMiOtnGwMo0no0o54ByvDNbgmSYvhsC81lod_hNG5kTJkTqtlhjT-ww8FrbzXdzauGF5oSvbLgOkcvml7l4FzBpVLbZpfIccC_JNYeAtVSEJJ-oa80lc5PWli135D5FmPGvMM5MJ7EaR6eKetThJVwCoDF5Xq66gU-h2zWq_G38GkOKo0l8WfQQe_2WfamMLT8pm5IqRk-I&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=luU-xGdBxgbFGG1RDq615Jzt7RSNPE5RQLAj6urpK1gq14kVj8TZ8e0bSU3lyAujPybFnk4izRF7ZG34kRLu-mTDGB343htbR_y8GpE7x_FV-0NzSz4rm7-5nLd_fz2UdmUJ92mXmNnZi5mIhh5NqeLdWlvv7knG6RqpgMrIpsIFR9Oh9vLA88Rh-AYZucaR0uJR2yP7X3jF7_vs6eeW5zkOqw0Y6JoT9stgFCfUuRTzDLoFg-1RARYtbfghf-VlVoAnvFoGh_dAF3MRPr5nZ4jJEsQtdZ2Ea8LKRE6quT6teEBTCG4BIi1Uy1cFBHAJ6Bz5eFp7YB6XEQbFFIE8kcv0SVYTXaAtXXwT7hLVO_X0x1NeZSXF1AbIqPO8K0MG&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=ZIqmjpRS84Fxl1UjidaMpX30gUBelFujodDGcwk3OsRoVPf96ViG8S7Z8K7itBzPtDjvcebkVY9FI_9OTfsCZ0lN2LTHzK6ENASwt0yjclddfE0WspAownDYAEdVz7W_7FQ67Hk0BVEOHVwn3v72YdfzNNiAvUL1MMc2umZCOJ7pNLDCDegdaXckEepFbpVL-64bqWfttrdANgEILX_wN2Hj9pWKUA-EkfUEqnLn3HLjNFttyTfF5rN4fOEoN676ZflXk3BfRXJewBJ79RJWJgeXwce7PQXTJM6ylyME6nvjbiTUtO_vkCzLA10CxhuCNQDZWoQ6zD4rA-DBvSyPx02qacS6QTfwQ75WmAk7iA1xvuvcyACF4grsyGOFHziALydFzm9m2QXmRmiv80y74w&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=KopbuyOe0DmPOIeNfeheBOARkAqmw7FOnZLtDIHoaaZWkweEp-u-CylybCtCdYl6CR_bMQX9fIdpBIWuLd4fA90ayu1WUjC731NXe6kXV6pjewac2r8Casb28xRWHOQ-EXHg55y1s3Lju9F_lQYXAmQ6JRMcMKoIhsLSvQaK1wiov9Qk7FOrUPIHJtkYNklX4EK2UMbI8uW5QwqCPX11GumYvFYxGEhZ4tnhj4Y49UqsUmv7hoFhiAvE6E34blKTmFUELecGJrQ3k1c0qYHE-ntHWyFb4CN_dG1Q9KOyBpV4Z5fV0MP75UF2tHd8YUPSEVoN_OgJZrfhtnwGlBCf31Ty4lY4oy5awO3Nzdl1WqDuEmKERjiUcwRt8Kel3o9S_doD5TaqVeiaO3m7jKg4Aw&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=4Wr2GfwbD-Ptu8LaeFFndSX6b4Tmfusvfp0E6onRwYoqGOuaLTEVQOwmqejn9lgj1o6oEacycOP0W2De2AihUSS0UMhzB1HQVslgjRfMd43I5yS1i0dg-jZ2O2Z2TQZ0FPdZqnk-x_2oEmCFI6ndz0XR83peThkuVfuCaN2kD-2B5-GiiuZ8sOhGAQ_V7htxqul0kEC9x6rZlsgTv_wUtu6AcLXhVyRvDZYgRThYD2Ra66g44hyvnxZTqRO0DPOZ1_jWWSBzWZvUzWyF0DdY26d0Guf_f8qkHjG9MNJFH1RSe-E1oRSTxt5U73wdPxjK5Bd9DlEwchOhl6C7H26MQH_YcNPWgfJRTHtq376ayaK53g5JGSPRFTUs4ujSnEYpTYG4--gdFtS60a_fLCd7IQ&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P515527",
+            "product": {
+                "en": {
+                    "brandName": "LANEIGE",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": true,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2873990-main-zoom.jpg?imwidth=135",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": true,
+                        "listPrice": "$22.00",
+                        "skuId": "2873990",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P515527",
+                    "reviews": "1162",
+                    "moreColors": 8,
+                    "displayName": "Glaze Craze Tinted Polypeptide Lip Serum",
+                    "rating": "4.3494",
+                    "targetUrl": "https://www.sephora.com/product/glaze-craze-tinted-polypeptide-lip-serum-P515527"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=oZPmPjKlUkPFGDiDpUaezqcP32gnl9Yq8Ast2wvg4b9mIhzS4zRR91nbNCZMdCKRR_AeUx1YRsyaPNYsd5LxsXbYCDEDvOxi9f-j2AX9WKQzCNblK2h2-S4MUaR9lbFKQri-HwLuOT1W1csZlwmW1FQIuFkiHAGu5CqdIHNzeznBjSfgNrRz_nMxa1FhoV0HEvJufHgR2Pg6HVmlZBysT1-wVIMnqH9u91Tj17aSKR35d3NtM8sPTuHY6Gju5ekH8Q8BrUskcy8YAMVGcQqIU2bVIAIQ8miNfvCtCO2-51ZPcBmbwb39LxR9Kq4b2DSaWTBXi48IdDLDfpSvwgt-kBFQrIAHO7bSTPBLzxpRY_8&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=EPs3ha1A4I6f4MtEphHjtq9q5yjR8LoOjqwIIAuoysTORD6PAJoiNEYLdtbMCGIN_7NJWpOM0dmKm4e31t1My_VfzAWqFNv99mWmtMnhPA1XQgiGt3DIJAGrHSZPttLXp0Of2wE5oRnuzy_Zzh1D5k-yhy6o_dDtAkBYwY_ohWt-UtRwb3QziYGelx_ob1fdsjSV_DQBCuawf9-pButpTeAJnL293BUo1VFNFloUMdtGRIsv-dNNTJPCZCy8nw8-l89B9DqiwaqRKQksfdwJPnt0VTqzV1moUe6_-14F1421a_U928iyEoCqHFpzi35uEP1nxpUe3hZ1bWSmQeo1GHMXPBb5IQnzIJarrnlBVZZo2Lwtak3XZSE65-s5C_FI&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=N_FJZMKyxrdLe1JtABq9ufsaeYq1uT8FWe35e-Dzx5TD7hgKSF5ylCOU3lqP8K3-SVKzTWEXN2LlWkmY-VAspAs6L4NYLIscF9lCRvwyx0aNbE1sjOaZ3rTrg09bwOpNbSJmjfe4ruGQG85VaCK3HK2YF7Fv-mBMMWpoN3H4ag6Cj23_TxIwsUk-UTd7fbv5ITiOZ9ptM1_oXE5QZSEt_ft81LenIPCdALM2UcBopMnKHikEcNUQFSqpVNmtJ2CedDG81k2B45QWGv7k1o7SCinT-lVHdsUTQ1cK8gcNqGItwFd3aPzzoTA6nVGK1FqEMYyyEhw7WLDk7JSTbCsggz_2nQY4_1tvFbuwpGmFzzP0PFVgO82qXoHn8mcde3kgjNmhQQ1JAeeXu8nT-9Vc6w&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=RyRS_s4uIaBOOqGeVXlKO609uTKyU364un0LvfiG9GW_2Tay08YNCgarccXMnjt-oDiDApf2nf8cqIEdV1rOST0q2CxJMe8uiUkwZIRFwL_ewMlP4jNkw8y2l20PgfhP0P2_12oOoYihl8FKSYDZuOUssk3PrN7XuD-MzGWGvyOXpL8xF8QSXit25B5Os0c2Ft3GaccW5sZJRpXZa-oelgDKLPPhTOKVgO1hhWawq6Qi2SvDSNrgLvyCF_gEKXceeZejoGQbwZ_c6VO25Nllxe4zXEQCVseydfI_lOflFrBvsIigZcr97WnphGu-X7TpAGjNe6aFgJ8ivT_hJa3B3OFYu4hlpJpqvdapbM71pCQ0cKOI-QsDEyyTsobrm05uEGbpdsrmKSm_lurmsuKkTQ&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=ytq_t3f8BsGDwGh29A5HhG_uMeMPbpmvAreZxDYKKXGEKFEbqLwQzJMDFLYViCQ0tDD62Fn9uZew_-haU50j7SUqZ9HPOJJwzpjrKlFKw3_I7KrzVQ4KM604fjUikT3ifMcZhqApSYq_fg0WMrfUZDnks6Z5bqtvNzeQF6EP_BNWDKDzHMnGWNAQ8P0TS7qeUlUeO6wSr-jkbgvCCaBWbIWK8Z6uk1ltRHaUZlQMmVnl5-maDCOBEEVIxU_ZKxz2sgsW_tInAPgVwcu65z-FrP7_1UiAkOIbLHny-8kUBlbkISJN7Jonf2diBrA28j2oKZnZnPTek9sBuaLDpI-BwpdWUf9ofZZIzNXjIbiAgH-hDqI52Tk0zt3HOI0WbiHN6fxUD-b6fKD7f2YY8iYgSg&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P429952",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2473361-av-20-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$49.00",
+                        "skuId": "2473361",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P429952",
+                    "reviews": "6002",
+                    "moreColors": 1,
+                    "displayName": "Jet Lag Mask + Moisturizer",
+                    "rating": "4.0933",
+                    "targetUrl": "https://www.sephora.com/product/jet-lag-mask-P429952"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=czb7UcAieTnn2LBgrqVuXrbKgu99RPtdG30tv0RP_gij9eVB_R4UNhIwtOMDfZzu7RElFOgMBlHhJgNt8JOfXTwTwiHncklE3zhakyyaUYsYFaXhwjqfYjNnss8au_00oK6WJkXe8q4mtLhy-x8Pw9qJsEaui89Kk5a5pem2ou1txZVrAg92dokqQ0ylf2oEiRzZtiDwN4UG5PSYLfkENNhG3gkSaLwFDXSksGx8XjotTmpDyeZNO63vwQIzG6YpoDrueP4xEYVDF-rpWlttVpT1hmoysnh_rj_ra8gJ3wTLRtx3gsi9wE7lJ_PvMkii5CJJytb8rrRHjXJMrqz5j5QphrKuNjN-apxOZpifj-0&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=f1Dt7BmY90lN2df8IJVbCv_Moy5N0sIQFbHPde8StZQht9eG2y1iSDie81D7wYBQdW2dnk_vXPt-K4v4p72-roq03XIpeHBs9mENlYkJrScMskwZFSeVp-9RTDsx5wBzQc64apsfi-TqELmB9WZ1_Z9Hm6LDS98BBoOmiLi_oUTVIb2FOsUx3P02n2BvGyjHxB6o241QhSHJWJ4MxQb7OhBBVJ8adQaANE55luTqadMllMtg3-EMvDeDJRPw12TtpX-DC2oqYIwTjSFAdu4MUe65Y7v7OhxsPHOnfKuwFRg-UDiL4KQRjiu65FBYSGgBfMdE5wg0XCVvpRKIYoOCOKI2NJIz8wytxWB72QIWZd9gb5NitfMSpb1p0d19YpO_&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=0WjFet_d9OGlhdvc0TrKjbRx18OJf_wct7-6ZfULaBpIuzmzktA4QBqKdn_NFdCUkrS-fnkxRT8qsHdgGJfJvXvCq_N45I0ewvZyc2NNuS-kPCCSEWZ73ypbRDjgK3-ewP4Mt8gz_Y3zpCYcOg0qkNNZvmpYnjImrUym7kIVNxGaNOMZioD4RxkIJG_iIc7t1ScTa68AdNd70cLHQ0X0N7YoqIHTO1DkcpoZ2y8QaNCXwCUqMOGl3Yxx64Va7z6IEW4137Ltv_eMclkVHG9Ptah8Dzzt8iyIS9TjJnJTD6Q28ed5bmWbwk9Pjk2jgjnf4LzmssKF2NXPfKRQojuxwqTQsJGms7C94_HBUnmXwIDHIBcha5DC-LQxtNITY87JGGiFMcdYRQuBIt6PeLNPEg&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=S5GJJYR0TfoK0fi8hpr_q5PZOKJC5ZZlD8ZHJxNKaeA-PVYa2FVjcAFxv-PAnh11QyH4Ir6oVBR8c9aAVh8TKvb1iSRzLRrvahzBJ9VKP0h7XBdCBES0McPTir1tdu3SXlYQHVPCEdRvecIXSfggol2TF8u-ntM5J9DjwftOPe_0nLtfsgtdScxsePRo2b1MaI0FkRseBr0dgYdT-7mdZ4dTWGBpNj6prKx5bEcF5T1XnABbkwObBf34X93FUs3s9UOkssPn5FwEsJQkjQL5ikre4Epn-5Ep97K5XrcbeQlS0GGWHGExjAFvhF2_Ni6bXq1UTj9qv_C3KRxZV88AsNa0fbWBuV_AVDWdCikNysR6xTPYn80A16RS1oFIhbt6Q8PgB_ebxtIB8xWG9rHtsw&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=Tz_JliJflakoBl9-iToD_fKjBqchy4Mb4lJNUzbM8Z-rtHorm4yhg2TIuE3mowk6zUFrchanu9RQWK2TPNKj6BnsqzKD-VqcIar2i_ZA2cIO7GPc30pTGX5CwfFYK2i7rfxErudoErz8_87hHXU0pYbsSkh_xYYkaVHGXI5UCFbP1ZUnUkkVPWYLTQ1pRc-e0DE1HK-P13TwMlnghP6tKjdB21yIMP0h_8cJj-CyjQDgczB-G5z3SC-hLfFKSMW2GWzXEtcjNiQMcy2MWAOvI1-ziexkAOKJ-XGyqr3yj5Yykp8W_CizI3UVbl8m8FYV1HYA8QDK4vvD8LlIjjt4MRh2_AAaIyT68HLI5OQY2SkgWTcPmIBqBESCp6pOPiTPrGyxL2SdTXT17Tn3DF-IvQ&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P471283",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": true,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2462109-main-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": true,
+                        "listPrice": "$29.00",
+                        "skuId": "2462109",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P471283",
+                    "reviews": "144",
+                    "moreColors": 1,
+                    "displayName": "Babymoon Belly Balm",
+                    "rating": "3.9444",
+                    "targetUrl": "https://www.sephora.com/product/summer-fridays-babymoon-belly-balm-P471283"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=MH3zXnv9u4G5DMbVFVb9Ds6G2Phe3zvTVbAJH6Kvd5uk7id3R1hdv88wQZzt9-WuApNct7e6rfKVDUJrpzWNwBOgSHh0OfNQptIt19thVuRv83tEOdVNooV42XReRm6bHBk0BcD47gnYugAcjpGTiGB2oAyZoHkQaOl3UpPg0K-rOiogaiUaCZlaRfYycpTAKn7MBkrOJF3YYtOtOBrAEzeaV4hR7-XLrRCOAWjeFQXdUZaK6r-ExFHUQyfQZfwb_z6LgNG4vniYcOeMG1PX3OenJkVlu9gr7QXGlCEn0IDJiLnXasIbaoRjHvQtdaQ5In3jTyfX1aTUN5SoMFqz0aXERRsNconoBYjOiv3CJI4&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=hMgWlsqRuOfFG4GwTU8WBbKFNOgc2XwQoroCLHrGdTBiv4bhzqw2GnKOS1sog8X-cIUmUskGaE1uunRFvvIT_U3AmrHMaLdesxbQdhsZjng-ongS9yZxDDwRO3sxgnsCKOkxAozPo9M4hk1MNubeNl62mMyFjyw6SNb-bjEhVTMI0lLrcfSyhCaGAazQ77jSEdwYdqDVXqpieAS8cD5cupDJl1J5m8LLYXUt-hRQjhVV4Z7NqlpuQYjdhwJt777rwJs96lW-Jwtv727iCvjqhix_7cIrVyN3Vstn5tV8lQksRNcOnCQJ5ttCG-PnHcigg8nRjXzExqfZ-IEFvJUmmVAfeo-SgXu-q02KsBvBUtFzHGa1YyUJVVf85kwkkk3D&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=Tw_RxS3GDdmecNoT53NxqAY-KUOotMuK_8UFFzCQEEdPY2bWqz6f2_zfGB8DZzGYf7wp_H22ds7YoRHOqUGrU5io7CI1l8YgcWH6KDSeV-KWZwKMXRhSFnK37AfQTvHK6WR7k5NtFw1rVAcHCTbbBdlIjNlwXnTxjOsaPwhBxWZBMTX8YlHtQG1B0vgMiDFK2rVfT7CfNA7PCPD-Zj-iXjssbd3fwrugmcchYSDaEXyXFl0XVUGBiKrhWlCZEqjiRvrX8kpufThmqvbUANTCNh1ZEIrzd6RosKk9V2r2IxPktm2YHvN5S7MyX7DVjvRNHbINnaWGuKKqpRKn1Dmy6Mo3nW06y81eqbIQxG2uEi6Qaubv4Bifr96HzsqgkY7drgyNaeCpMrEiFKX8-q8i5Q&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=4Y6Ejisz7lR6M_R86l9ru6G9iDrtjQ47Ykh9AGJfY97i8RsPvJOg8kqhmcGUrs29mjgbHnbWtNxUbX84a9J1zUZPhzoHVf5bVjWfu34ErLzOWrNZnruzj9eUK6RvPvD6WaD54SLhclefma2sMIoSXkMN_Kz37-PM8HoUfSg65uiO9iEyDmrwA0o-OCofChxUfMq6Hd3JgCEhBMTZKbHP3RjoqUy-MlWpbQBru7TNh53G297tIbrJcpAlpgWSF9IQ66mfgRq1QtmWAR06qgy99GhPyei-jzf-fN-HLHZFJgEx6-OGDSPOBRZ6u3KhJGskwOsZXBNpzlaJVdrUfAOWl9jyEIYpq_l610d4plafIVDZj4ydXGgPxTDQwmyu5MjebEEtLseOuEenPsFB7lAkaA&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=TTYpOzM7oKRd16kR-tJwqvTuH8Cx_w_Y-uRlsrtueBcDCkXgR_O55MnvDa3Pop46cDiLnAJNFxW-Om7BI2Pqc9DUu6N2-0ErjFH4onMFR6I9Z7XF-R7WXrF6qZ6AIFuu7IT-yK1nbbS4LMLt2S6U9PjJ3N8iklump9RZC7Eru8BOYpaiGlUokxheHgBBHxo4dn9Kf44Bouw-nB_KnbTe0WK5OtfRwR35eobyme0BoMc5vihXFxeh-gRQczktL6kop3HZ3pI2Csc60bmXYl5N5rak7S4hciguEQNjETb4Z_V2ETia9lDeNbElRqreo-y8pJnBONG5AueS1M0CRYXAxbLzsF7oCGbx-jPnQAE6x9vaT5XaYZcZMdao1mUsTuvhU7vEDtonSuMdhYJhY8O-_A&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P509439",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": true,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2839173-main-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$26.00",
+                        "skuId": "2839173",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P509439",
+                    "reviews": "2352",
+                    "moreColors": 8,
+                    "displayName": "Dream Lip Oil for Moisturizing Sheer Coverage",
+                    "rating": "3.8537",
+                    "targetUrl": "https://www.sephora.com/product/summer-fridays-dream-lip-oil-P509439"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=mVt2oHWll_1TzpYsTkWlx1_9YvRwNO5unWunT2oL8GIHX-t-iII6pGiVOmh08XDfnIIWlTjlvDgQd-KT3X1__hVvwZuw2D2FUn3_kgBmNZL0QMXUA6jd9YGJ9AFlTBzPf-mG9V7mGiypcqzzOl18i59q6Gty6r5VyFCQISa-uiiBjZ3UfO2xXWrpYLyFoO6f-YL1DQugoTSjxkIKbdLDCZaI3ALh0gSgf6b5Yja9rZ_El_veDZHrn7_BpSoAp8mRjUDobTx3KBbtvFSHhmM_VNfmZPUUUEmp2FU0nnlbL9ds6thH3iqExOUy_qjvd6H9cJDLqVlBXhTX2uTX_v26gPu9I1e2w6VWkNPotp6IC3g&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=Azl5-vDRtG0wfbcIcTeh4S5dUmBiK2AaTRNi3BjtlFxI0yI---BQVtemxad6twwdu_UxLnw9JBjko6RoZDkk-REwCA6w-wctNivP_w4NNYmRnC1f8Rx63G802sQSHJR3tYZ9_n_g_IKx0sN2hBUu9_QTRLTeRc2vfty7PZrMH2qra9o9Z1eCQ02tVH_MP4Ah7k-x33xPHFpr-jokpu7FUT159-zfgz0y79wBRQunmyfhTmXWNX5TaYv-pVc_MsMzzQUP6cj7oKqaoEpGZWNGZxwByiubv2NjevXQPBfyv3vYrghtF4GCmYNhTiX7msCLtR8WNkY-rMxiOWTXn0dK9KaAATfdLP9jK64Bt8A4h5qSDtOqjCp8KSgfRWYbeknr&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=Hba_c5UoSM4iTtNhURJZq7BXewvsaTCWVJIXK_K2YOX7Ds73-ftMiAseuV9eVo3lW5CN0ReXA7zVMAciUUMy9WXrQhiBGbRG7I3ESERQ5Yzpix_CrtQuolCmk8jfVBJS579SH4CTuBMO2PbBaR29b7XthbzSu4-w7r3PKeXl6d4r2VFa4P6Ho0ZpmHTXZ_tz9wuNMU8l99al6kgPK3JuNqx1n6aEqOCbkWt5JxnaAO4Dg6SENqPsjg8P8TUE6EmluzptMmxbajc61Ev5jQX7J1fsAdOx_g-338qgnIWGnQMgtSbACA36orKDNJClE0TwZMP5hPJk73Bo_JpzljyBTslC5utUwL_Kz5pf5zvB6bYa1oxzYWCuctx4N1pG9-gstNijmqvSr1N4z1_h7m9QlQ&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=Ep-eJSLmWOma-dm_9ZFQTbi_XCdZ3f9j5M8cFWnUiftuBP8UYOV3aAWwM2bsBPwrpVL1u4SscPU1J1BEVkTdeh9woDXovyYCeLmck_AuXLSXv1l40XsHdl4pzNUnT4l81i0FXf4s_ryXU5dhX2cRLMHEno5BgiDSJT-9KE4N3SE77TAvQOj1_CgLcdybGqwq4oK8QVxDdaMgT2qoPDz1LLZKe3t6UaAfEDt0zbeZu9labVEa5luVwffTxl40fSTsXfQEDIgIRTeKK2D6c9uWgm1RN4dp6SS8HUubrgUZS8CxN6Joke47frJuwpYT1eOUmEDUTWlJGWEDDRTu0aasSHbZR4-vTwuczHXVXsBNSfzcSa6u2m5QM9mf0uvZ2pr9oNdziu25jAyAGNo1x_NXCg&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=lRzyzeh9lbhHhArKXxt-LFkR-aDs4h627-1Cf3en9i0RNxHL8jRGCa2Fh68c-fcN4FAo-9-XhQEkz6EK53-ADjs2KjflaLF6_lVYsGLiiR0H0gM43w4Gh9HGrPl63HDCsklmgsiQZQOYb2IBDHdBl5o6WIMLZk6x1tRN8Ys1ZOCpWb1Q8aCz2ySVqzZZ5Cseo4FHhZpKrTv4uBK-4YDpywwqRIiQ-KuWz8YpRqz699ma6Us5etLC2N3tKGC9HLlZpn7wEuOibZC2DIx_PR2cg6PrxGv_IyDhT18NPuRW3JuGLbJBOJRHuUnQ8FlKRm8B7rldvp-rtof_Fx-CEjYiNX-5IRLPkOMJbU_bYlcF8TB689NSdeeeiVjsKC1UA-8n5Cdbhfs00ZpnxdlQDxtdPA&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P442563",
+            "product": {
+                "en": {
+                    "brandName": "The Ordinary",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2210607-main-zoom.jpg?imwidth=135",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$9.50",
+                        "skuId": "2210607",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P442563",
+                    "reviews": "3863",
+                    "moreColors": 1,
+                    "displayName": "AHA 30% + BHA 2% High-Strength Peeling Solution for Brightening",
+                    "rating": "4.4574",
+                    "targetUrl": "https://www.sephora.com/product/aha-30-bha-2-peeling-solution-P442563"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=u4y_hWbjgpBp7-qwlQotIFG7W7SUq2RKQ7oe4jTDQqzOimeoB8ywXOmVu376Rch3rRpUqKo1UOoEd3MBd8dRKuUNTmu8TFXZBKuMr7hl6DAQtmxm9sGIkBTMGVFxqc1yDawthCEdODXnVhXAx8zCQQi6VBvpeqN0_6hk61bCIYS7jz7obeIzQJIjI3RkiywYhEoUH6vkA49vg9TjwbPHXax_K_2cn3KWh7gzmUoItSn_cS8FN4hVg7UUgI2kdtJUwQf1EH5oXeh7sZsZsA_gZfXFa7Zeiq3gyF9XicI7rYUdhBjRmkSo2m3fSqokSS1RKT9bCOWXeT7F99m1VAOis_VrPvalLe-nHMD8ndBU9Qc&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=tWmuv6TBSHqGvoXYPrbpUYnYKjWHoNp2R9SVV2GawPqY8u3NE2G57a9JJLc3vvCQGALykjnAInddYQIleH7jrQoERSpWp1MePjIZcUuAjw7TVSCsIweHhgKT7W1oB4TBg0tkGnVIEELmIEjjebWQJBZG7WvEt3_xiMtgUjynycogqP-Ri25R982pr5RC3bjMZtHrSOO3vuOvGuz9bjUQ67ZRk-ahLBjeP-F8IdeCYyByYnrBMHnsQRo2DEmupZBnM8QniPVZKvQKGLlkntX9zCBs9M3sHBEZRR7wkYShCWQr_mm3mYskItDKCWDInnZ_KoalZTPjRT_w8Py9rGO_FU3swlDWMWWnGvocBqc6TtKLpqBbBljIOpxXElEwH_K6&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=iyqpmDQBZWrLQ7Q-kGqA4rzySidVfNr-ImQebDo0hP2bN9hFl-LKv1nWyVql7I3fxBvXH8A7frZDP_x9NEqePD_F3CcfOVz9cWy5he5Hv__eBl208bjSGHIvITC37N6FSN22ZzGEJ1u6KDjRnHjvLzLxMQ3EUY1kaU1TI0u8a-2ls_5ySqKaSgF7xI9uLRCVSqNpIajC0WOLdQ1C2lFMYY3FHxSwLLIjlvc836hrPsZ4SS-NiI5ibO6pypO1YniRMuRSAvrKX9ayrVSD0gZqd22L7Oq_Gb1yjRjYXBkrUvL0PbYjC9gj6kHjwScZ2kKeqbe2yWasJFyOX75tf2f0bjIPdzGlz0jgQdPYXC42cAzDFy-647ezbnMYkJ5_EEA0xIi698Jx94WgPwWbSvHr_A&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=LzBwtH0Tgf55OpzEn4Y2EmyVlLBGiPt2d8lj4MtJLA57I7roQzDmot5EdJLHQXdmFCG3ekZ12UTecSFPtAYDesZ7aVNJGtiV6tINZwlX1vzKM6nPVcUJonXcQkOSMHTOAHKjxHe9U-Vt0Nvn5mNjFmWSU7JmddDoZ2UPPN4D_Y40XaoEkUOGMlQjfwgltE2cCxcbM0GbyaBD9Jt263Wmf88_qzrlpPOpIDbKDAfvhDAqHe0hmYZsBzklj3XMdp3maleCqa11YL-Bx1BcbJQyGvayt2PqQs-7RZmL8L41TKNk3nDTZpVLMe_WcrMqa_qlyLvbVZsoKqbfkFoYjGkNFZ3O3J-WW9bSynov1FsdE5d4mKH0foKeZmjSqFB5Hkzft8duP-7-4i4mj3dDXoar9A&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=hq1ZJtoItfwzGPJqYDYnGFWmamnAziIT7CrFVeLWLRslHdUnWN-6f1RVqKpa8GHzD8Y6IManBlUT4v7yNxio1S7MMwzVeeVeXEwV_uzNT4PR668K7ZtgJKd4YnaGRJj6E1JpoFpwJjSYBCtxCY-BCEjVwT9FOjJncamEa9TXvFgdxFJvKk91MKfD2y75B2XsIUqXhFVDDeGou8XJ3yJazic-J9FZ82x4U20G8o717enAffVWAXfv7oB_Ni3ftbKGPR13U44X_HLMEmBhLukn6FSOQaVirFqIrZA-Zgt4nBqh8tQcjACw1TMR1OtDoz6834-mcGEKHF8wp1VQYHLxB30fzYukLGeDGI0Ma8Za9D2nY46chTGzo2URdc_9uMQl8MKDYelVVlBytKq43qGEuA&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P509440",
+            "product": {
+                "en": {
+                    "brandName": "ILIA",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2739837-main-zoom.jpg?imwidth=135&pb=allure-2024-bestofbeauty",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$58.00",
+                        "skuId": "2739837",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P509440",
+                    "reviews": "1124",
+                    "moreColors": 1,
+                    "displayName": "The Base Face Milk Essence & Lightweight Moisturizer with Hyaluronic Acid",
+                    "rating": "4.5231",
+                    "targetUrl": "https://www.sephora.com/product/ilia-base-face-milk-P509440"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=j8AlYvvYpN2WtBmG2pAkc1Bk9ildbYqQqck9csOr6ehgp8SJljBl58Hjx3jEITbBVsT1oYuuTR6yEk-lbtZ7j0fnt5yIkZMGbHth2s0QvrbEtslowiG3fZ4BtN4VhAN2I3cHtksbaPxTgT_zKFgV_u6NZpcxsh1BTPGECafPT8viGsYHIrVwT5WvptHlmuFFHpvobogHEdUw8doSYFj6JIQXFNlXkuWvMpMT469Nkm74BBH_WAbxFQslzmvRHgLv90qXd1nF6Zt6uucRRsybp4u-tPlqdsIjoCixmeXbjnjTK7hzk3pJ-mfWrJIMQFrV_gMajksvqSQ1U5ooamEb6_9ZZ0-vvXAAEsj09yi-m60&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=cNPZJy6ZygPPRs6AeXWVAptvUs-TxheaGiOfn7FtyiuKh5tmhxLpIuljGzXM4o6a1d9808Wez9KtT9bZFwOIr_sk7FqoKj0KGfhXyyU6Ewb-zcmjjgS_3v320XHleLM_1YxGPx41F8ioUE_0EIo2xPwCoXQ68yixhUWPLG0N0-nV-UKgChVo9H6TYyUAJPu70QTuLuWT09fPZf-SQUBl3H1drm-IJ4F-OSs-qlbiEBNNAn3LTNdPpymmyYtNCCEjdRkdXKhkC14D6WSLkQ3SYW1pbU39lnKUOuxUNLbcsVFDFzpDmBjzL6uIdt3Zg79oV2yH7hZzv7LRa6IeZoRcrapu45npFjw39IrxEE7j6VdonZQyaEeXCVVdX05WPUDB&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=h3r7fXpFq6vH3zUGIqrjMZGjGJeoxhYoSLMO1KB7p3uWx-Y1IPCz3PBtR1IclbTDNDBKBkxxhvWruVIc5yq2SP3DI2rOLfvezRu4SIftbKU9KaOzl3bEurIGA2r8Eh0hrWVMjQgTI5fP1fBm96-4sz6mmHEqFPDsMmgqNUKcrz1x2FiWyOKvI15zCBhtBnt1WQK_gtVdo3qE3UpRq5AvJayYHybsl9P71Vj1Pzhhn51heZc4YKYzw_4s_rWfc9fHQt39XH4DZxkqOdK5AUOB54-cDR7MWPETYEQv1qK8AssjYBJnSvn322AHnNf4VHyZxM9p5xMgHMkxFTRlrnQGUnF6BEWUAGGPGmm7no6OZXI9pfrcjvrnlGNeqTI8OqIEOaztuofSnhv3DSsu5CpFXQ&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=iE2VsjFT9nqv1K0WZXhjl54_CJiLQqdbGJyoc29JEwdD_AU2Mlm-cWwwwmAt3KozphiCJFVR9p-rE2b3qalbqIMRoM6NRxIJ6SbLp5chbRezMPEbP1HNkdeth3FkN1-CEVsZrae5UkmVxH7B2g-h1f2-UT51qYKIY-zL7cEqnczYttLRCnMys1hmCA8nl4BrD2d_3vWGiY4V7AMavxpCqYIa5HD6tRDodemnfJvE1XpPDwoiODFRzKXk7u1tILT9EagO0K0SUupfKkq2ptKRVNJm74x_4V7Y-YR61h3JhnG4QkJ9wnaLG21kXFx0NYCqHTHRqC4a_nAtJq-HUqRhstqtlx6xdACa5SOTuGRNJfpMxTSkha7I8v6GiQjfQNyP3DioYo_z715qmWtNniLl1Q&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=WkkU8q-t8CywAiVVR90ljd0jq9HSA6ATLW_E7yc9gKA-loqvQ-0c5XobdEhtUhe391lBo5oXjFFjpQpagvi8ND4fIMSbGPJ43NkxUEm6Pa_HQvoKVrFbUGZ6DQN3buckJ7Uwg0xpOw5vByGExchTRnWCbyVRpD6jAu7TdEokRWea6VdUb9i5Wl2ayB_TvGy9QwhLK8gDnvsS3oT4zz2ExAwSORMntn6ofkeo8Ag0gsALNbxX6xQ_VCBivp4xnhPtw0X19GgHs9bzB9Eir8pSeKrg2GxkmBdaK1CJ-O1iOwneQmutWkr6LjY-XUuQjckQCuCYDkhF-WRTWy8THCDWB7B3IryE6Bd7X65-XHSCGUn9wd0Yrbcs5QKb_C7wGUyC1F3sZfmUo2d0vyF7-jBzGA&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P511987",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2802189-main-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$44.00",
+                        "skuId": "2802189",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P511987",
+                    "reviews": "446",
+                    "moreColors": 1,
+                    "displayName": "Jet Lag Deep Hydration Serum",
+                    "rating": "4.7691",
+                    "targetUrl": "https://www.sephora.com/product/summer-fridays-jet-lag-hydration-serum-P511987"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=8fBlZIiR5Hi8mvcpTsAD5BNZ0jplCfHr26jCC76NRTaR3Y4fr1J7EeQKjMOjAFrCxFcGOgOINXAN7A8beOSRsQqnRfVSB1g8OxJJoU_ZoH__N_kwP9n0jLyLygxXkrXWlgj1DRKMHPmbefPZXLBRd3F7IymcIQxZVBQLtOzbrDaUrjboDrnI-Iv8VEpwuAY_g6iwP0t1Fk3a5Bta3-egsKro1M8RXMttIcbrKq6iqlN4Na8_ioaokgVYbuZLh8jpKcQFL7gRtJfAlPndCtThok9d9MUj50FD1leTYFSmynFg5ay10hGDwLN8N6QsKmUyPdEzq7giIxj4kgqi-6JpFC5DJHZxgri736rXLWfmAws&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=Yg-DOVmhOUtOvqIrTBfiJERK7P4xduRHUBui-zXpMz-OJ5MuoEpAowglTbPybATPZNbKOdG3P6FPaDcWBV5YnD2PGlUiOLrQkNtAugeqoRhU7JQfMfht2KIhfUaF1XIjLxAMfbc5mGBnAeYuzgfsV6x5nmZA9ubYkFt1DTK7V3l1zXGCLEP_30jGjZYrsAX1XrBpPfFxRQwrtcZoESCHBckSztlc_OD-p98ful5vF-XCrW5LPXAsAQj5uvhU4QIXWI57TpVOwnPf8vFjkOXEHZZCBEsHaLJIG2I-mmTAw9Cj-kRNGNMi0S9vMZjWmdVJ65EB_8vqWKcp_nT6rhwV6ylRBDecI4y7-167OrDrPKTZOpwy2G2DJdY7j3cSB8-1&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=I6esaQu3nnaZvklzS7HYicT-RGiSkGCsdWj4i85ZQsqbsjGeL_twswDV1VRNux2W8sQdfg7Wi3y4glhBHJ8FgazVGNcOYrc1sO-AudlufA7IlmNCXdr3-CzxBGLL1DEsYzNdQ2huGiANb31sgtJuEbqeh9Z6z41GscrET2bbHEuxR5q5t_S1U9SmNPOXaaSb6aKF0PcixFCq5K7eG4MtcDufAlLD7IFdj-zCC-MeE5OEXIWx0Fqq8CjIBvJsNYed6e2xn8vgkZ_U2BgEC8Q5YpreVU-ar9G9teckJYgwMmIn7_efIwUohKjCXyq4F4cXRlTv9L83phs16eQBr_iMeewq1AU28QPZDNVHMwU7iF9-FFAkiFm0FL_9kJzy2T5lhq5MHHkxX8c8wJ6CjvSgEQ&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=HvnVH81nKzncfdV77_ztMm3CuclwguvnLvx61d8mRoy2UolGuekQ9F3XsDyDuaQjkP68xoTfVDsD8zGOQY1GlA838xvH4Hybus3uizcicDZTJdQGOp3ZDmCogCohrYlPWPd4GkWUdm2TQUp_y64nbkhZ7OQIHO7eoIhcZERH7SERXgYUdypc1M7dPb4x4oaplH4BUcfFjdaaqpSNf3SIPwvuFyKpXD1LKDNVF0nV_x5tpEzEYJteKJenStxZictWe6GK5RX0IfuWXIPZQZPKKOwSbiIg2cUz31Df_zo88Qzjz_a3gHAqc_gIZtKRMRJRA61UFJ3jTwCb9A_neP36umORAXR1tvlQRcD_21wRjLL8wJzIfH7rR9CdsY6zjSr7DgU6LYq4RpwvhMG57SPYZA&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=5PY2P4dShDNz-8_rwXBUbpK-RwcJk8hCeEwtFA0GbJ8KFtZYBIyOn2PpC_s63JRIi2mq4oK2xiWTJHn1qM_r3dJy-DisISu28M8jDcwkB0ytMCjuSDXwqz-JFNO2h_wPmFWj-gqHRdgIyzekrqCv7qsvKmhnbH8Fao7Mefnu-z9Z0PDpm1OM5oD2gPDPOIKrmp4yA08CHWeWaZrfQljVxue6uPizODw6efw8xSTq0zV_6Xqa4dBPKcEpVxXMM6yJYz8P5YCNccPHwC1kHw0dToq1QvJKB7mjmgpWOi_dl-oqBoVoQPc5aSqRD0603KeQZjzDTeOm9OJMIklWwKRvBfLAYcUVosBRA5rcD652TuB_2Qh27o1In3Ycx9AzkIs56OE_nQxxSwL4Sj5tACYuzQ&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P449180",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2224061-main-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$68.00",
+                        "skuId": "2224061",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P449180",
+                    "reviews": "1235",
+                    "moreColors": 1,
+                    "displayName": "CC Me Vitamin C + Niacinamide Serum",
+                    "rating": "4.1328",
+                    "targetUrl": "https://www.sephora.com/product/cc-me-vitamin-c-serum-P449180"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=k_Jt5L0LJwi0_3ikTOEVOdEzJzENYe7GlUwdywgUEC3Vpc4CSrKKO6I4yryK_o2x_50VosZvR6HbB3uB9lNu8xxhq8ONZCUwMgnH18DEKuuRuInZawg7Jwqhx449tSDJksfHFfQvyMpu6g3a_WT1S4bf5e7FjsiHxmgV01Au7AXXfD84_VfT-RbdvYBz0pSRlENujI-PIKcNcs5W9ZQYaaUPR4y44mLJChKvV9Ck_5kl4pQuI9XlROPfAyAwCYpFxq2RaeAe6xtIY7brDctxUnhB9qC_vWDbHk3scDj3L20kHKxk_js6dxBJOwbFfYAHAhdARswIZf2y2ncnhZzLuJ2TOdQCzcqSv-2qENAsI4w&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=c-VTG8FHDiYV-uWn0KOTqe0FKgOOMVaz84SdRz_9d25X8LEbUSyJ61-nVgznJbDtHJBGS0BLe2r9m_kzBG_tlPHK8JsBg_NUj9Ts-6clmbXhpNbcycqaGELe-99Fpp9vEuIhezIZF5YSl4Rcnj3xfsq1PDznqN307dlo__jjEVsslL4mfC1QCACZYV05nUjTSpgRT_fON6nRqzQKbdgMcM7Ffpzg_SvbmbOjB0QZyx2-Sn05lfdpepcgkB8ep-0zJB8XM1_zkso3ibQo8CIxwk4TtgkIkflTwj_By4NbIpO_Gml6GEx-0V7SpavsdxEvfdsTsdBcUvGYpUzMNI8xIC8TaS4oh_XtoOug2ZDv6ILYgMHGfRARWvAiyuKhnXQx&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=RbprmAyWdmqaNpffvdsDZZ753sYB5R0r_u-BBxdRbdsihntj9tEqX3c--ydlOvtL6ESsJ3gp2DO2D02_yVuHHfwxiLk_MHGUBTun3RI070a5Qim5wwVDaGvYfVYRUxeWHisUoOaVtE2pYGy-1sGFNgKj05McrA6sI4vR9xcB-JK3J_IJzdbYP_rk31mMTLWtH8pKohahMFA7x6FQIVpzzw811BAtBwk5t8StCzm9Q_6e5AGwFavxSJUA0V4B-3o6Y-XEyAjw1BH39yX8RQCgJ0Bq1jcINNLGlUlmysMRWYdOsRRSGkauroi0LP5oOmccoD9seR6k9SkV-f5a-OsXAs3hgwhbOw7q9JHkN7h_kMYiAE7T1jr_44b9HU_FL0O5so-1_z4vA-0u1k46YsStDA&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=YabD8LYnc-y7Sr3TlChhlKnqqR-ytcmE6JqEne3Hdqe4MQhAcOgmsbkVSMnP2gYbv89pxX93_YQVX30QgXi7A9TD-4ibwL4sN9Wq-gX5XbnJ2G-L0iEo_jEumrA_wulSfxTtuxtkV7pOAvcZWrQAIxhHuVJk0HH3zzTlY9JSwz_Y4sdGb_8pLllRK4jWMpRUeL8-t6FS-_yrURX6GaB7q_occ4isqMfgiIxIrxGAak2xUgxuSRPsciGT3Oy9gXgXGfrbvMBlBVyswExMui2Hy-eimyqBa-JAPbMHg2sSGmX_baT407KaffZcZMro6Hw9XxndFDz8CSlaUAWzPz3Yeo-F1nN8sCI0Ws6xrL4JI6cUBnrJAv85jzdxXA1cKyb_DwGuOxB8Rgxpl-UCs_59og&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=D4izpIXlpT2e9z4PSfNfyqQ7HEcQZQZltzEbCNYGzOIr40HK2VccvSfibyMMlQA0Jv8dFnZTv3mA0JeUlglMZqwauCLw2SAk3oW28i75VHP9Pa1yzJCSEJPB8_xojWgsmlIMYNG-5r0__FMmquIlKoTGb1ywKDEkSE8gwu782uAwJM-QddiM00LLhOoM7f-HXKqx3FXqlXrWuG1VquJpnX2K-qjMYS7b-qpnVpjg-aiDVdCrdlnXhY6EFA__30kTt--fG69CP45ioCdq2Cqh7JMgqzMMstEL-6sZVYFX0g6rJ7Mh_dykjWniDj6ZBEl8hWqrYpLj4lP2KJvg8TUWDnqp6yR_Od5SruMB8N_zDE_JhkaEzk_xLoDdjV7Mm6KB2z_X0jm1gG2ZVQLDsJsdNg&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P511756",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2786770-main-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$21.00",
+                        "skuId": "2786770",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P511756",
+                    "reviews": "693",
+                    "moreColors": 1,
+                    "displayName": "Jet Lag Skin Soothing Hydration Mist",
+                    "rating": "4.6349",
+                    "targetUrl": "https://www.sephora.com/product/summer-fridays-jet-lag-hydration-mist-P511756"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=YpJYkowSfx5r4uOg-lO0-OtEa_xXlOSM3RcBWnf90qg8xF62-itkRU-BXVoWDNH-WtZUbvl7H2_KJZb5zJfJ9WnEjlo2K61KIPZTLfqFKMV0vCNzCupiGMz8QdnpXhZDakhU1GHoToT8Yxh-ZG90LqlqJ6jhupQTLovi-Tj4HJk7Tt8BJGkU-dxdFao6deogjEpx0vzNZHFFIYxrZKXqsIrRR0ivdZl-e3elKbrQBfa2aKjYiqPQfriBjEQOzjWvlXdHuX5R_bK9qtltrvrPTE6HuASXJ1DFjTMrDPKcivnsvYrIg5DoSXzJ38dnvlGMdEPGkhDxoFb8OLPNZYvOSfxdqSRmKHqAAVgwm5MWZvU&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=HojshUb-ceq2h_9oZR2rDt4APjAwGbjRuFxnm0hl1yCgaSJoP8dgaSMlpQ9ABjd-UmI4Zjg6GbY9MsmjyPGQWvPZ_XCIgit_SrReU_RzrOIfm5to9wAAKgNGHqpswNz5l6BCbc_bM2ZHJpmj24BQaiNUsmAhXDjByeoR5yq8LwOPqf8_DuSNsIwEqNBgib5p2w9eWr393DRUTlSRECvFiNErx1lR5Lp2btK14BNvG_N4uVeRWGWYMGQACzsJZw-etKOnVz-ao9PXS0DiUcWzJiD5fzOr_5Rc4VvXXMoWy6X-kc1uwh8aFihyVGARWtDIyYONRxGwqXVjKxpaIyxGEvIjx0YJM1H3WZ3rzp7E5um3thO2ofTTR3jqtYiHbVCQ&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=PcPmfWld6ZgSyhKsu59nPjHrsxpCpvU5DZ3XdUDqyNt4Lr8Qi5bi8ulLBRiPhzmG-3awRDkwlE37UGp-68Z9mi4cwj-MIqi5a7qWL-dEsk_ss3-QBDgS_M17W0KZ920mx7yOBBeX84rWanHMVcdIz8_xPOOs-sWbmvF1JzVdRV6HixrFGJpwY6mkggfO9DKqosYMi6Q0uLHMogjgDRCIukmd-U1cWTJWs3RyCiYFOxw_qclf2QDiEy_JuOGLPUkxkBTql10D4VJMutU_2R-DEMt7z-_NaV-UmmHDmOT4lu44kqZk2zWOFA0op2CNMSs-XtNvBUlHNymGWO5OwP3G1-A8k9uVKIXGCUOQh7CaNgvSmBEqpjFyD0zzCRwpXvvfPIB0iqCW2ZQewfVQjYqhFg&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=hN6XhIqKSiP7ieTiD2FdR2OSope9gsxZOhVNd-q3FeR0_SBQr8rN1IvNM1yVJcpvETb6I3cJ77HwMJGpozOETnOqTjahRio8f9CyurEoj6u0VzX5fS45zb1TWPZOhjmHejg6173zU0B6fCvkznxTQWAyUDZZkI5kzjgJu-ajjeXrNHUKim_rUEjpS3QP4OvONgxTXqbIquOA43lVdU6E3sCEctGJTJYIvQea51QVvB7fH7dZ7o2NqgVku3Y0dbWS-x_90gCoyAqWlHIRJZ8ko_I_WqO75fM7ZmKwEVTNG-_yL8QZjeuowoFV6rRzFW59BXwp48JPaz2vTOiakib-vMVrjjPIZ6zN7ZrSu1Em-RRwemSPACKI-RgmR79j4vDnAumzirN7tqN55Wqtt5H11A&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=wZIvzM398HH6TYB7STRSSMmrshSUfgpbOz-OcAnBNmiJACAVFMdJRqLha-H1kmdlfK2olmPmArtIe0NFLtieTLQu0S8o149f-n4S_5v2MBU4QeBMBz0zJDC-7CWBigD5ByiC7td90ytC9ubYJ8FxxdEjGl0W_Sy1fzjh7JmEYabddn3v42ye8-b8_NONUxUXrj4g4MejB5aGHKdAKVqfAE57i0HCjh5JtzdCDeTTliJkc2ZBSrgwhsfwskiRoSP4zTRqqkZvJGEhxl4DZdmAaeZ379Tw1GRmd6QMtrGmsoN_q1oM0dl7bUG8wVCc6mPjIIGaTahHeL6QOrOu_hpio_qkrnmQ7lmrquEI5mGnepc0krYo9-8DxvngDnJYRNcwXjM3th46K5cuxpRnNm28ww&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P506690",
+            "product": {
+                "en": {
+                    "brandName": "Summer Fridays",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2703726-main-zoom.jpg?imwidth=135&pb=clean-at-sephora",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$52.00",
+                        "skuId": "2703726",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P506690",
+                    "reviews": "670",
+                    "moreColors": 1,
+                    "displayName": "Rich Cushion Cream Ultra Plumping Moisturizer",
+                    "rating": "4.4955",
+                    "targetUrl": "https://www.sephora.com/product/rich-cushion-cream-ultra-plumping-moisturizer-P506690"
+                }
+            }
+        },
+        {
+            "placement_type": "pla.any",
+            "onload_payload": "//b.us5.us.criteo.com/rm?rm_e=BI0_UxE75xQGIeId8agjNN9HXPdv7aB_BPoK4FFx3wmaUV3VRJa8k70rnKFvrd1SLcxW5ygRyaXOaF03N3EF7pNiqaNtHeHS7Om6ebMhASu4TX-BWOYNjxCvfJotRvdpbOA6yALNpwdifi0ujHt4RgwQUAt8tMYJGgDlSSFF1fw2pbDfYcEUwB6f9JgXYzcXhs4HMvLLp_MjurAUvwHBRGgAUBhjFvgRLkrHC9QY-Xdp8hF15JEN95vtoMy7o84y7nK6hE4CHW52NLtZr8cLmQcKSVcqPY4Gv421acqxWHIXqkPy4WA4863h6Y3Gw9La4GRfv--NIUgEpJYxQ2Gyw9ijhmCAsY2wr4BCGDwKm7A&ev=4",
+            "viewable_impression_payload": "//b.us5.us.criteo.com/rm?rm_e=qyBjiofAqJneyIk1swzC1RV4VkEatmmlN-fhbGI5QAm2lhM6OS4-e9juOD54GtsXfNUhOYxt4s3uUhI6MkASl6iCnCNuwoiQbwlpp8l8yklnHBCcLjHTi8WQ0fnojq1jUMVxrao5SSrtjy3zvaufCI4zxdmyDqQtxsKFY0gWISSmK651SlnIteGWO7LHin47-0e9Nle5AAn_FxI3-i1Jc_tnwBZN-e6tXvjkUYc3xKZb1hEQ8Pih4NYxWdFXD83j1I6fRBKuXAJ3khxra9bEj37twfBYpJKsilJLVEnCtzgXM9r0CMtf8q4eojvMOTiMsQEnLNwKwzpssnZxj2BEEFfl-f0thEcUwJhOlzjFeenmUIwaupfzFpTzHASLh9SU&ev=4",
+            "click_payload": "//b.us5.us.criteo.com/rm?rm_e=BKzZC9ipTNht8Z6KZjFZgvBOKP3UxgwtGieV8wP6RO8QEO2zvebzdPgo7rSVQndrDSBPWyfcn3evd22oXJusxQgV_5yyGrfSASCCHQndKYKniggSvsApItmx6jPaxm4MYuImGfiHK4YB4bwPu9JK2Yb6V57RFvhj8RKPlYHthnd69er6W0cva_lPLh_F73TXsIWW_Mik-8PX3GcAK0KEwt_zF7423ig8MF0IaitRyJxQF3YuudkXD6UW05sf6qKyAC42oudt6C1BRj3cLZnXkdaMgTYZm55T6CEczrbc9IpaXI8uwUFMSGfYHSGLxfhIWMXSuFGBiVFC9seA_SihQm-10YhNR5ruCy2IeQOionKueUgIW3VJFDo6XAgSyBMDpGs_kt7KnYlPBM9Kd9nCdg&ev=4",
+            "wishlist_payload": "//b.us5.us.criteo.com/rm?rm_e=Dluf-gbm9-mQj4aFXJE35K3RAQ64MIOU6vGHkKTCZPOBS41Ko-2CiJwkDsCfYQfS82K1mBA5frvOHEJejFN2ko2CuqffaKktAmMZ0_nVOrh8ELTDq7IWXT7F_BVekZYJ_kW2J6t46ADwwIIk-doiwBnzPFGo_QEGussBQUqlGo5Sk2xmyvrPbBoVBEdLw4J5YjxqPCVdCz6R4kKwKPD1GIcWbT3rXiYhtiHQoZP_yEgGBRAc9oHJRb6ou3xkWgw0nqoAvChrIK3ih9ewiFuDv89zVV1sk8yZXP30Qt1CBEm0Cyec4kY7RwflzBNrEf6m4oQzSMmcTkIXBosD1ZCHt9PE0uEpSqbg6VNVU0nYnyeJXYNEb1H11rVf2krZxwwp8X1OWL2ui1JnlN-j4iKPSg&ev=4",
+            "basket_payload": "//b.us5.us.criteo.com/rm?rm_e=yZcA_5Q9Zq07JGSbxbp3cP3QKYWGrGJPpJpxiptNjvkfbegy02SclPoFRmM_pUGnaI-O83358DjvoVDnRd5-DIOLxe_dzwsUMrgqjX3OZnDd96b_Gusr1ppGYu9n2apcdQEN5d2Hjl7bA6cMCdZeYWsBANxOMNtksPADpw5Vfr0Uen4Acbt5-ljX2qAv-5yepQt-SWjrBCjWylflidsKoIkZR7qQK_eebTbdUsBLGVmJ9UZ3uEvDo2w0qR7lnidl8lNDPsKc5_naj-ZjXevUZUDImj9ARCdLT6cGkcIns1UxkZNuNRxMURsDwYWSzwURFVM8AbcEUZRQwo2X_-7o3mno-allh9H7CerBsQiwsBbAKX3ZiJHBY7slesxObpf9G7BKokcwJSQbELQ1_aqk3A&ev=4",
+            "impression_id": "deprecated",
+            "impression_payload": "deprecated",
+            "impression_tracker": "reserve",
+            "click_tracker": "reserve",
+            "sponsored": true,
+            "product_id": "P443563",
+            "product": {
+                "en": {
+                    "brandName": "LANEIGE",
+                    "currentSku": {
+                        "isBI": false,
+                        "imageAltText": "",
+                        "isOnlineOnly": false,
+                        "isNew": false,
+                        "skuType": "Standard",
+                        "gridImageURL": "https://www.sephora.com/productimages/sku/s2743060-main-zoom.jpg?imwidth=135",
+                        "isLimitedEdition": false,
+                        "biExclusiveLevel": "none",
+                        "isSephoraExclusive": false,
+                        "listPrice": "$19.00",
+                        "skuId": "2743060",
+                        "isAppExclusive": false,
+                        "isLimitedTimeOffer": false
+                    },
+                    "productId": "P443563",
+                    "reviews": "7298",
+                    "moreColors": 10,
+                    "displayName": "Lip Glowy Lightweight Hydration Balm with Shea Butter",
+                    "rating": "4.383",
+                    "targetUrl": "https://www.sephora.com/product/glowy-lip-balm-P443563"
+                }
+            }
+        }
+    ]
+}
