@@ -108,6 +108,17 @@ class ChatProcessor:
             if not processed_file['success']:
                 return processed_file
             
+            # Process file for RAG system
+            rag_result = self.file_service.process_file_for_rag(
+                session_id, file_info['full_path'], file_info['file_type'], 
+                file_info['filename'], file_record.id
+            )
+            
+            if rag_result['success']:
+                logger.info(f"File processed for RAG: {rag_result['chunks_created']} chunks created")
+            else:
+                logger.warning(f"RAG processing failed: {rag_result.get('error', 'Unknown error')}")
+            
             # Generate AI analysis
             file_summary = self.file_service.get_file_summary(file_info['full_path'])
             # Streaming AI analysis
@@ -126,6 +137,7 @@ class ChatProcessor:
                 logger.error(f"AI analysis failed: {e}")
                 # Fallback analysis when AI service is unavailable
                 analysis_response = self._generate_fallback_analysis(processed_file, file_info, user_question)
+            
             # Save file upload message
             await self._create_message(
                 session, 'file', f"Uploaded file: {file_info['filename']}",
@@ -146,7 +158,9 @@ class ChatProcessor:
                 'file_info': file_info,
                 'processed_data': processed_file,
                 'analysis': analysis_response,
-                'file_id': file_record.id
+                'file_id': file_record.id,
+                'rag_processed': rag_result['success'],
+                'chunks_created': rag_result.get('chunks_created', 0)
             }
             
         except Exception as e:

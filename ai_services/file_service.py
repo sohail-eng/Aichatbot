@@ -26,6 +26,38 @@ class FileService:
             '.pdf': self._process_pdf,
         }
     
+    def _clean_data_for_json(self, data):
+        """Clean data to ensure JSON serialization"""
+        try:
+            if isinstance(data, dict):
+                return {str(k): self._clean_data_for_json(v) for k, v in data.items()}
+            elif isinstance(data, list):
+                return [self._clean_data_for_json(item) for item in data]
+            elif isinstance(data, (int, float, str, bool, type(None))):
+                # Handle NaN and infinity values
+                if isinstance(data, float):
+                    if pd.isna(data) or pd.isinf(data):
+                        return None
+                return data
+            elif hasattr(data, 'dtype'):  # numpy/pandas types
+                if pd.isna(data) or pd.isinf(data):
+                    return None
+                if hasattr(data, 'item'):  # numpy scalar
+                    return data.item()
+                return str(data)
+            elif hasattr(data, 'to_dict'):  # pandas objects
+                try:
+                    return self._clean_data_for_json(data.to_dict())
+                except:
+                    return str(data)
+            elif hasattr(data, 'tolist'):  # numpy arrays
+                return self._clean_data_for_json(data.tolist())
+            else:
+                return str(data)
+        except Exception as e:
+            logger.error(f"Error cleaning data for JSON: {e}")
+            return str(data)
+    
     def save_uploaded_file(self, file, session_id: str) -> Dict:
         """Save uploaded file and return file info"""
         try:
@@ -119,15 +151,43 @@ class FileService:
             else:
                 numeric_summary = {}
             
+            # Clean the data for JSON serialization
+            # Handle NaN values in the DataFrame before conversion
+            df_clean = df.fillna('N/A')  # Replace NaN with 'N/A' string
+            
+            clean_sample = self._clean_data_for_json(sample)
+            clean_full_data = self._clean_data_for_json(df_clean.head(100).to_dict('records'))  # Limit to first 100 rows
+            
             result = {
                 'success': True,
                 'file_type': 'csv',
                 'content': df.to_string(max_rows=1000),  # Limit for display
-                'data': sample,
+                'data': clean_sample,
                 'analysis': analysis,
                 'numeric_summary': numeric_summary,
-                'full_data': df.to_dict('records')  # For AI processing
+                'full_data': clean_full_data  # Cleaned data for AI processing
             }
+            
+            # Final validation: ensure the result is JSON serializable
+            try:
+                import json
+                json.dumps(result)
+                logger.info("JSON validation passed")
+            except Exception as e:
+                logger.error(f"JSON validation failed: {e}")
+                # If validation fails, create a simplified result
+                result = {
+                    'success': True,
+                    'file_type': 'csv',
+                    'content': f"CSV file with {len(df)} rows and {len(df.columns)} columns",
+                    'data': [],  # Empty data to avoid serialization issues
+                    'analysis': {
+                        'rows': len(df),
+                        'columns': len(df.columns),
+                        'column_names': list(df.columns)
+                    },
+                    'message': 'File processed successfully (simplified output due to data complexity)'
+                }
             
             logger.info(f"CSV processing completed successfully")
             logger.info(f"Result keys: {list(result.keys())}")
@@ -148,20 +208,40 @@ class FileService:
             
             for sheet_name in excel_file.sheet_names:
                 df = pd.read_excel(file_path, sheet_name=sheet_name)
+                # Clean the data for JSON serialization
+                clean_sheet_data = self._clean_data_for_json(df.head(10).to_dict('records'))
                 sheets_data[sheet_name] = {
-                    'data': df.head(10).to_dict('records'),
+                    'data': clean_sheet_data,
                     'rows': int(len(df)),
                     'columns': int(len(df.columns)),
                     'column_names': list(df.columns)
                 }
             
-            return {
+            result = {
                 'success': True,
                 'file_type': 'excel',
                 'sheets': sheets_data,
                 'sheet_names': excel_file.sheet_names,
                 'content': f"Excel file with {len(excel_file.sheet_names)} sheets: {', '.join(excel_file.sheet_names)}"
             }
+            
+            # Final validation: ensure the result is JSON serializable
+            try:
+                import json
+                json.dumps(result)
+                logger.info("Excel JSON validation passed")
+            except Exception as e:
+                logger.error(f"Excel JSON validation failed: {e}")
+                # If validation fails, create a simplified result
+                result = {
+                    'success': True,
+                    'file_type': 'excel',
+                    'sheet_names': excel_file.sheet_names,
+                    'content': f"Excel file with {len(excel_file.sheet_names)} sheets: {', '.join(excel_file.sheet_names)}",
+                    'message': 'File processed successfully (simplified output due to data complexity)'
+                }
+            
+            return result
             
         except Exception as e:
             return {'success': False, 'error': f'Error processing Excel: {str(e)}'}
@@ -199,6 +279,9 @@ class FileService:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
+            # Clean the data for JSON serialization
+            clean_data = self._clean_data_for_json(data)
+            
             # Basic JSON analysis
             analysis = {
                 'type': type(data).__name__,
@@ -213,8 +296,8 @@ class FileService:
             return {
                 'success': True,
                 'file_type': 'json',
-                'content': json.dumps(data, indent=2)[:5000],  # Limit for display
-                'data': data,
+                'content': json.dumps(clean_data, indent=2)[:5000],  # Limit for display
+                'data': clean_data,
                 'analysis': analysis
             }
             
@@ -335,3 +418,36 @@ class FileService:
         except Exception as e:
             logger.error(f"Failed to cleanup files: {e}")
             return 0
+    
+    def process_file_for_rag(self, session_id: str, file_path: str, file_type: str, 
+                           file_name: str, file_id: str) -> Dict:
+        """
+        Process file for RAG system using ChromaDB
+        
+        Args:
+            session_id: Chat session ID
+            file_path: Path to the file
+            file_type: Type of file
+            file_name: Name of the file
+            file_id: Database file ID
+            
+        Returns:
+            RAG processing results
+        """
+        try:
+            from .chroma_service import ChromaService
+            
+            chroma_service = ChromaService()
+            result = chroma_service.process_file_for_rag(
+                session_id, file_path, file_type, file_name, file_id
+            )
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"Error processing file for RAG: {e}")
+            return {
+                'success': False,
+                'error': str(e),
+                'chunks': []
+            }

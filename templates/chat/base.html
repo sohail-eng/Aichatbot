@@ -49,6 +49,56 @@
         .accordion-content {
             transition: all 0.3s ease;
         }
+        
+        /* Sidebar responsive behavior */
+        @media (max-width: 768px) {
+            #sidebar {
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                z-index: 50;
+            }
+        }
+        
+        /* Sidebar transition improvements */
+        #sidebar {
+            transform: translateX(100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #sidebar.show {
+            transform: translateX(0);
+        }
+        
+        /* Sidebar backdrop for mobile */
+        .sidebar-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .sidebar-backdrop.show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        
+        /* Only show backdrop on mobile */
+        @media (min-width: 769px) {
+            .sidebar-backdrop {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100">

@@ -14,5 +14,6 @@ urlpatterns = [
     path('database/connect/', views.DatabaseConnectionView.as_view(), name='db_connect'),
     path('database/query/', views.ExecuteQueryView.as_view(), name='execute_query'),
     path('history/', views.ChatHistoryView.as_view(), name='chat_history'),
+    path('rag-query/', views.RAGQueryView.as_view(), name='rag_query'),
 ]
 

@@ -18,6 +18,7 @@ import pandas as pd
 from dataclasses import dataclass
 from datetime import datetime
 import hashlib
+from .chroma_service import ChromaService
 
 logger = logging.getLogger('ai_services')
 
@@ -60,12 +61,8 @@ class RAGService:
             self.max_results = 10  # Maximum search results
             self.similarity_threshold = 0.7  # Minimum similarity score
             
-            # In-memory storage (in production, use proper vector DB)
-            self.document_chunks: Dict[str, DocumentChunk] = {}
-            self.file_embeddings: Dict[str, List[DocumentChunk]] = {}
-            
-            # Initialize embedding model (simplified for now)
-            self.embedding_model = self._initialize_embedding_model()
+            # Initialize ChromaDB service
+            self.chroma_service = ChromaService()
             
             RAGService._initialized = True
     
@@ -79,14 +76,17 @@ class RAGService:
             logger.warning(f"Could not initialize embedding model: {e}")
             return "simple"
     
-    def process_file_for_rag(self, file_path: str, file_type: str, file_name: str) -> Dict:
+    def process_file_for_rag(self, session_id: str, file_path: str, file_type: str, 
+                           file_name: str, file_id: str) -> Dict:
         """
-        Process a file for RAG system
+        Process a file for RAG system using ChromaDB
         
         Args:
+            session_id: Chat session ID
             file_path: Path to the file
             file_type: Type of file (csv, xlsx, txt, json)
             file_name: Name of the file
+            file_id: Database file ID
             
         Returns:
             Processing results with chunks and metadata
@@ -94,39 +94,12 @@ class RAGService:
         try:
             logger.info(f"Processing file for RAG: {file_name} ({file_type})")
             
-            # Extract content based on file type
-            if file_type == 'csv':
-                content_chunks = self._extract_csv_content(file_path, file_name)
-            elif file_type in ['xlsx', 'xls']:
-                content_chunks = self._extract_excel_content(file_path, file_name)
-            elif file_type == 'txt':
-                content_chunks = self._extract_text_content(file_path, file_name)
-            elif file_type == 'json':
-                content_chunks = self._extract_json_content(file_path, file_name)
-            else:
-                return {
-                    'success': False,
-                    'error': f'Unsupported file type: {file_type}',
-                    'chunks': []
-                }
+            # Use ChromaDB service to process file
+            result = self.chroma_service.process_file_for_rag(
+                session_id, file_path, file_type, file_name, file_id
+            )
             
-            # Create document chunks
-            document_chunks = self._create_document_chunks(content_chunks, file_name, file_type)
-            
-            # Generate embeddings for chunks
-            embedded_chunks = self._generate_embeddings(document_chunks)
-            
-            # Store chunks
-            self._store_chunks(embedded_chunks, file_name)
-            
-            return {
-                'success': True,
-                'file_name': file_name,
-                'file_type': file_type,
-                'chunks_created': len(embedded_chunks),
-                'total_content_length': sum(len(chunk.content) for chunk in embedded_chunks),
-                'chunks': embedded_chunks
-            }
+            return result
             
         except Exception as e:
             logger.error(f"Error processing file for RAG: {e}")
@@ -407,55 +380,47 @@ class RAGService:
         for chunk in chunks:
             self.document_chunks[chunk.chunk_id] = chunk
     
-    def search_relevant_chunks(self, query: str, file_names: Optional[List[str]] = None) -> List[SearchResult]:
+    def search_relevant_chunks(self, session_id: str, query: str, 
+                            file_names: Optional[List[str]] = None, n_results: int = 5) -> List[Dict]:
         """
-        Search for relevant chunks based on query
+        Search for relevant chunks based on query using ChromaDB
         
         Args:
+            session_id: Chat session ID
             query: Search query
             file_names: Optional list of file names to search in
+            n_results: Number of results to return
             
         Returns:
             List of search results with relevance scores
         """
         try:
-            logger.info(f"Searching for query: '{query}'")
+            logger.info(f"Searching for query: '{query}' in session {session_id}")
             
-            # Generate query embedding
-            query_embedding = self._simple_embedding(query)
+            # Use ChromaDB service to search with file filtering
+            search_results = self.chroma_service.search_similar_chunks(
+                session_id, query, n_results, file_filter=file_names
+            )
             
-            search_results = []
-            
-            # Determine which files to search
-            files_to_search = file_names if file_names else list(self.file_embeddings.keys())
-            
-            for file_name in files_to_search:
-                if file_name not in self.file_embeddings:
-                    continue
+            # Convert to SearchResult format for compatibility
+            formatted_results = []
+            for result in search_results:
+                chunk = DocumentChunk(
+                    content=result['content'],
+                    metadata=result['metadata'],
+                    chunk_id=result['chunk_id'],
+                    source_file=result['source_file']
+                )
                 
-                chunks = self.file_embeddings[file_name]
-                
-                for chunk in chunks:
-                    if chunk.embedding is None:
-                        continue
-                    
-                    # Calculate similarity score
-                    similarity = self._calculate_similarity(query_embedding, chunk.embedding)
-                    
-                    if similarity >= self.similarity_threshold:
-                        result = SearchResult(
-                            chunk=chunk,
-                            score=similarity,
-                            source_file=file_name,
-                            context=chunk.content[:500] + "..." if len(chunk.content) > 500 else chunk.content
-                        )
-                        search_results.append(result)
+                search_result = SearchResult(
+                    chunk=chunk,
+                    score=result['similarity_score'],
+                    source_file=result['source_file'],
+                    context=result['content'][:500] + "..." if len(result['content']) > 500 else result['content']
+                )
+                formatted_results.append(search_result)
             
-            # Sort by relevance score
-            search_results.sort(key=lambda x: x.score, reverse=True)
-            
-            # Return top results
-            return search_results[:self.max_results]
+            return formatted_results
             
         except Exception as e:
             logger.error(f"Error searching chunks: {e}")
@@ -483,11 +448,12 @@ class RAGService:
             logger.error(f"Error calculating similarity: {e}")
             return 0.0
     
-    def get_context_for_question(self, question: str, file_names: List[str]) -> Dict:
+    def get_context_for_question(self, session_id: str, question: str, file_names: List[str]) -> Dict:
         """
-        Get relevant context for a question from specified files
+        Get relevant context for a question from specified files using ChromaDB
         
         Args:
+            session_id: Chat session ID
             question: User question
             file_names: List of file names to search in
             
@@ -495,15 +461,17 @@ class RAGService:
             Context information for LLM
         """
         try:
-            # Search for relevant chunks
-            search_results = self.search_relevant_chunks(question, file_names)
+            logger.info(f"Getting context for question in files: {file_names}")
+            
+            # Search for relevant chunks ONLY in the specified files
+            search_results = self.search_relevant_chunks(session_id, question, file_names)
             
             if not search_results:
                 return {
                     'success': False,
                     'context': '',
                     'sources': [],
-                    'message': 'No relevant context found in the specified files.'
+                    'message': f'No relevant context found in the specified files: {file_names}'
                 }
             
             # Assemble context
@@ -520,6 +488,8 @@ class RAGService:
                 })
             
             context = "\n\n---\n\n".join(context_parts)
+            
+            logger.info(f"Context assembled from {len(sources)} sources in files: {file_names}")
             
             return {
                 'success': True,
@@ -538,30 +508,28 @@ class RAGService:
                 'message': f'Error retrieving context: {str(e)}'
             }
     
-    def clear_file_chunks(self, file_name: str):
-        """Clear chunks for a specific file"""
-        if file_name in self.file_embeddings:
-            chunks = self.file_embeddings[file_name]
-            for chunk in chunks:
-                if chunk.chunk_id in self.document_chunks:
-                    del self.document_chunks[chunk.chunk_id]
-            del self.file_embeddings[file_name]
-            logger.info(f"Cleared chunks for file: {file_name}")
+    def clear_file_chunks(self, session_id: str, file_name: str):
+        """Clear chunks for a specific file using ChromaDB"""
+        try:
+            success = self.chroma_service.delete_file_chunks(session_id, file_name)
+            if success:
+                logger.info(f"Cleared chunks for file: {file_name} in session {session_id}")
+            else:
+                logger.warning(f"Failed to clear chunks for file: {file_name}")
+            return success
+        except Exception as e:
+            logger.error(f"Error clearing file chunks: {e}")
+            return False
     
-    def get_file_stats(self) -> Dict:
-        """Get statistics about stored chunks"""
-        total_chunks = len(self.document_chunks)
-        total_files = len(self.file_embeddings)
-        
-        file_stats = {}
-        for file_name, chunks in self.file_embeddings.items():
-            file_stats[file_name] = {
-                'chunks': len(chunks),
-                'total_content_length': sum(len(chunk.content) for chunk in chunks)
+    def get_file_stats(self, session_id: str) -> Dict:
+        """Get statistics about stored chunks using ChromaDB"""
+        try:
+            return self.chroma_service.get_collection_stats(session_id)
+        except Exception as e:
+            logger.error(f"Error getting file stats: {e}")
+            return {
+                'total_chunks': 0,
+                'total_files': 0,
+                'file_types': {},
+                'total_content_length': 0
             }
-        
-        return {
-            'total_chunks': total_chunks,
-            'total_files': total_files,
-            'file_stats': file_stats
-        }
