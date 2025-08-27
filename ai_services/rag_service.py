@@ -463,10 +463,39 @@ class RAGService:
         try:
             logger.info(f"Getting context for question in files: {file_names}")
             
-            # Search for relevant chunks ONLY in the specified files
-            search_results = self.search_relevant_chunks(session_id, question, file_names)
+            # Search each file separately to ensure we get results from all files
+            all_search_results = []
+            file_results_map = {}
             
-            if not search_results:
+            for file_name in file_names:
+                # Search in this specific file
+                file_results = self.search_relevant_chunks(session_id, question, [file_name], n_results=3)
+                file_results_map[file_name] = file_results
+                all_search_results.extend(file_results)
+            
+            # Ensure we have at least one result from each file
+            final_results = []
+            
+            # First, add the best result from each file
+            for file_name in file_names:
+                if file_name in file_results_map and file_results_map[file_name]:
+                    best_result = max(file_results_map[file_name], key=lambda x: x.score)
+                    final_results.append(best_result)
+            
+            # Then add additional results from all files, sorted by score
+            remaining_results = []
+            for file_name in file_names:
+                if file_name in file_results_map:
+                    # Skip the best result we already added
+                    file_results = file_results_map[file_name]
+                    if len(file_results) > 1:
+                        remaining_results.extend(file_results[1:])
+            
+            # Sort remaining results by score and add top ones
+            remaining_results.sort(key=lambda x: x.score, reverse=True)
+            final_results.extend(remaining_results[:3])  # Add up to 3 more results
+            
+            if not final_results:
                 return {
                     'success': False,
                     'context': '',
@@ -478,7 +507,7 @@ class RAGService:
             context_parts = []
             sources = []
             
-            for result in search_results:
+            for result in final_results:
                 context_parts.append(f"Source: {result.source_file}\n{result.chunk.content}")
                 sources.append({
                     'file_name': result.source_file,
@@ -496,7 +525,7 @@ class RAGService:
                 'context': context,
                 'sources': sources,
                 'total_sources': len(sources),
-                'average_relevance': sum(r.score for r in search_results) / len(search_results)
+                'average_relevance': sum(r.score for r in final_results) / len(final_results)
             }
             
         except Exception as e:

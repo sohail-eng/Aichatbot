@@ -78,11 +78,13 @@ MSSQL_CONFIG = {
 
 # AI Configuration
 AI_CONFIG = {
-    'LLAMA_API_URL': 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',  # Google AI Studio
-    'MODEL_NAME': 'gemini-1.5-flash',
+    'LLAMA_API_URL': 'http://127.0.0.1:11434', 
+    # 'LLAMA_API_URL': 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',  # Google AI Studio
+    'MODEL_NAME': 'qwen2.5:7b',
+    # 'MODEL_NAME': 'gemini-1.5-flash',
     'MAX_TOKENS': 2048,
     'TEMPERATURE': 0.7,
-    'API_KEY': 'AIzaSyA7vBmqL-zZpJrvNoijDzHTvYaEeNctEig',  # Replace with your actual API key
+    # 'API_KEY': 'AIzaSyA7vBmqL-zZpJrvNoijDzHTvYaEeNctEig',  # Replace with your actual API key
 }
 
 # File Upload Settings
@@ -99,7 +101,7 @@ CHROMA_DB_PORT = 8000
 # RAG System settings
 RAG_CHUNK_SIZE = 1000
 RAG_CHUNK_OVERLAP = 200
-RAG_MAX_RESULTS = 5
+RAG_MAX_RESULTS = 15
 RAG_SIMILARITY_THRESHOLD = 0.7
 
 STATIC_URL = '/static/'
