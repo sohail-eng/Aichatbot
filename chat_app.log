@@ -1720,3 +1720,870 @@ Filtering search to files: ['InterfaceData.csv']
 Found 5 similar chunks for query: which ip is down? in files: ['InterfaceData.csv']
 Context assembled from 5 sources in files: ['InterfaceData.csv']
 Sending streaming request to AI service with model: gemini-1.5-flash
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'provide all author names in thw file' with 1 files
+Search terms: ['author', 'thw', 'file', 'names', 'all', 'provide']
+Processing file for RAG: linkedin_posts_output.csv (csv)
+Processing file for RAG: linkedin_posts_output.csv (csv)
+Retrieved existing collection: session_default_session
+Added 3 chunks to ChromaDB for file: linkedin_posts_output.csv
+CSV loaded: 17 rows, 15 columns
+Getting context for question in files: ['linkedin_posts_output.csv']
+Searching for query: 'provide all author names in thw file' in session default_session
+Filtering search to files: ['linkedin_posts_output.csv']
+Found 3 similar chunks for query: provide all author names in thw file in files: ['linkedin_posts_output.csv']
+Context assembled from 3 sources in files: ['linkedin_posts_output.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which devices has bgp state down and what’s their neighbor ip Which devices has vrf support on them ? List devices with interfacestatus not_present' with 2 files
+Search terms: ['show', 'support', 'list', 'their', 'neighbor', 'them', 'identify', 'vrf', 'failed', 'interfacestatus', 'not_present', 'offline', 'devices', 'down', 'inactive', 'bgp', 'which', 'state']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 7 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['InterfaceData.csv', 'BGPData.csv']
+Searching for query: 'which devices has bgp state down and what’s their neighbor ip Which devices has vrf support on them ? List devices with interfacestatus not_present' in session default_session
+Filtering search to files: ['InterfaceData.csv', 'BGPData.csv']
+Found 5 similar chunks for query: which devices has bgp state down and what’s their neighbor ip Which devices has vrf support on them ? List devices with interfacestatus not_present in files: ['InterfaceData.csv', 'BGPData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv', 'BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which devices has bgp state down and what’s their neighbor ip' with 1 files
+Search terms: ['show', 'list', 'their', 'neighbor', 'identify', 'failed', 'offline', 'devices', 'down', 'inactive', 'bgp', 'which', 'state']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Getting context for question in files: ['InterfaceData.csv']
+Searching for query: 'which devices has bgp state down and what’s their neighbor ip' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: which devices has bgp state down and what’s their neighbor ip in files: ['InterfaceData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'These include Ethernet34/2, Ethernet33/1, Port-Channel100, Ethernet34/4, Ethernet34/1, Ethernet30/4, Ethernet35/4, Ethernet32/1, Ethernet30/1, Ethernet28/4, Ethernet36/2, Ethernet35/3, Ethernet35/2, Ethernet35/1, Ethernet33/3, Ethernet30/2, Ethernet6/1, Ethernet5/1, Ethernet3/4, Ethernet22/1, Ethernet21/4, Ethernet22/4, Ethernet22/2, Ethernet21/3, Ethernet21/2, Ethernet21/1, Ethernet20/4, Ethernet20/3, Ethernet32/2, Ethernet22/3, Ethernet36/4, Ethernet32/4, Ethernet20/2, Ethernet20/1, Ethernet28/3, Ethernet28/2, Ethernet28/1, Ethernet34/3, Ethernet33/4, Ethernet30/3, Ethernet36/3, Ethernet33/2, Ethernet32/3, Ethernet26/4, Ethernet26/3, Ethernet8/2, Ethernet24/4, Ethernet27/4, Ethernet24/3, Ethernet8/3, Ethernet25/3, Ethernet26/2, Ethernet8/4, Ethernet24/2, Ethernet9/4, Ethernet27/3, Ethernet25/2, Ethernet9/3, Ethernet9/2, Ethernet27/2, Ethernet25/4, Ethernet7/2, Ethernet3/1, Ethernet6/2, Ethernet5/4, Ethernet5/2, Ethernet4/4, Ethernet4/1, Ethernet3/2, Ethernet7/3, Ethernet7/1, Ethernet6/4, Ethernet5/3, Ethernet4/2, Ethernet3/3, Ethernet7/4, Ethernet4/3, Ethernet6/3. i need their naghbour ip' with 1 files
+Search terms: ['ethernet20', 'ethernet8', 'ethernet22', 'include', 'ethernet27', 'ethernet36', 'ethernet5', 'ethernet32', 'ethernet21', 'ethernet33', 'ethernet26', 'ethernet6', 'need', 'their', 'ethernet7', 'ethernet28', 'ethernet3', 'ethernet30', 'ethernet25', 'ethernet24', 'ethernet34', 'ethernet4', 'port', 'ethernet9', 'channel100', 'naghbour', 'ethernet35']
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 7 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['BGPData.csv']
+Searching for query: 'These include Ethernet34/2, Ethernet33/1, Port-Channel100, Ethernet34/4, Ethernet34/1, Ethernet30/4, Ethernet35/4, Ethernet32/1, Ethernet30/1, Ethernet28/4, Ethernet36/2, Ethernet35/3, Ethernet35/2, Ethernet35/1, Ethernet33/3, Ethernet30/2, Ethernet6/1, Ethernet5/1, Ethernet3/4, Ethernet22/1, Ethernet21/4, Ethernet22/4, Ethernet22/2, Ethernet21/3, Ethernet21/2, Ethernet21/1, Ethernet20/4, Ethernet20/3, Ethernet32/2, Ethernet22/3, Ethernet36/4, Ethernet32/4, Ethernet20/2, Ethernet20/1, Ethernet28/3, Ethernet28/2, Ethernet28/1, Ethernet34/3, Ethernet33/4, Ethernet30/3, Ethernet36/3, Ethernet33/2, Ethernet32/3, Ethernet26/4, Ethernet26/3, Ethernet8/2, Ethernet24/4, Ethernet27/4, Ethernet24/3, Ethernet8/3, Ethernet25/3, Ethernet26/2, Ethernet8/4, Ethernet24/2, Ethernet9/4, Ethernet27/3, Ethernet25/2, Ethernet9/3, Ethernet9/2, Ethernet27/2, Ethernet25/4, Ethernet7/2, Ethernet3/1, Ethernet6/2, Ethernet5/4, Ethernet5/2, Ethernet4/4, Ethernet4/1, Ethernet3/2, Ethernet7/3, Ethernet7/1, Ethernet6/4, Ethernet5/3, Ethernet4/2, Ethernet3/3, Ethernet7/4, Ethernet4/3, Ethernet6/3. i need their naghbour ip' in session default_session
+Filtering search to files: ['BGPData.csv']
+Found 5 similar chunks for query: These include Ethernet34/2, Ethernet33/1, Port-Channel100, Ethernet34/4, Ethernet34/1, Ethernet30/4, Ethernet35/4, Ethernet32/1, Ethernet30/1, Ethernet28/4, Ethernet36/2, Ethernet35/3, Ethernet35/2, Ethernet35/1, Ethernet33/3, Ethernet30/2, Ethernet6/1, Ethernet5/1, Ethernet3/4, Ethernet22/1, Ethernet21/4, Ethernet22/4, Ethernet22/2, Ethernet21/3, Ethernet21/2, Ethernet21/1, Ethernet20/4, Ethernet20/3, Ethernet32/2, Ethernet22/3, Ethernet36/4, Ethernet32/4, Ethernet20/2, Ethernet20/1, Ethernet28/3, Ethernet28/2, Ethernet28/1, Ethernet34/3, Ethernet33/4, Ethernet30/3, Ethernet36/3, Ethernet33/2, Ethernet32/3, Ethernet26/4, Ethernet26/3, Ethernet8/2, Ethernet24/4, Ethernet27/4, Ethernet24/3, Ethernet8/3, Ethernet25/3, Ethernet26/2, Ethernet8/4, Ethernet24/2, Ethernet9/4, Ethernet27/3, Ethernet25/2, Ethernet9/3, Ethernet9/2, Ethernet27/2, Ethernet25/4, Ethernet7/2, Ethernet3/1, Ethernet6/2, Ethernet5/4, Ethernet5/2, Ethernet4/4, Ethernet4/1, Ethernet3/2, Ethernet7/3, Ethernet7/1, Ethernet6/4, Ethernet5/3, Ethernet4/2, Ethernet3/3, Ethernet7/4, Ethernet4/3, Ethernet6/3. i need their naghbour ip in files: ['BGPData.csv']
+Context assembled from 5 sources in files: ['BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/01974285-54f8-44bd-b39f-f5b62f448398_20250825_113153_BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Creating basic analysis...
+Analysis created: {'rows': 3817, 'columns': 13, 'column_names': ['host', 'neighboraddress', 'timestamp', 'vrf', 'lastchange', 'peer_as', 'sessionstate', 'prefixesreceived', 'prefixaccepted', 'prefixsent', 'peergroups', 'neighborinfo', 'DeviceType'], 'dtypes': {'host': 'object', 'neighboraddress': 'object', 'timestamp': 'object', 'vrf': 'object', 'lastchange': 'object', 'peer_as': 'float64', 'sessionstate': 'object', 'prefixesreceived': 'float64', 'prefixaccepted': 'float64', 'prefixsent': 'float64', 'peergroups': 'object', 'neighborinfo': 'object', 'DeviceType': 'object'}, 'missing_values': {'host': 0, 'neighboraddress': 0, 'timestamp': 0, 'vrf': 0, 'lastchange': 0, 'peer_as': 3817, 'sessionstate': 6, 'prefixesreceived': 358, 'prefixaccepted': 358, 'prefixsent': 560, 'peergroups': 329, 'neighborinfo': 405, 'DeviceType': 0}, 'memory_usage': 2452574}
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+JSON validation passed
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: BGPData.csv (csv)
+Created new collection: session_01974285-54f8-44bd-b39f-f5b62f448398
+Added 7 chunks to ChromaDB for file: BGPData.csv
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing CSV file: /home/azeem/Documents/upwork-projects/chat_project/media/uploads/01974285-54f8-44bd-b39f-f5b62f448398_20250825_113213_InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Creating basic analysis...
+Analysis created: {'rows': 100, 'columns': 11, 'column_names': ['timestamp', 'host', 'adminstatus', 'interface', 'subinterface', 'neighbor_description', 'intstatus', 'SFPinfo', 'lastchangeint', 'Neighbor_System_name', 'Neigh_port_id'], 'dtypes': {'timestamp': 'object', 'host': 'object', 'adminstatus': 'object', 'interface': 'object', 'subinterface': 'float64', 'neighbor_description': 'object', 'intstatus': 'object', 'SFPinfo': 'object', 'lastchangeint': 'object', 'Neighbor_System_name': 'object', 'Neigh_port_id': 'object'}, 'missing_values': {'timestamp': 0, 'host': 0, 'adminstatus': 0, 'interface': 0, 'subinterface': 96, 'neighbor_description': 87, 'intstatus': 0, 'SFPinfo': 6, 'lastchangeint': 0, 'Neighbor_System_name': 88, 'Neigh_port_id': 88}, 'memory_usage': 59887}
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+Error cleaning data for JSON: module 'pandas' has no attribute 'isinf'
+JSON validation passed
+CSV processing completed successfully
+Result keys: ['success', 'file_type', 'content', 'data', 'analysis', 'numeric_summary', 'full_data']
+Sample data type: <class 'list'>
+Analysis type: <class 'dict'>
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: InterfaceData.csv (csv)
+Retrieved existing collection: session_01974285-54f8-44bd-b39f-f5b62f448398
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down what is its neighboring ip?' with 2 files
+Search terms: ['which', 'its', 'status', 'list', 'identify', 'show', 'failed', 'device', 'neighboring', 'down', 'inactive', 'offline']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Retrieved existing collection: session_default_session
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 7 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['InterfaceData.csv', 'BGPData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?' in session default_session
+Filtering search to files: ['InterfaceData.csv', 'BGPData.csv']
+Found 5 similar chunks for query: which device status is down what is its neighboring ip? in files: ['InterfaceData.csv', 'BGPData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv', 'BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Created new collection: session_test_session_debug
+Added 7 chunks to ChromaDB for file: BGPData.csv
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 7 chunks to ChromaDB for file: InterfaceData.csv
+Retrieved existing collection: session_test_session_debug
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: None
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Getting context for question in files: ['BGPData.csv', 'InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 5 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Context assembled from 5 sources in files: ['BGPData.csv', 'InterfaceData.csv']
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Retrieved existing collection: session_test_session_debug
+Added 10 chunks to ChromaDB for file: BGPData.csv
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Error processing file for RAG: Expected metadata value to be a str, int, float or bool, got ['UP', 'DOWN'] which is a <class 'list'>
+Retrieved existing collection: session_test_session_debug
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: None
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Getting context for question in files: ['BGPData.csv', 'InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 5 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Context assembled from 5 sources in files: ['BGPData.csv', 'InterfaceData.csv']
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Deleted collection: session_test_session_debug
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Created new collection: session_test_session_debug
+Added 10 chunks to ChromaDB for file: BGPData.csv
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+Retrieved existing collection: session_test_session_debug
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: None
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Getting context for question in files: ['BGPData.csv', 'InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 5 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Context assembled from 5 sources in files: ['BGPData.csv', 'InterfaceData.csv']
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Retrieved existing collection: session_test_session_debug
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: DOWN status interfaces in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: adminstatus DOWN in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: intstatus DOWN in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: interface DOWN in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: neighbor system name in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: ethernet DOWN in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 5 similar chunks for query: device status down in files: ['InterfaceData.csv']
+Filtering search to files: ['InterfaceData.csv']
+Found 16 similar chunks for query: which device status is down what is its neighboring ip in files: ['InterfaceData.csv']
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Deleted collection: session_test_session_debug
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Created new collection: session_test_session_debug
+Added 10 chunks to ChromaDB for file: BGPData.csv
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+Retrieved existing collection: session_test_session_debug
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: None
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Getting context for question in files: ['BGPData.csv', 'InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip in files: ['InterfaceData.csv']
+Context assembled from 5 sources in files: ['BGPData.csv', 'InterfaceData.csv']
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Deleted collection: session_test_session_debug
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Created new collection: session_test_session_debug
+Added 10 chunks to ChromaDB for file: BGPData.csv
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+Retrieved existing collection: session_test_session_debug
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: None
+Filtering search to files: ['BGPData.csv', 'InterfaceData.csv']
+Found 10 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv', 'InterfaceData.csv']
+Getting context for question in files: ['BGPData.csv', 'InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip in files: ['BGPData.csv']
+Searching for query: 'which device status is down what is its neighboring ip' in session test_session_debug
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip in files: ['InterfaceData.csv']
+Context assembled from 5 sources in files: ['BGPData.csv', 'InterfaceData.csv']
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down what is its neighboring ip?' with 2 files
+Extracted search terms: ['device', 'status', 'down', 'neighboring', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'interface', 'port', 'ethernet', 'host', 'neighbor', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name', 'lastchange', 'neighbor_description']
+Search terms: ['device', 'status', 'down', 'neighboring', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'interface', 'port', 'ethernet', 'host', 'neighbor', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name', 'lastchange', 'neighbor_description']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Retrieved existing collection: session_default_session
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 10 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['InterfaceData.csv', 'BGPData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip? in files: ['InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?' in session default_session
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip? in files: ['BGPData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv', 'BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down what is its neighboring ip?(these two files are related)' with 2 files
+Extracted search terms: ['device', 'status', 'down', 'neighboring', 'two', 'files', 'related', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'interface', 'port', 'ethernet', 'host', 'neighbor', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name', 'lastchange', 'neighbor_description']
+Search terms: ['device', 'status', 'down', 'neighboring', 'two', 'files', 'related', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'interface', 'port', 'ethernet', 'host', 'neighbor', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name', 'lastchange', 'neighbor_description']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 10 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['InterfaceData.csv', 'BGPData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?(these two files are related)' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip?(these two files are related) in files: ['InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?(these two files are related)' in session default_session
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip?(these two files are related) in files: ['BGPData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv', 'BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 2 attached files
+Processing message with 2 attached files
+Processing question with 2 attached files
+Analyzing question (async): 'which device status is down what is its neighboring ip?' with 2 files
+Extracted search terms: ['device', 'status', 'down', 'neighboring', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'interface', 'port', 'ethernet', 'host', 'neighbor', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name', 'lastchange', 'neighbor_description']
+Search terms: ['device', 'status', 'down', 'neighboring', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'interface', 'port', 'ethernet', 'host', 'neighbor', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name', 'lastchange', 'neighbor_description']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 10 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['InterfaceData.csv', 'BGPData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip? in files: ['InterfaceData.csv']
+Searching for query: 'which device status is down what is its neighboring ip?' in session default_session
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: which device status is down what is its neighboring ip? in files: ['BGPData.csv']
+Context assembled from 5 sources in files: ['InterfaceData.csv', 'BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Connection error: Unable to connect to AI service at https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'what is this data about?' with 1 files
+Extracted search terms: ['data', 'about']
+Search terms: ['data', 'about']
+Processing file for RAG: Skincare_DB_Schema_Guide.csv (csv)
+Processing file for RAG: Skincare_DB_Schema_Guide.csv (csv)
+Retrieved existing collection: session_default_session
+Added 7 chunks to ChromaDB for file: Skincare_DB_Schema_Guide.csv
+CSV loaded: 77 rows, 3 columns
+Getting context for question in files: ['Skincare_DB_Schema_Guide.csv']
+Searching for query: 'what is this data about?' in session default_session
+Filtering search to files: ['Skincare_DB_Schema_Guide.csv']
+Found 3 similar chunks for query: what is this data about? in files: ['Skincare_DB_Schema_Guide.csv']
+Context assembled from 3 sources in files: ['Skincare_DB_Schema_Guide.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'which interfaces are down?' with 1 files
+Extracted search terms: ['interfaces', 'down', 'status', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'device', 'interface', 'port', 'ethernet', 'host', 'lastchange']
+Search terms: ['interfaces', 'down', 'status', 'up', 'offline', 'online', 'adminstatus', 'intstatus', 'device', 'interface', 'port', 'ethernet', 'host', 'lastchange']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Getting context for question in files: ['InterfaceData.csv']
+Searching for query: 'which interfaces are down?' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: which interfaces are down? in files: ['InterfaceData.csv']
+Context assembled from 3 sources in files: ['InterfaceData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 5 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'show hosts with vrf standard.' with 1 files
+Extracted search terms: ['show', 'hosts', 'vrf', 'standard']
+Search terms: ['show', 'hosts', 'vrf', 'standard']
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 10 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['BGPData.csv']
+Searching for query: 'show hosts with vrf standard.' in session default_session
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: show hosts with vrf standard. in files: ['BGPData.csv']
+Context assembled from 3 sources in files: ['BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+Looking for session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found existing session: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Session found: de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Found 5 files for session de83e3ba-31e9-42b7-8104-a74b05bdfc63
+Sending streaming request to AI service with model: gemini-1.5-flash
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'show me user with established connection' with 1 files
+Extracted search terms: ['show', 'user', 'established', 'connection', 'neighbor', 'neighboring', 'ip', 'address', 'neighboraddress', 'neighbor_system_name', 'neighbor_description']
+Search terms: ['show', 'user', 'established', 'connection', 'neighbor', 'neighboring', 'ip', 'address', 'neighboraddress', 'neighbor_system_name', 'neighbor_description']
+Processing file for RAG: BGPData.csv (csv)
+Processing file for RAG: BGPData.csv (csv)
+Added 10 chunks to ChromaDB for file: BGPData.csv
+CSV loaded: 3817 rows, 13 columns
+Getting context for question in files: ['BGPData.csv']
+Searching for query: 'show me user with established connection' in session default_session
+Filtering search to files: ['BGPData.csv']
+Found 3 similar chunks for query: show me user with established connection in files: ['BGPData.csv']
+Context assembled from 3 sources in files: ['BGPData.csv']
+Sending streaming request to AI service with model: gemini-1.5-flash
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Sending streaming request to AI service with model: qwen2.5:7b
+Unexpected error in AI service: Request URL is missing an 'http://' or 'https://' protocol.
+Sending streaming request to AI service with model: qwen2.5:7b
+Unexpected error in AI service: Request URL is missing an 'http://' or 'https://' protocol.
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Sending streaming request to AI service with model: qwen2.5:7b
+AI service error: 405 - b'405 method not allowed'
+Sending streaming request to AI service with model: qwen2.5:7b
+AI service error: 405 - b'405 method not allowed'
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Sending streaming request to AI service with model: gemini-1.5-flash
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Sending streaming request to AI service with model: qwen2.5:7b
+AI service error: 405 - b'405 method not allowed'
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Qwen request - URL: http://127.0.0.1:11434, Model: qwen2.5:7b
+Qwen response status: 405
+Qwen API error: 405 - b'405 method not allowed'
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Qwen request - URL: http://127.0.0.1:11434, Model: qwen2.5:7b
+Qwen response status: 405
+Qwen API error: 405 - b'405 method not allowed'
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Qwen request - URL: http://127.0.0.1:11434, Model: qwen2.5:7b
+Qwen response status: 200
+Qwen JSON parse error: Expecting value: line 1 column 1 (char 0) | line: Ollama is running
+Qwen request - URL: http://127.0.0.1:11434, Model: qwen2.5:7b
+Qwen response status: 200
+Qwen JSON parse error: Expecting value: line 1 column 1 (char 0) | line: Ollama is running
+Qwen request - URL: http://127.0.0.1:11434, Model: qwen2.5:7b
+Qwen response status: 200
+Qwen JSON parse error: Expecting value: line 1 column 1 (char 0) | line: Ollama is running
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Trying Qwen connection - Model: qwen2.5:7b
+Trying endpoint: http://127.0.0.1:11434
+Qwen response status: 405
+Qwen response status: 405
+Qwen response status: 405
+Trying endpoint: http://127.0.0.1:11434/v1/chat/completions
+Qwen response status: 200
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'what is the data about?' with 1 files
+Extracted search terms: ['data', 'about']
+Search terms: ['data', 'about']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Retrieved existing collection: session_default_session
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Getting context for question in files: ['InterfaceData.csv']
+Searching for query: 'what is the data about?' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: what is the data about? in files: ['InterfaceData.csv']
+Context assembled from 3 sources in files: ['InterfaceData.csv']
+Trying Qwen connection - Model: qwen2.5:7b
+Trying endpoint: http://127.0.0.1:11434
+Qwen response status: 405
+Qwen response status: 405
+Qwen response status: 405
+Trying endpoint: http://127.0.0.1:11434/v1/chat/completions
+Qwen response status: 400
+Qwen API error 400: {"error":{"message":"[] is too short - 'messages'","type":"invalid_request_error","param":null,"code":null}}
+Qwen response status: 400
+Qwen API error 400: {"error":{"message":"[] is too short - 'messages'","type":"invalid_request_error","param":null,"code":null}}
+Qwen response status: 400
+Qwen API error 400: {"error":{"message":"[] is too short - 'messages'","type":"invalid_request_error","param":null,"code":null}}
+Qwen response status: 400
+Qwen API error 400: {"error":{"message":"[] is too short - 'messages'","type":"invalid_request_error","param":null,"code":null}}
+Qwen response status: 400
+Qwen API error 400: {"error":{"message":"[] is too short - 'messages'","type":"invalid_request_error","param":null,"code":null}}
+Qwen response status: 400
+Qwen API error 400: {"error":{"message":"[] is too short - 'messages'","type":"invalid_request_error","param":null,"code":null}}
+Trying endpoint: http://127.0.0.1:11434/chat/completions
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Trying endpoint: http://127.0.0.1:11434/api/v1/chat/completions
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Trying endpoint: http://127.0.0.1:11434/v1/services/aigc/text-generation/generation
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Qwen response status: 404
+Qwen API error 404: 404 page not found
+Processing message with 1 attached files
+Processing message with 1 attached files
+Processing question with 1 attached files
+Analyzing question (async): 'what is the data about?' with 1 files
+Extracted search terms: ['data', 'about']
+Search terms: ['data', 'about']
+Processing file for RAG: InterfaceData.csv (csv)
+Processing file for RAG: InterfaceData.csv (csv)
+Added 16 chunks to ChromaDB for file: InterfaceData.csv
+CSV loaded: 100 rows, 11 columns
+Getting context for question in files: ['InterfaceData.csv']
+Searching for query: 'what is the data about?' in session default_session
+Filtering search to files: ['InterfaceData.csv']
+Found 3 similar chunks for query: what is the data about? in files: ['InterfaceData.csv']
+Context assembled from 3 sources in files: ['InterfaceData.csv']
+Trying Qwen connection - Model: qwen2.5:7b
+Trying endpoint: http://127.0.0.1:11434
+Qwen response status: 405
+Qwen response status: 405
+Qwen response status: 405
+Trying endpoint: http://127.0.0.1:11434/v1/chat/completions
+Qwen response status: 200

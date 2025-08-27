@@ -224,7 +224,101 @@ class ChromaService:
             }
             chunks.append(summary_info)
             
-            # Add sample data chunks (in batches)
+            # Add enhanced data structure chunk with column descriptions
+            column_descriptions = []
+            for col in df.columns:
+                col_lower = col.lower()
+                if 'status' in col_lower:
+                    column_descriptions.append(f"{col}: Contains status information (UP/DOWN)")
+                elif 'neighbor' in col_lower:
+                    column_descriptions.append(f"{col}: Contains neighbor/connection information")
+                elif 'host' in col_lower:
+                    column_descriptions.append(f"{col}: Contains device/host names")
+                elif 'interface' in col_lower:
+                    column_descriptions.append(f"{col}: Contains interface/port information")
+                elif 'address' in col_lower or 'ip' in col_lower:
+                    column_descriptions.append(f"{col}: Contains address/IP information")
+                elif 'timestamp' in col_lower or 'time' in col_lower:
+                    column_descriptions.append(f"{col}: Contains timestamp/time information")
+            
+            if column_descriptions:
+                structure_info = {
+                    'type': 'structure',
+                    'content': f"Data structure in {file_name}:\n" + "\n".join(column_descriptions),
+                    'additional_metadata': {
+                        'total_rows': len(df),
+                        'total_columns': len(df.columns)
+                    }
+                }
+                chunks.append(structure_info)
+            
+            # Add status-specific chunks if status columns exist
+            status_columns = [col for col in df.columns if 'status' in col.lower()]
+            if status_columns:
+                for status_col in status_columns:
+                    # Get unique status values
+                    unique_statuses = df[status_col].dropna().unique()
+                    status_values = [str(s) for s in unique_statuses if str(s).strip()]
+                    
+                    if status_values:
+                        status_info = {
+                            'type': 'status_info',
+                            'content': f"Status values in {status_col} column of {file_name}: {', '.join(status_values)}",
+                            'additional_metadata': {
+                                'status_column': status_col,
+                                'status_values': ', '.join(status_values)  # Convert list to string
+                            }
+                        }
+                        chunks.append(status_info)
+                        
+                        # Add specific status data chunks
+                        for status_value in ['DOWN', 'down', 'UP', 'up']:
+                            if status_value in status_values:
+                                status_data = df[df[status_col] == status_value]
+                                if len(status_data) > 0:
+                                    sample_size = min(20, len(status_data))
+                                    sample_data = status_data.head(sample_size).to_dict('records')
+                                    
+                                    status_chunk_content = f"Data with {status_col} = {status_value} in {file_name}:\n"
+                                    status_chunk_content += json.dumps(sample_data, indent=2, default=str)
+                                    
+                                    status_chunk = {
+                                        'type': 'status_data',
+                                        'content': status_chunk_content,
+                                        'additional_metadata': {
+                                            'status_column': status_col,
+                                            'status_value': status_value,
+                                            'sample_size': len(sample_data),
+                                            'total_count': len(status_data)
+                                        }
+                                    }
+                                    chunks.append(status_chunk)
+            
+            # Add neighbor-specific chunks if neighbor columns exist
+            neighbor_columns = [col for col in df.columns if 'neighbor' in col.lower()]
+            if neighbor_columns:
+                for neighbor_col in neighbor_columns:
+                    # Get non-empty neighbor data
+                    neighbor_data = df[df[neighbor_col].notna() & (df[neighbor_col] != '')]
+                    if len(neighbor_data) > 0:
+                        sample_size = min(20, len(neighbor_data))
+                        sample_data = neighbor_data.head(sample_size).to_dict('records')
+                        
+                        neighbor_chunk_content = f"Data with {neighbor_col} information in {file_name}:\n"
+                        neighbor_chunk_content += json.dumps(sample_data, indent=2, default=str)
+                        
+                        neighbor_chunk = {
+                            'type': 'neighbor_data',
+                            'content': neighbor_chunk_content,
+                            'additional_metadata': {
+                                'neighbor_column': neighbor_col,
+                                'sample_size': len(sample_data),
+                                'total_count': len(neighbor_data)
+                            }
+                        }
+                        chunks.append(neighbor_chunk)
+            
+            # Add sample data chunks (in batches) - keep this for general data access
             sample_size = min(100, len(df))  # Limit to 100 rows
             sample_df = df.head(sample_size)
             

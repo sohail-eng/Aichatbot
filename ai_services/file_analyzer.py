@@ -217,33 +217,64 @@ class FileAnalyzer:
             }
     
     def _extract_search_terms(self, question: str) -> List[str]:
-        """Extract meaningful search terms from question"""
-        # Clean and tokenize
-        clean_question = re.sub(r'[^\w\s]', ' ', question.lower())
-        words = clean_question.split()
+        """Extract search terms from user question"""
+        question_lower = question.lower()
         
-        # Remove stop words
+        # Basic keyword extraction
+        words = re.findall(r'\b\w+\b', question_lower)
+        
+        # Remove common stop words
         stop_words = {
-            'what', 'is', 'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-            'of', 'with', 'by', 'from', 'up', 'about', 'into', 'through', 'during', 'before',
-            'after', 'above', 'below', 'between', 'among', 'within', 'without', 'against',
-            'show', 'tell', 'give', 'find', 'get', 'make', 'do', 'have', 'has', 'had',
-            'will', 'would', 'could', 'should', 'can', 'may', 'might', 'must', 'shall',
-            'this', 'that', 'these', 'those', 'i', 'you', 'he', 'she', 'it', 'we', 'they'
+            'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 
+            'of', 'with', 'by', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+            'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
+            'should', 'may', 'might', 'can', 'what', 'which', 'where', 'when',
+            'why', 'how', 'who', 'this', 'that', 'these', 'those', 'i', 'you',
+            'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them',
+            'my', 'your', 'his', 'her', 'its', 'our', 'their', 'mine', 'yours',
+            'his', 'hers', 'ours', 'theirs', 'am', 'is', 'are', 'was', 'were'
         }
         
-        # Filter meaningful terms (length > 2, not stop words)
-        terms = [word for word in words if len(word) > 2 and word not in stop_words]
+        # Filter out stop words and short words
+        filtered_words = [word for word in words if word not in stop_words and len(word) > 2]
         
-        # Add question type context
-        if 'which' in question.lower() or 'what' in question.lower():
-            terms.extend(['list', 'show', 'identify'])
-        if 'how many' in question.lower():
-            terms.extend(['count', 'number', 'total'])
-        if 'down' in question.lower():
-            terms.extend(['failed', 'inactive', 'offline'])
+        # Add semantic variations for common network/device terms
+        semantic_variations = []
         
-        return list(set(terms))
+        # Device status variations
+        if any(term in question_lower for term in ['status', 'down', 'up', 'offline', 'online']):
+            semantic_variations.extend(['status', 'down', 'up', 'offline', 'online', 'adminstatus', 'intstatus'])
+        
+        # Device/interface variations
+        if any(term in question_lower for term in ['device', 'interface', 'port', 'ethernet']):
+            semantic_variations.extend(['device', 'interface', 'port', 'ethernet', 'host'])
+        
+        # Neighbor/connection variations
+        if any(term in question_lower for term in ['neighbor', 'neighboring', 'ip', 'address', 'connection']):
+            semantic_variations.extend(['neighbor', 'neighboring', 'ip', 'address', 'connection', 'neighboraddress', 'neighbor_system_name'])
+        
+        # BGP/network variations
+        if any(term in question_lower for term in ['bgp', 'session', 'routing']):
+            semantic_variations.extend(['bgp', 'session', 'routing', 'sessionstate', 'neighboraddress'])
+        
+        # Add specific data column names that might be relevant
+        if any(term in question_lower for term in ['status', 'down', 'up']):
+            semantic_variations.extend(['adminstatus', 'intstatus', 'lastchange'])
+        
+        if any(term in question_lower for term in ['neighbor', 'connection']):
+            semantic_variations.extend(['neighboraddress', 'neighbor_system_name', 'neighbor_description'])
+        
+        # Combine all terms
+        all_terms = filtered_words + semantic_variations
+        
+        # Remove duplicates while preserving order
+        unique_terms = []
+        for term in all_terms:
+            if term not in unique_terms:
+                unique_terms.append(term)
+        
+        logger.info(f"Extracted search terms: {unique_terms}")
+        return unique_terms
     
     def _resolve_file_path(self, file_info: Dict) -> Optional[str]:
         """Resolve file path from file info (synchronous version)"""
