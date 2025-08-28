@@ -4,11 +4,14 @@ import logging
 import asyncio
 from typing import Dict, List, Optional, AsyncGenerator
 from django.conf import settings
+from foundry_local import FoundryLocalManager
 
+import requests
 logger = logging.getLogger('ai_services')
 
 class FoundryService:
     def __init__(self):
+        self.service_type = settings.AI_CONFIG['SERVICE_TYPE']
         self.api_url = settings.AI_CONFIG['LLAMA_API_URL']
         self.model_name = settings.AI_CONFIG['MODEL_NAME']
         self.max_tokens = settings.AI_CONFIG['MAX_TOKENS']
@@ -26,8 +29,12 @@ class FoundryService:
             async for chunk in self._handle_google_ai(messages):
                 yield chunk
         elif service_type == 'qwen':
-            async for chunk in self._handle_qwen_api(messages):
-                yield chunk
+            if self.service_type == 'foundry':
+                async for chunk in self._handle_qwen_api_with_foundry(messages):
+                    yield chunk
+            else:
+                async for chunk in self._handle_qwen_api(messages):
+                    yield chunk
         else:
             # Default OpenAI-compatible
             async for chunk in self._handle_openai_compatible(messages):
@@ -163,6 +170,30 @@ class FoundryService:
                     except Exception as e:
                         logger.debug(f"Request failed for {endpoint}: {e}")
                         continue  # Try next header format
+        
+        # If all attempts failed
+        yield f"Unable to connect to Qwen service. Please verify:\n1. API URL: {self.api_url}\n2. Model name: {self.model_name}\n3. API key is correct\n4. Service supports POST requests\n\nCommon Qwen endpoints:\n- /v1/chat/completions\n- /chat/completions\n- /api/v1/chat/completions"
+
+    async def _handle_qwen_api_with_foundry(self, messages: List[Dict]) -> AsyncGenerator[str, None]:
+        """Handle Qwen/Alibaba Cloud DashScope API requests"""
+        alias = self.model_name
+        manager = FoundryLocalManager(alias)
+        url = manager.endpoint + "/chat/completions"
+        
+        payload = {
+            "model": manager.get_model_info(alias).id,
+            "messages": messages,
+            "stream": True,
+            "max_tokens": self.max_tokens,
+            "temperature": self.temperature
+        }
+
+        headers = {
+            "Content-Type": "application/json"
+        }
+
+        response = requests.post(url, headers=headers, data=json.dumps(payload))
+        yield response.json()["choices"][0]["message"]["content"]
         
         # If all attempts failed
         yield f"Unable to connect to Qwen service. Please verify:\n1. API URL: {self.api_url}\n2. Model name: {self.model_name}\n3. API key is correct\n4. Service supports POST requests\n\nCommon Qwen endpoints:\n- /v1/chat/completions\n- /chat/completions\n- /api/v1/chat/completions"
@@ -542,4 +573,5 @@ Return only the SQL query, no explanations."""
             debug_info['attempts'].append(attempt)
         
         return debug_info
+
         

@@ -2587,3 +2587,5 @@ Qwen response status: 405
 Qwen response status: 405
 Trying endpoint: http://127.0.0.1:11434/v1/chat/completions
 Qwen response status: 200
+ChromaDB initialized at /home/azeem/Documents/upwork-projects/chat_project/media/chroma_db
+Embedding model loaded: all-MiniLM-L6-v2
