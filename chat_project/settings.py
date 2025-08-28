@@ -68,19 +68,20 @@ DATABASES = {
 }
 
 # MS SQL Configuration (for data queries)
-MSSQL_CONFIG = {
-    'server': 'your_server_name',
-    'database': 'your_database_name',
-    'username': 'your_username',
-    'password': 'your_password',
-    'driver': '{ODBC Driver 17 for SQL Server}',
-}
+# MSSQL_CONFIG = {
+#     'server': 'your_server_name',
+#     'database': 'your_database_name',
+#     'username': 'your_username',
+#     'password': 'your_password',
+#     'driver': '{ODBC Driver 17 for SQL Server}',
+# }
 
 # AI Configuration
 AI_CONFIG = {
+    'SERVICE_TYPE': 'foundry',  # foundry, llama, ''
     'LLAMA_API_URL': 'http://127.0.0.1:11434', 
     # 'LLAMA_API_URL': 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',  # Google AI Studio
-    'MODEL_NAME': 'qwen2.5:7b',
+    'MODEL_NAME': 'qwen2.5-7b',
     # 'MODEL_NAME': 'gemini-1.5-flash',
     'MAX_TOKENS': 2048,
     'TEMPERATURE': 0.7,
