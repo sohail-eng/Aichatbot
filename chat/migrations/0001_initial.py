@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -15,75 +14,191 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='ChatSession',
+            name="ChatSession",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('session_id', models.CharField(max_length=100, unique=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('is_active', models.BooleanField(default=True)),
-                ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("session_id", models.CharField(max_length=100, unique=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("is_active", models.BooleanField(default=True)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='DatabaseConnection',
+            name="DatabaseConnection",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('connection_type', models.CharField(choices=[('mssql', 'Microsoft SQL Server'), ('postgresql', 'PostgreSQL'), ('mysql', 'MySQL'), ('sqlite', 'SQLite')], max_length=20)),
-                ('server', models.CharField(max_length=255)),
-                ('database', models.CharField(max_length=100)),
-                ('username', models.CharField(max_length=100)),
-                ('password', models.CharField(max_length=255)),
-                ('port', models.IntegerField(default=1433)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('is_active', models.BooleanField(default=True)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                (
+                    "connection_type",
+                    models.CharField(
+                        choices=[
+                            ("mssql", "Microsoft SQL Server"),
+                            ("postgresql", "PostgreSQL"),
+                            ("mysql", "MySQL"),
+                            ("sqlite", "SQLite"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                ("server", models.CharField(max_length=255)),
+                ("database", models.CharField(max_length=100)),
+                ("username", models.CharField(max_length=100)),
+                ("password", models.CharField(max_length=255)),
+                ("port", models.IntegerField(default=1433)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("is_active", models.BooleanField(default=True)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'unique_together': {('user', 'name')},
+                "unique_together": {("user", "name")},
             },
         ),
         migrations.CreateModel(
-            name='UploadedFile',
+            name="UploadedFile",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('file_name', models.CharField(max_length=255)),
-                ('file_type', models.CharField(choices=[('csv', 'CSV File'), ('xlsx', 'Excel File'), ('txt', 'Text File'), ('pdf', 'PDF File'), ('json', 'JSON File')], max_length=20)),
-                ('file_path', models.CharField(max_length=500)),
-                ('file_size', models.BigIntegerField()),
-                ('upload_timestamp', models.DateTimeField(auto_now_add=True)),
-                ('processed', models.BooleanField(default=False)),
-                ('processing_status', models.TextField(blank=True)),
-                ('session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='files', to='chat.chatsession')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("file_name", models.CharField(max_length=255)),
+                (
+                    "file_type",
+                    models.CharField(
+                        choices=[
+                            ("csv", "CSV File"),
+                            ("xlsx", "Excel File"),
+                            ("txt", "Text File"),
+                            ("pdf", "PDF File"),
+                            ("json", "JSON File"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                ("file_path", models.CharField(max_length=500)),
+                ("file_size", models.BigIntegerField()),
+                ("upload_timestamp", models.DateTimeField(auto_now_add=True)),
+                ("processed", models.BooleanField(default=False)),
+                ("processing_status", models.TextField(blank=True)),
+                (
+                    "session",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="files",
+                        to="chat.chatsession",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='QueryHistory',
+            name="QueryHistory",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('query', models.TextField()),
-                ('result_count', models.IntegerField(default=0)),
-                ('execution_time', models.FloatField(default=0.0)),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('success', models.BooleanField(default=True)),
-                ('error_message', models.TextField(blank=True)),
-                ('database_connection', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='chat.databaseconnection')),
-                ('session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='queries', to='chat.chatsession')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("query", models.TextField()),
+                ("result_count", models.IntegerField(default=0)),
+                ("execution_time", models.FloatField(default=0.0)),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                ("success", models.BooleanField(default=True)),
+                ("error_message", models.TextField(blank=True)),
+                (
+                    "database_connection",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="chat.databaseconnection",
+                    ),
+                ),
+                (
+                    "session",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="queries",
+                        to="chat.chatsession",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Message',
+            name="Message",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('message_type', models.CharField(choices=[('user', 'User'), ('ai', 'AI Assistant'), ('system', 'System'), ('file', 'File Upload'), ('db_query', 'Database Query')], max_length=20)),
-                ('content', models.TextField()),
-                ('metadata', models.TextField(blank=True)),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('session', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='messages', to='chat.chatsession')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "message_type",
+                    models.CharField(
+                        choices=[
+                            ("user", "User"),
+                            ("ai", "AI Assistant"),
+                            ("system", "System"),
+                            ("file", "File Upload"),
+                            ("db_query", "Database Query"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
+                ("content", models.TextField()),
+                ("metadata", models.TextField(blank=True)),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                (
+                    "session",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="messages",
+                        to="chat.chatsession",
+                    ),
+                ),
             ],
             options={
-                'ordering': ['timestamp'],
+                "ordering": ["timestamp"],
             },
         ),
     ]
