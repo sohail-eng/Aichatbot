@@ -1,0 +1,518 @@
+
+!
+enable password sha512 $6$MASKED_SECRET_001$MASKED_SECRET_001
+no aaa root
+!
+username admin privilege 15 role network-admin secret 0 MASKED_SECRET_002
+!
+terminal length 0
+!
+daemon TerminAttr
+   exec /usr/bin/TerminAttr -cvcompression=gzip -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -ingestexclude=/Sysdb/cell/1/agent,/Sysdb/cell/2/agent -cvaddr=10.64.0.1:9910 -cvauth=token,/tmp/token -cvvrf=management -taillogs -cvgnmi -disableaaa
+   no shutdown
+!
+load-interval default 5
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+logging host 10.64.0.2
+logging host 10.64.0.3
+logging source-interface Management1
+!
+hostname DEVICE-001
+dns domain company.local
+!
+sflow sample 500000
+sflow polling-interval 100
+sflow destination 127.0.0.1
+sflow source-interface Loopback0
+sflow run
+!
+snmp-server ipv4 access-list snmp_deny vrf management
+snmp-server contact MASKED_CONTACT_001
+snmp-server location MASKED_LOCATION_001
+snmp-server vrf management local-interface Management1
+snmp-server community MASKED_COMMUNITY_001 ro
+snmp-server community MASKED_COMMUNITY_002 ro
+snmp-server host 10.64.0.4 vrf management version 2c MASKED_COMMUNITY_001
+snmp-server host 10.64.0.5 vrf management version 2c MASKED_COMMUNITY_002
+snmp-server vrf management
+!
+spanning-tree mode mstp
+no spanning-tree vlan-id 4094
+spanning-tree edge-port bpduguard default
+spanning-tree mst 0-1 priority 8192
+!
+spanning-tree mst configuration
+   name mst-root-device-001
+   revision 1
+   instance 1 vlan  1-4094
+!
+service unsupported-transceiver company 361ac33e
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+vlan 2
+   name support-dsre-10.64.1.0/25
+!
+vlan 52
+   name admin-tor-10.64.2.0/25
+!
+vlan 99
+   name native
+!
+vlan 170
+   name support-Hyper-v-10.64.3.0/25
+!
+vlan 4094
+   trunk group mlag
+!
+vrf instance admin
+!
+vrf instance corplab
+!
+vrf instance management
+!
+vrf instance support
+!
+banner motd
+**  - COMPANY BANNER - UNAUTHORIZED ACCESS PROHIBITED - COMPANY BANNER  **
+-                                                                        -
+E  This is a private network device.  If you are not authorized to       E
+S  access this device, disconnect at once!  Actual or attempted use,     S
+M  access, examination, or configuration change by an unauthorized       M
+L  person external to the Corporation will result in criminal and civil  L
+S  prosecution to the fullest extent of the law. Unauthorized login      S
+E  attempts by internal personnel will be reported immediately to the    E
+S  violator's management and may result in disciplinary action.          S
+-                                                                        -
+**  - COMPANY BANNER - UNAUTHORIZED ACCESS PROHIBITED - COMPANY BANNER  **
+EOF
+!
+management api http-commands
+   protocol http
+   no shutdown
+   !
+   vrf management
+      no shutdown
+!
+management api gnmi
+   transport grpc runcvp
+      vrf management
+!
+tacacs-server key 7 MASKED_KEY_001
+tacacs-server timeout 10
+tacacs-server policy unknown-mandatory-attribute ignore
+tacacs-server host 10.64.0.6 vrf management
+!
+aaa group server tacacs+ TACACS-SERVER
+   server 10.64.0.6 vrf management
+!
+aaa authentication login default group TACACS-SERVER local
+aaa authentication login securid group TACACS-SERVER local
+aaa authentication enable default group TACACS-SERVER local
+aaa authorization exec default group TACACS-SERVER local
+aaa accounting exec default start-stop group TACACS-SERVER
+aaa accounting commands 0,15 default start-stop group TACACS-SERVER
+!
+interface Port-Channel1000
+   description link;PEER-DEVICE;pc1000
+   switchport mode trunk
+   switchport trunk group mlag
+!
+interface Ethernet1
+   description LINK TO EXTERNAL-SWITCH
+   no switchport
+   vrf corplab
+   ip address 10.64.10.1/30
+!
+interface Ethernet2
+   description LINK TO EXTERNAL-SWITCH
+   no switchport
+   vrf corplab
+   ip address 10.64.10.5/30
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Ethernet13
+!
+interface Ethernet14
+!
+interface Ethernet15
+!
+interface Ethernet16
+!
+interface Ethernet17
+!
+interface Ethernet18
+!
+interface Ethernet19
+!
+interface Ethernet20
+!
+interface Ethernet21
+!
+interface Ethernet22
+!
+interface Ethernet23
+   switchport mode trunk
+   channel-group 1000 mode active
+!
+interface Ethernet24
+   switchport mode trunk
+   channel-group 1000 mode active
+!
+interface Ethernet25
+!
+interface Ethernet26
+!
+interface Ethernet27
+!
+interface Ethernet28
+!
+interface Ethernet29
+!
+interface Ethernet30
+!
+interface Ethernet31
+!
+interface Ethernet32
+!
+interface Ethernet33
+!
+interface Ethernet34
+!
+interface Ethernet35
+!
+interface Ethernet36
+!
+interface Ethernet37
+!
+interface Ethernet38
+!
+interface Ethernet39
+!
+interface Ethernet40
+!
+interface Ethernet41
+!
+interface Ethernet42
+!
+interface Ethernet43
+!
+interface Ethernet44
+!
+interface Ethernet45
+!
+interface Ethernet46
+!
+interface Ethernet47
+!
+interface Ethernet48
+!
+interface Ethernet49/1
+   description link;UPSTREAM-ROUTER-1;Et15/1
+   mtu 9214
+   speed forced 40gfull
+   no switchport
+   ip address 10.64.20.1/31
+   ipv6 address 2001:64:1:1::1/126
+   ipv6 nd ra disabled all
+!
+interface Ethernet50/1
+   description link;UPSTREAM-ROUTER-2;Et15/1
+   mtu 9214
+   speed forced 40gfull
+   no switchport
+   ip address 10.64.20.3/31
+   ipv6 nd ra disabled all
+!
+interface Ethernet51/1
+!
+interface Ethernet51/2
+!
+interface Ethernet51/3
+!
+interface Ethernet51/4
+!
+interface Ethernet52/1
+!
+interface Ethernet53/1
+!
+interface Ethernet54/1
+!
+interface Loopback0
+   ip address 10.64.30.1/32
+   ipv6 address 2001:64:2:1::1/128
+!
+interface Loopback1
+   description DEVICE-001:vtep
+   ip address 10.64.30.2/32
+   ipv6 address 2001:64:2:2::1/128
+!
+interface Management1
+   vrf management
+   ip address 10.64.40.1/27
+!
+interface Vlan52
+   description admin-tor-10.64.50.0/25
+   vrf admin
+   ip address 10.64.50.1/25
+   ipv6 address 2001:64:3:1::1/64
+   ip virtual-router address 10.64.50.254
+!
+interface Vlan170
+   description support-Hyper-v-10.64.51.0/25
+   vrf support
+   ip address 10.64.51.1/25
+   ipv6 address 2001:64:3:2::1/64
+   ip virtual-router address 10.64.51.254
+!
+interface Vlan4094
+   ip address 192.168.1.2/24
+!
+interface Vxlan1
+   vxlan source-interface Loopback1
+   vxlan udp-port 4789
+   vxlan vrf admin vni 5000
+   vxlan vrf corplab vni 28000
+   vxlan vrf support vni 17000
+!
+hardware tcam
+   system profile vxlan-routing
+!
+monitor connectivity
+   vrf management
+      host DNS-test
+         ip 10.64.60.1
+      !
+      host inter-dc-test
+         ip 10.64.60.2
+   interval 40
+   no shutdown
+!
+ip virtual-router mac-address 00:01:11:11:11:11
+!
+ip access-list Support-V4
+   10 remark LAB-SUPPORT
+   20 permit ip 10.64.70.0/23 any
+   30 permit ip 10.64.72.0/23 any
+   40 permit ip 10.64.74.0/23 any
+   50 permit ip 10.64.76.0/23 any
+!
+ip access-list snmp_deny
+   10 permit udp any any eq snmp
+   20 permit udp any any eq snmptrap
+   30 permit tcp any any eq snmp
+!
+ip routing
+ip routing vrf admin
+ip routing vrf corplab
+no ip routing vrf management
+ip routing vrf support
+!
+ip as-path access-list local-as-only-out permit ^$ any
+ip community-list admin-tor permit 641:1050
+ip community-list corp-loop permit 641:1002
+ip community-list corp-tor permit 641:1020
+ip community-list ian-outer permit 641:1021
+ip community-list support-tor permit 641:1070
+ip community-list support-tor permit 641:1171
+!
+ip prefix-list CORP-OUT-DSR
+   seq 10 permit 10.64.80.0/26
+   seq 20 permit 10.64.80.64/26
+!
+ip prefix-list PRIVATE-OUT-DSR
+   seq 10 permit 10.64.81.0/25
+   seq 20 permit 10.64.82.0/24
+!
+ip prefix-list default-v4
+   seq 10 permit 0.0.0.0/0
+!
+ipv6 prefix-list default-v6
+   seq 10 permit ::/0
+!
+ipv6 unicast-routing
+ipv6 unicast-routing vrf admin
+ipv6 unicast-routing vrf support
+!
+monitor session 1 source Ethernet1
+monitor session 1 destination Cpu
+!
+mlag configuration
+   domain-id mlag1
+   local-interface Vlan4094
+   peer-address 192.168.1.1
+   peer-link Port-Channel1000
+!
+ip route vrf management 0.0.0.0/0 10.64.40.30
+!
+ntp server 10.64.90.1
+!
+route-map corp-dsr-v4-in permit 10
+   set community 641:1028
+!
+route-map corp-dsr-v4-out permit 10
+   match ip address prefix-list default-v4
+!
+route-map corp-ss-v4-in deny 10
+   match ip address prefix-list default-v4
+!
+route-map corp-ss-v4-in permit 20
+!
+route-map corp-ss-v4-out deny 10
+   match ip address prefix-list default-v4
+!
+route-map corp-ss-v4-out permit 20
+!
+route-map corp-ss-v6-in permit 10
+   match ipv6 address prefix-list default-v6
+!
+route-map corp-ss-v6-in permit 20
+   match community corp-loop
+!
+route-map corp-ss-v6-out deny 10
+   match ipv6 address prefix-list default-v6
+!
+route-map corp-ss-v6-out permit 20
+!
+route-map set-comm-corp-loop permit 10
+   set community 641:1002
+!
+route-map set-comm-corplab-tor permit 10
+   set community 641:1028
+!
+route-map set-comm-support permit 10
+   set community 641:1070
+!
+route-map set-comm-support-tor permit 10
+   set community 641:1171
+!
+router bgp 642
+   router-id 10.64.30.1
+   no bgp default ipv4-unicast
+   maximum-paths 4
+   no bgp bestpath as-path multipath-relax
+   neighbor corp-dsr-v4 peer group
+   neighbor corp-dsr-v4 remote-as 643
+   neighbor corp-dsr-v4 route-map corp-dsr-v4-in in
+   neighbor corp-dsr-v4 route-map corp-dsr-v4-out out
+   neighbor corp-dsr-v4 maximum-routes 12000 warning-only
+   neighbor corp-ss-v4 peer group
+   neighbor corp-ss-v4 remote-as 644
+   neighbor corp-ss-v4 route-map corp-ss-v4-in in
+   neighbor corp-ss-v4 route-map corp-ss-v4-out out
+   neighbor corp-ss-v4 send-community
+   neighbor corp-ss-v4 maximum-routes 12000 warning-only
+   neighbor corp-ss-v6 peer group
+   neighbor corp-ss-v6 remote-as 644
+   neighbor corp-ss-v6 route-map corp-ss-v6-in in
+   neighbor corp-ss-v6 route-map corp-ss-v6-out out
+   neighbor corp-ss-v6 send-community
+   neighbor corp-ss-v6 maximum-routes 12000 warning-only
+   neighbor evpn-bl peer group
+   neighbor evpn-bl remote-as 641
+   neighbor evpn-bl update-source Loopback0
+   neighbor evpn-bl bfd
+   neighbor evpn-bl ebgp-multihop
+   neighbor evpn-bl send-community standard extended
+   neighbor evpn-bl maximum-routes 12000 warning-only
+   neighbor 10.64.100.1 peer group corp-ss-v4
+   neighbor 10.64.100.1 remote-as 644
+   neighbor 10.64.100.1 description UPSTREAM-ROUTER-1
+   neighbor 10.64.100.2 peer group corp-ss-v4
+   neighbor 10.64.100.2 remote-as 644
+   neighbor 10.64.100.2 description UPSTREAM-ROUTER-2
+   neighbor 10.64.101.1 peer group evpn-bl
+   neighbor 10.64.101.1 remote-as 641
+   neighbor 10.64.101.1 description BORDER-LEAF-1
+   neighbor 10.64.101.2 peer group evpn-bl
+   neighbor 10.64.101.2 remote-as 641
+   neighbor 10.64.101.2 description BORDER-LEAF-2
+   neighbor 2001:64:4:1::1 peer group corp-ss-v6
+   neighbor 2001:64:4:1::1 remote-as 644
+   neighbor 2001:64:4:1::1 description UPSTREAM-ROUTER-1
+   neighbor 2001:64:4:2::1 peer group corp-ss-v6
+   neighbor 2001:64:4:2::1 remote-as 644
+   neighbor 2001:64:4:2::1 description UPSTREAM-ROUTER-2
+   !
+   address-family evpn
+      neighbor evpn-bl activate
+   !
+   address-family ipv4
+      neighbor corp-dsr-v4 activate
+      neighbor corp-ss-v4 activate
+      no neighbor evpn-bl activate
+      network 10.64.30.1/32 route-map set-comm-corp-loop
+      network 10.64.30.2/32 route-map set-comm-corp-loop
+   !
+   address-family ipv6
+      neighbor corp-ss-v6 activate
+      no neighbor evpn-bl activate
+      network 2001:64:2:1::1/128 route-map set-comm-corp-loop
+      network 2001:64:2:2::1/128 route-map set-comm-corp-loop
+   !
+   vrf admin
+      rd 10.64.30.1:5
+      route-target import 641:5000
+      route-target export 641:5000
+      router-id 10.64.30.1
+      maximum-paths 2
+      network 10.64.50.0/25 route-map set-comm-admin
+      network 2001:64:3:1::/64 route-map set-comm-admin
+   !
+   vrf corplab
+      rd 10.64.30.1:28
+      route-target import 641:28000
+      route-target export 641:28000
+      router-id 10.64.30.1
+      maximum-paths 4
+      neighbor 10.64.110.1 peer group corp-dsr-v4
+      neighbor 10.64.110.2 peer group corp-dsr-v4
+      no neighbor 10.64.110.1 shutdown
+      network 10.64.80.0/26 route-map set-comm-corplab-tor
+   !
+   vrf support
+      rd 10.64.30.1:17
+      route-target import 641:17000
+      route-target export 641:17000
+      router-id 10.64.30.1
+      maximum-paths 2
+      network 10.64.51.0/25 route-map set-comm-support
+      network 2001:64:5:1::/64 route-map set-comm-support
+      network 2001:64:3:2::/64 route-map set-comm-support
+!
+ip tacacs source-interface Management1
+!
+management ssh
+   ip access-group Support-V4 vrf management in
+   idle-timeout 30
+   shutdown
+   !
+   vrf management
+      no shutdown
+!
+end
